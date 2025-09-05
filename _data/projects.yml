@@ -1,6 +1,7 @@
 - title: US Drought Monitor
   type: ARCHIVE
-  description: Weekly US Drought Monitor (USDM) data archived as GeoParquet files with detailed metadata, January 4, 2000 – Today.
+  description:
+    Weekly US Drought Monitor (USDM) data archived as GeoParquet files with detailed metadata, January 4, 2000 – Today.
   link: https://sustainable-fsa.github.io/usdm
   image: /usdm/example-1.png
 
@@ -18,9 +19,18 @@
 
 - title: Livestock Forage Program Eligibility
   type: FOIA ARCHIVE
-  description: Official county-level eligibility data for the Livestock Forage Program from the USDA Farm Service Agency, 2008–2024.
+  description:
+    Official county-level eligibility data for the Livestock Forage Program from the USDA Farm Service Agency,
+    2008–2024.
   link: https://sustainable-fsa.github.io/fsa-lfp-eligibility
   image: /fsa-lfp-eligibility/example-1.png
+
+- title: Livestock Forage Program Counties
+  type: FOIA ARCHIVE
+  description:
+    The county boundary dataset used to determine LFP eligibility from the USDA Farm Service Agency, 2008–2024.
+  link: https://sustainable-fsa.github.io/fsa-lfp-counties
+  image: /fsa-lfp-counties/example-1.png
 
 - title: FSA_Counties_dd17 Boundary Dataset
   type: ARCHIVE
@@ -33,9 +43,10 @@
   description: Official farm payment files from the USDA Farm Service Agency, 2004–2024, available in Parquet format.
   link: https://sustainable-fsa.github.io/fsa-payment-files
   image: /fsa-payment-files/example-1.png
-  
+
 - title: NAP-190 Normal Grazing Periods
   type: REANALYSIS
-  description: "A reanalysis of FSA NAP-190 Normal Grazing Periods using data from NOAA's NClimGrid daily gridded weather dataset."
+  description:
+    "A reanalysis of FSA NAP-190 Normal Grazing Periods using data from NOAA's NClimGrid daily gridded weather dataset."
   link: https://sustainable-fsa.github.io/nclimgrid-normal-grazing-period
   image: /nclimgrid-normal-grazing-period/nclimgrid-normal-grazing-period.png
