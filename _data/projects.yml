@@ -31,6 +31,12 @@
     The county boundary dataset used to determine LFP eligibility from the USDA Farm Service Agency, 2008–2024.
   link: https://sustainable-fsa.github.io/fsa-lfp-counties
   image: /fsa-lfp-counties/example-1.png
+  
+- title: USDM LFP County Aggregations
+  type: DERIVED DATA
+  description: Weekly US Drought Monitor (USDM) data aggregated to the Livestock Forage Program county boundaries.
+  link: https://sustainable-fsa.github.io/usdm-counties-fsa-lfp
+  image: /usdm-counties-fsa-lfp/example-1.png
 
 - title: FSA_Counties_dd17 Boundary Dataset
   type: ARCHIVE
