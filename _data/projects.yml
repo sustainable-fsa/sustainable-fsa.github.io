@@ -5,7 +5,7 @@
   link: https://sustainable-fsa.github.io/usdm
   image: /usdm/example-1.png
 
-- title: USDM County Aggregations
+- title: USDM Census County Aggregations
   type: DERIVED DATA
   description: Weekly US Drought Monitor (USDM) data aggregated to US Census county boundaries.
   link: https://sustainable-fsa.github.io/usdm-counties
