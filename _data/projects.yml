@@ -37,7 +37,13 @@
   description: Weekly US Drought Monitor (USDM) data aggregated to the Livestock Forage Program county boundaries.
   link: https://sustainable-fsa.github.io/usdm-counties-fsa-lfp
   image: /usdm-counties-fsa-lfp/example-1.png
-
+  
+- title: USDM Reported County Aggregations
+  type: ARCHIVE
+  description: Archive of weekly US Drought Monitor (USDM) data aggregated to county boundaries as reported by the USDM.
+  link: https://sustainable-fsa.github.io/usdm-counties-reported
+  image: /usdm-counties-reported/example-1.png
+  
 - title: FSA_Counties_dd17 Boundary Dataset
   type: ARCHIVE
   description: An archive of the FSA_Counties_dd17 dataset, originally distributed by the USDA Farm Service Agency.
