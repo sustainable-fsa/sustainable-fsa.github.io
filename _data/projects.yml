@@ -2,19 +2,33 @@
   type: ARCHIVE
   description:
     Weekly US Drought Monitor (USDM) data archived as GeoParquet files with detailed metadata, January 4, 2000 – Today.
-  link: https://sustainable-fsa.github.io/usdm
+  links:
+    - title: Documentation
+      url: /usdm
+    - title: Archive
+      url: /usdm/usdm.html
+    - title: Animation
+      url: /usdm-viz/usdm
   image: /usdm/example-1.png
 
 - title: USDM Census County Aggregations
   type: DERIVED DATA
   description: Weekly US Drought Monitor (USDM) data aggregated to US Census county boundaries.
-  link: https://sustainable-fsa.github.io/usdm-counties
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.github.io/usdm-counties
+    - title: Animation
+      url: https://sustainable-fsa.github.io/usdm-viz/usdm-counties
   image: /usdm-counties/example-1.png
 
 - title: FSA Normal Grazing Periods
   type: FOIA ARCHIVE
   description: Official county-level normal grazing period definitions from the USDA Farm Service Agency, 2008–2024.
-  link: https://sustainable-fsa.github.io/fsa-normal-grazing-period
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.github.io/fsa-normal-grazing-period
+    - title: Dashboard
+      url: /fsa-normal-grazing-period/fsa-normal-grazing-period.html
   image: /fsa-normal-grazing-period/example-1.png
 
 - title: Livestock Forage Program Eligibility
@@ -22,43 +36,59 @@
   description:
     Official county-level eligibility data for the Livestock Forage Program from the USDA Farm Service Agency,
     2008–2024.
-  link: https://sustainable-fsa.github.io/fsa-lfp-eligibility
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.github.io/fsa-lfp-eligibility
+    - title: Dashboard
+      url: /fsa-lfp-eligibility/fsa-lfp-eligibility.html
   image: /fsa-lfp-eligibility/example-1.png
 
 - title: Livestock Forage Program Counties
   type: FOIA ARCHIVE
   description:
     The county boundary dataset used to determine LFP eligibility from the USDA Farm Service Agency, 2008–2024.
-  link: https://sustainable-fsa.github.io/fsa-lfp-counties
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.github.io/fsa-lfp-counties
   image: /fsa-lfp-counties/example-1.png
-  
+
 - title: USDM LFP County Aggregations
   type: DERIVED DATA
   description: Weekly US Drought Monitor (USDM) data aggregated to the Livestock Forage Program county boundaries.
-  link: https://sustainable-fsa.github.io/usdm-counties-fsa-lfp
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.github.io/usdm-counties-fsa-lfp
   image: /usdm-counties-fsa-lfp/example-1.png
-  
+
 - title: USDM Reported County Aggregations
   type: ARCHIVE
   description: Archive of weekly US Drought Monitor (USDM) data aggregated to county boundaries as reported by the USDM.
-  link: https://sustainable-fsa.github.io/usdm-counties-reported
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.github.io/usdm-counties-reported
   image: /usdm-counties-reported/example-1.png
-  
+
 - title: FSA_Counties_dd17 Boundary Dataset
   type: ARCHIVE
   description: An archive of the FSA_Counties_dd17 dataset, originally distributed by the USDA Farm Service Agency.
-  link: https://sustainable-fsa.github.io/fsa-counties-dd17
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.github.io/fsa-counties-dd17
   image: /fsa-counties-dd17/example-1.png
 
 - title: FSA Farm Payment Files, 2004–2024
   type: ARCHIVE
   description: Official farm payment files from the USDA Farm Service Agency, 2004–2024, available in Parquet format.
-  link: https://sustainable-fsa.github.io/fsa-payment-files
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.github.io/fsa-payment-files
   image: /fsa-payment-files/example-1.png
 
 - title: NAP-190 Normal Grazing Periods
   type: REANALYSIS
   description:
     "A reanalysis of FSA NAP-190 Normal Grazing Periods using data from NOAA's NClimGrid daily gridded weather dataset."
-  link: https://sustainable-fsa.github.io/nclimgrid-normal-grazing-period
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.github.io/nclimgrid-normal-grazing-period
   image: /nclimgrid-normal-grazing-period/nclimgrid-normal-grazing-period.png

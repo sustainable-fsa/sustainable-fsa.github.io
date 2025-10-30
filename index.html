@@ -2,93 +2,116 @@
 layout: none
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sustainable FSA</title>
-  <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 2em;
-      background: #f9f9f9;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 0.5em;
-    }
-    .intro {
-      max-width: 700px;
-      margin: 0 auto 2em;
-      text-align: center;
-      color: #444;
-    }
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-    .card {
-      background: white;
-      border: 1px solid #ddd;
-      border-radius: 10px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      width: 300px;
-      padding: 1em;
-      text-align: center;
-      transition: transform 0.2s ease-in-out;
-    }
-    .card:hover {
-      transform: scale(1.02);
-    }
-    .card img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 6px;
-      margin-bottom: 0.75em;
-    }
-    .card h2 {
-      margin: 0.5em 0 0.25em;
-    }
-    .card a {
-      display: inline-block;
-      margin-top: 0.5em;
-      text-decoration: none;
-      color: #007acc;
-      font-weight: bold;
-    }
-    .footer {
-      text-align: center;
-      font-size: 0.9em;
-      color: #666;
-      margin-top: 4em;
-    }
-  </style>
-</head>
-<body>
-  <h1>🌿 Enhancing Sustainable Disaster Relief in FSA Programs 🔥</h1>
-  <div class="intro">
-    <p>This website highlights projects led by the <strong>Sustainable FSA</strong> initiative, strengthening US food security by assessing non-stationarity at the intersection of normal grazing periods and US drought assessment. Click on any card below to explore data repositories and interactive dashboards.</p>
-  </div>
-  <div class="grid">
-    {% for project in site.data.projects %}
-    <div class="card">
-      <img src="{{ project.image }}" alt="{{ project.title }} Preview">
-      <h2>{{ project.type }}</h2>
-      <h3>{{ project.title }}</h3>
-      <p>{{ project.description }}</p>
-      <a href="{{ project.link }}">View Project →</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sustainable FSA</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 2em;
+        background: #f9f9f9;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 0.5em;
+      }
+      .intro {
+        max-width: 700px;
+        margin: 0 auto 2em;
+        text-align: center;
+        color: #444;
+      }
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+      }
+      .card {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        padding: 1em;
+        text-align: center;
+        transition: transform 0.2s ease-in-out;
+      }
+      .card:hover {
+        transform: scale(1.02);
+      }
+      .card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+        margin-bottom: 0.75em;
+      }
+      .card h2 {
+        margin: 0.5em 0 0.25em;
+      }
+      .card a {
+        display: inline-block;
+        margin-top: 0.5em;
+        text-decoration: none;
+        color: #007acc;
+        font-weight: bold;
+      }
+      .footer {
+        text-align: center;
+        font-size: 0.9em;
+        color: #666;
+        margin-top: 4em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🌿 Enhancing Sustainable Disaster Relief in FSA Programs 🔥</h1>
+    <div class="intro">
+      <p>
+        This website highlights projects led by the <strong>Sustainable FSA</strong> initiative, strengthening US food
+        security by assessing non-stationarity at the intersection of normal grazing periods and US drought assessment.
+        Click on any card below to explore data repositories and interactive dashboards.
+      </p>
     </div>
-    {% endfor %}
-  </div>
+    <div class="grid">
+      {% for project in site.data.projects %}
+      <div class="card">
+        <img src="{{ project.image }}" alt="{{ project.title }} Preview" />
+        <h2>{{ project.type }}</h2>
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+        {% for link in project.links %}
+        <a href="{{ link.url }}">{{ link.title }} →</a><br />
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
 
-  <div class="footer">
-    <p>This site is part of the <strong><a href="https://www.ars.usda.gov/research/project/?accnNo=444612" target="_blank">Enhancing Sustainable Disaster Relief in FSA Programs</a></strong> project.<br>It is supported by the <a href="https://www.usda.gov/about-usda/general-information/staff-offices/office-chief-economist/office-energy-and-environmental-policy" target="_blank">USDA Office of the Chief Economist, Office of Energy and Environmental Policy</a> and the <a href="https://www.climatehubs.usda.gov" target="_blank">USDA Climate Hubs</a>.<br>Data and analyses were prepared by the <a href="https://climate.umt.edu" target="_blank">Montana Climate Office</a>.</p>
-    
-    <a href="https://climate.umt.edu" target="_blank"><img src="/assets/MCO_logo.svg" alt="Montana Climate Office logo" style="width: 250px;"></a>
-  </div>
-</body>
+    <div class="footer">
+      <p>
+        This site is part of the
+        <strong
+          ><a href="https://www.ars.usda.gov/research/project/?accnNo=444612" target="_blank"
+            >Enhancing Sustainable Disaster Relief in FSA Programs</a
+          ></strong
+        >
+        project.<br />It is supported by the
+        <a
+          href="https://www.usda.gov/about-usda/general-information/staff-offices/office-chief-economist/office-energy-and-environmental-policy"
+          target="_blank"
+          >USDA Office of the Chief Economist, Office of Energy and Environmental Policy</a
+        >
+        and the <a href="https://www.climatehubs.usda.gov" target="_blank">USDA Climate Hubs</a>.<br />Data and analyses
+        were prepared by the <a href="https://climate.umt.edu" target="_blank">Montana Climate Office</a>.
+      </p>
+
+      <a href="https://climate.umt.edu" target="_blank"
+        ><img src="/assets/MCO_logo.svg" alt="Montana Climate Office logo" style="width: 250px"
+      /></a>
+    </div>
+  </body>
 </html>

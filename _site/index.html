@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sustainable FSA</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        margin: 0;
+        padding: 2em;
+        background: #f9f9f9;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 0.5em;
+      }
+      .intro {
+        max-width: 700px;
+        margin: 0 auto 2em;
+        text-align: center;
+        color: #444;
+      }
+      .grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem;
+        justify-content: center;
+      }
+      .card {
+        background: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        width: 300px;
+        padding: 1em;
+        text-align: center;
+        transition: transform 0.2s ease-in-out;
+      }
+      .card:hover {
+        transform: scale(1.02);
+      }
+      .card img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 6px;
+        margin-bottom: 0.75em;
+      }
+      .card h2 {
+        margin: 0.5em 0 0.25em;
+      }
+      .card a {
+        display: inline-block;
+        margin-top: 0.5em;
+        text-decoration: none;
+        color: #007acc;
+        font-weight: bold;
+      }
+      .footer {
+        text-align: center;
+        font-size: 0.9em;
+        color: #666;
+        margin-top: 4em;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🌿 Enhancing Sustainable Disaster Relief in FSA Programs 🔥</h1>
+    <div class="intro">
+      <p>
+        This website highlights projects led by the <strong>Sustainable FSA</strong> initiative, strengthening US food
+        security by assessing non-stationarity at the intersection of normal grazing periods and US drought assessment.
+        Click on any card below to explore data repositories and interactive dashboards.
+      </p>
+    </div>
+    <div class="grid">
+      
+      <div class="card">
+        <img src="/usdm/example-1.png" alt="US Drought Monitor Preview" />
+        <h2>ARCHIVE</h2>
+        <h3>US Drought Monitor</h3>
+        <p>Weekly US Drought Monitor (USDM) data archived as GeoParquet files with detailed metadata, January 4, 2000 – Today.</p>
+        
+        <a href="/usdm">Documentation →</a><br />
+        
+        <a href="/usdm/usdm.html">Archive →</a><br />
+        
+        <a href="/usdm-viz/usdm">Animation →</a><br />
+        
+      </div>
+      
+      <div class="card">
+        <img src="/usdm-counties/example-1.png" alt="USDM Census County Aggregations Preview" />
+        <h2>DERIVED DATA</h2>
+        <h3>USDM Census County Aggregations</h3>
+        <p>Weekly US Drought Monitor (USDM) data aggregated to US Census county boundaries.</p>
+        
+        <a href="https://sustainable-fsa.github.io/usdm-counties">Documentation →</a><br />
+        
+        <a href="https://sustainable-fsa.github.io/usdm-viz/usdm-counties">Animation →</a><br />
+        
+      </div>
+      
+      <div class="card">
+        <img src="/fsa-normal-grazing-period/example-1.png" alt="FSA Normal Grazing Periods Preview" />
+        <h2>FOIA ARCHIVE</h2>
+        <h3>FSA Normal Grazing Periods</h3>
+        <p>Official county-level normal grazing period definitions from the USDA Farm Service Agency, 2008–2024.</p>
+        
+        <a href="https://sustainable-fsa.github.io/fsa-normal-grazing-period">Documentation →</a><br />
+        
+        <a href="/fsa-normal-grazing-period/fsa-normal-grazing-period.html">Dashboard →</a><br />
+        
+      </div>
+      
+      <div class="card">
+        <img src="/fsa-lfp-eligibility/example-1.png" alt="Livestock Forage Program Eligibility Preview" />
+        <h2>FOIA ARCHIVE</h2>
+        <h3>Livestock Forage Program Eligibility</h3>
+        <p>Official county-level eligibility data for the Livestock Forage Program from the USDA Farm Service Agency, 2008–2024.</p>
+        
+        <a href="https://sustainable-fsa.github.io/fsa-lfp-eligibility">Documentation →</a><br />
+        
+        <a href="/fsa-lfp-eligibility/fsa-lfp-eligibility.html">Dashboard →</a><br />
+        
+      </div>
+      
+      <div class="card">
+        <img src="/fsa-lfp-counties/example-1.png" alt="Livestock Forage Program Counties Preview" />
+        <h2>FOIA ARCHIVE</h2>
+        <h3>Livestock Forage Program Counties</h3>
+        <p>The county boundary dataset used to determine LFP eligibility from the USDA Farm Service Agency, 2008–2024.</p>
+        
+        <a href="https://sustainable-fsa.github.io/fsa-lfp-counties">Documentation →</a><br />
+        
+      </div>
+      
+      <div class="card">
+        <img src="/usdm-counties-fsa-lfp/example-1.png" alt="USDM LFP County Aggregations Preview" />
+        <h2>DERIVED DATA</h2>
+        <h3>USDM LFP County Aggregations</h3>
+        <p>Weekly US Drought Monitor (USDM) data aggregated to the Livestock Forage Program county boundaries.</p>
+        
+        <a href="https://sustainable-fsa.github.io/usdm-counties-fsa-lfp">Documentation →</a><br />
+        
+      </div>
+      
+      <div class="card">
+        <img src="/usdm-counties-reported/example-1.png" alt="USDM Reported County Aggregations Preview" />
+        <h2>ARCHIVE</h2>
+        <h3>USDM Reported County Aggregations</h3>
+        <p>Archive of weekly US Drought Monitor (USDM) data aggregated to county boundaries as reported by the USDM.</p>
+        
+        <a href="https://sustainable-fsa.github.io/usdm-counties-reported">Documentation →</a><br />
+        
+      </div>
+      
+      <div class="card">
+        <img src="/fsa-counties-dd17/example-1.png" alt="FSA_Counties_dd17 Boundary Dataset Preview" />
+        <h2>ARCHIVE</h2>
+        <h3>FSA_Counties_dd17 Boundary Dataset</h3>
+        <p>An archive of the FSA_Counties_dd17 dataset, originally distributed by the USDA Farm Service Agency.</p>
+        
+        <a href="https://sustainable-fsa.github.io/fsa-counties-dd17">Documentation →</a><br />
+        
+      </div>
+      
+      <div class="card">
+        <img src="/fsa-payment-files/example-1.png" alt="FSA Farm Payment Files, 2004–2024 Preview" />
+        <h2>ARCHIVE</h2>
+        <h3>FSA Farm Payment Files, 2004–2024</h3>
+        <p>Official farm payment files from the USDA Farm Service Agency, 2004–2024, available in Parquet format.</p>
+        
+        <a href="https://sustainable-fsa.github.io/fsa-payment-files">Documentation →</a><br />
+        
+      </div>
+      
+      <div class="card">
+        <img src="/nclimgrid-normal-grazing-period/nclimgrid-normal-grazing-period.png" alt="NAP-190 Normal Grazing Periods Preview" />
+        <h2>REANALYSIS</h2>
+        <h3>NAP-190 Normal Grazing Periods</h3>
+        <p>A reanalysis of FSA NAP-190 Normal Grazing Periods using data from NOAA's NClimGrid daily gridded weather dataset.</p>
+        
+        <a href="https://sustainable-fsa.github.io/nclimgrid-normal-grazing-period">Documentation →</a><br />
+        
+      </div>
+      
+    </div>
+
+    <div class="footer">
+      <p>
+        This site is part of the
+        <strong
+          ><a href="https://www.ars.usda.gov/research/project/?accnNo=444612" target="_blank"
+            >Enhancing Sustainable Disaster Relief in FSA Programs</a
+          ></strong
+        >
+        project.<br />It is supported by the
+        <a
+          href="https://www.usda.gov/about-usda/general-information/staff-offices/office-chief-economist/office-energy-and-environmental-policy"
+          target="_blank"
+          >USDA Office of the Chief Economist, Office of Energy and Environmental Policy</a
+        >
+        and the <a href="https://www.climatehubs.usda.gov" target="_blank">USDA Climate Hubs</a>.<br />Data and analyses
+        were prepared by the <a href="https://climate.umt.edu" target="_blank">Montana Climate Office</a>.
+      </p>
+
+      <a href="https://climate.umt.edu" target="_blank"
+        ><img src="/assets/MCO_logo.svg" alt="Montana Climate Office logo" style="width: 250px"
+      /></a>
+    </div>
+  </body>
+</html>
