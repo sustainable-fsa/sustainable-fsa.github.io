@@ -90,6 +90,15 @@
       url: /fsa-counties-dd17/FSA_Counties_dd17.gdb.zip
   image: /fsa-counties-dd17/example-1.png
 
+- title: FSA Disasters Archive
+  type: ARCHIVE
+  description:
+    Records of US Secretary of Agriculture disaster designations and Presidential Major Disaster declarations.
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.github.io/fsa-disasters
+  image: /fsa-disasters/example-1.png
+
 - title: FSA Farm Payment Files, 2004–2024
   type: ARCHIVE
   description: Official farm payment files from the USDA Farm Service Agency, 2004–2024, available in Parquet format.
