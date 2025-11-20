@@ -97,6 +97,10 @@
   links:
     - title: Documentation
       url: https://sustainable-fsa.github.io/fsa-disasters
+    - title: Download (CSV)
+      url: /fsa-disasters/fsa-disasters.csv
+    - title: Archive Listing
+      url: /fsa-disasters/manifest.html
   image: /fsa-disasters/example-1.png
 
 - title: FSA Farm Payment Files, 2004–2024
