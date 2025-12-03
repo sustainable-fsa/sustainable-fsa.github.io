@@ -55,7 +55,7 @@
     The county boundary dataset used to determine LFP eligibility from the USDA Farm Service Agency, 2008–2024.
   links:
     - title: Documentation
-      url: https://sustainable-fsa.github.io/fsa-lfp-counties
+      url: https://sustainable-fsa.com/fsa-lfp-counties
     - title: Download (GeoParquet)
       url: /fsa-lfp-counties/fsa-lfp-counties.parquet
   image: /fsa-lfp-counties/example-1.png
@@ -65,7 +65,7 @@
   description: Weekly US Drought Monitor (USDM) data aggregated to the Livestock Forage Program county boundaries.
   links:
     - title: Documentation
-      url: https://sustainable-fsa.github.io/usdm-counties-fsa-lfp
+      url: https://sustainable-fsa.com/usdm-counties-fsa-lfp
     - title: Archive Listing
       url: /usdm-counties-fsa-lfp/manifest.html
   image: /usdm-counties-fsa-lfp/example-1.png
@@ -75,7 +75,7 @@
   description: Archive of weekly US Drought Monitor (USDM) data aggregated to county boundaries as reported by the USDM.
   links:
     - title: Documentation
-      url: https://sustainable-fsa.github.io/usdm-counties-reported
+      url: https://sustainable-fsa.com/usdm-counties-reported
     - title: Archive Listing
       url: /usdm-counties-reported/manifest.html
   image: /usdm-counties-reported/example-1.png
@@ -85,7 +85,7 @@
   description: An archive of the FSA_Counties_dd17 dataset, originally distributed by the USDA Farm Service Agency.
   links:
     - title: Documentation
-      url: https://sustainable-fsa.github.io/fsa-counties-dd17
+      url: https://sustainable-fsa.com/fsa-counties-dd17
     - title: Download (ESRI File GeoDatabase)
       url: /fsa-counties-dd17/FSA_Counties_dd17.gdb.zip
   image: /fsa-counties-dd17/example-1.png
@@ -96,7 +96,7 @@
     Records of US Secretary of Agriculture disaster designations and Presidential Major Disaster declarations.
   links:
     - title: Documentation
-      url: https://sustainable-fsa.github.io/fsa-disasters
+      url: https://sustainable-fsa.com/fsa-disasters
     - title: Download (CSV)
       url: /fsa-disasters/fsa-disasters.csv
     - title: Download (Parquet)
@@ -108,7 +108,7 @@
   description: Official farm payment files from the USDA Farm Service Agency, 2004–2024, available in Parquet format.
   links:
     - title: Documentation
-      url: https://sustainable-fsa.github.io/fsa-payment-files
+      url: https://sustainable-fsa.com/fsa-payment-files
   image: /fsa-payment-files/example-1.png
 
 - title: NAP-190 Normal Grazing Periods
@@ -117,5 +117,5 @@
     "A reanalysis of FSA NAP-190 Normal Grazing Periods using data from NOAA's NClimGrid daily gridded weather dataset."
   links:
     - title: Documentation
-      url: https://sustainable-fsa.github.io/nclimgrid-normal-grazing-period
+      url: https://sustainable-fsa.com/nclimgrid-normal-grazing-period
   image: /nclimgrid-normal-grazing-period/nclimgrid-normal-grazing-period.png
