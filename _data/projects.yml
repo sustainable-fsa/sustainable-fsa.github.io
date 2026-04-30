@@ -89,6 +89,16 @@
     - title: Download (ESRI File GeoDatabase)
       url: /fsa-counties-dd17/FSA_Counties_dd17.gdb.zip
   image: /fsa-counties-dd17/example-1.png
+  
+  - title: FSA_Counties_dd22 Boundary Dataset
+  type: ARCHIVE
+  description: An archive of the FSA_Counties_dd22 dataset, originally distributed by the USDA Farm Service Agency.
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.com/fsa-counties-dd22
+    - title: Download (ESRI File GeoDatabase)
+      url: /fsa-counties-dd17/FSA_Counties_dd22.gdb.zip
+  image: /fsa-counties-dd17/example-1.png
 
 - title: FSA Disasters Archive
   type: ARCHIVE
