@@ -1,0 +1,61 @@
+{%- comment -%}
+  Single data-archive card. Rendered by _layouts/archives.html (the
+  /data/ and /analysis/ pages) via `{% include card.html project=project %}`
+  for each matching entry in _data/projects.yml. (The home page no longer
+  shows a project grid.)
+
+  Each project entry in _data/projects.yml provides:
+    - title           card heading
+    - type            small uppercase eyebrow (e.g. "FOIA ARCHIVE")
+    - byline          optional author/credit line; rendered in italic
+                      between the title and description (used for theses)
+    - description     1-2 sentence summary
+    - image           optional preview thumbnail (usually
+                      /SIBLING_REPO/example-1.png). Omit for cards
+                      without a graphical preview (e.g. thesis cards).
+    - links           array of { title, url } pairs; the first link is
+                      also used as the card-image and title hyperlink
+
+  In production the `image` URLs resolve under sustainable-fsa.com (the
+  sibling repos are deployed to the same parent domain). They 404 in
+  local dev — that's expected.
+{%- endcomment -%}
+{% assign project = include.project %}
+{% assign primary = project.links | first %}
+
+<article class="flex flex-col bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:border-sage/40 transition-all overflow-hidden">
+
+  {% if project.image %}
+  <a href="{{ primary.url }}" class="block bg-cream border-b border-gray-100">
+    <img src="{{ project.image }}" alt="{{ project.title }} preview"
+         class="w-full h-44 object-cover" loading="lazy" />
+  </a>
+  {% endif %}
+
+  <div class="flex flex-col flex-1 p-5">
+    <p class="text-[11px] font-semibold uppercase tracking-widest text-ochre-dark mb-2">{{ project.type }}</p>
+    <h3 class="text-base font-black text-terracotta-dark leading-tight mb-2">
+      <a href="{{ primary.url }}" class="hover:underline">{{ project.title }}</a>
+    </h3>
+    {% if project.byline %}
+    <p class="text-xs text-gray-500 italic mb-2">{{ project.byline }}</p>
+    {% endif %}
+    <p class="text-sm text-gray-600 leading-relaxed flex-1">{{ project.description }}</p>
+
+    {% if project.links %}
+    <ul class="mt-4 flex flex-wrap gap-x-4 gap-y-1.5 text-sm">
+      {% for link in project.links %}
+      <li>
+        <a href="{{ link.url }}"
+           class="inline-flex items-center gap-1 text-terracotta-dark font-medium hover:underline">
+          {{ link.title }}
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% endif %}
+  </div>
+</article>

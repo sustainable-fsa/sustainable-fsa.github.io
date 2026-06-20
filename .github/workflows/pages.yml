@@ -1,0 +1,84 @@
+# ─────────────────────────────────────────────────────────────────────
+# Deploy the Sustainable FSA Jekyll site to GitHub Pages.
+#
+# Replaces "Deploy from a branch" so the build is linted and CSS is
+# compiled before publish. Steps:
+#   1. Install Node deps, lint source HTML (html-validate), and
+#      validate _data/projects.yml (every entry must be categorized).
+#   2. Build assets/tailwind.css from src/tailwind.css.
+#   3. Install Ruby + github-pages bundle, build _site/.
+#   4. Upload the built site and deploy.
+#
+# To enable: Settings → Pages → Source = "GitHub Actions".
+# ─────────────────────────────────────────────────────────────────────
+name: Deploy Pages
+
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: "npm"
+
+      - name: Install Node deps
+        run: npm ci
+
+      - name: Lint source HTML
+        run: npm run lint:html
+
+      - name: Validate projects data
+        run: npm run lint:data
+
+      - name: Build Tailwind CSS
+        run: npm run build:css
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.2"
+          bundler-cache: true
+
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Build Jekyll site
+        env:
+          JEKYLL_ENV: production
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

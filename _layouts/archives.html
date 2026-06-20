@@ -1,0 +1,46 @@
+---
+layout: default
+---
+{% comment %}
+  Archive-listing layout for /data/ and /analysis/. Renders a header
+  (eyebrow + title + lede + optional prose body) followed by a card
+  grid filtered by `page.archive_category` against _data/projects.yml.
+
+  Front-matter the layout reads:
+    - title             page heading (required)
+    - section_label     small eyebrow above the title (optional)
+    - description       lede paragraph below the title (optional)
+    - archive_category  required; "data" or "analysis". Filters
+                        `_data/projects.yml` so only matching cards
+                        render in the grid.
+{% endcomment %}
+<div class="max-w-7xl mx-auto px-4 py-12">
+
+  {% if page.title %}
+  <header class="mb-8">
+    {% if page.section_label %}
+    <p class="text-sm font-semibold text-ochre-dark uppercase tracking-wide mb-2">{{ page.section_label }}</p>
+    {% endif %}
+    <h1 class="text-3xl sm:text-4xl font-black text-terracotta-dark leading-tight">{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="mt-3 text-lg text-gray-600 leading-relaxed max-w-3xl">{{ page.description }}</p>
+    {% endif %}
+  </header>
+  <hr class="border-gray-200 mb-10" />
+  {% endif %}
+
+  {% if content != "" %}
+  <div class="prose prose-lg max-w-none mb-10">
+    {{ content }}
+  </div>
+  {% endif %}
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    {% for project in site.data.projects %}
+      {% if project.category == page.archive_category %}
+        {% include card.html project=project %}
+      {% endif %}
+    {% endfor %}
+  </div>
+
+</div>

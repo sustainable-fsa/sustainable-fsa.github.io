@@ -1,0 +1,22 @@
+{%- comment -%}
+  One top-nav link, shared by the desktop and mobile navs in header.html:
+    {% include nav-link.html item=item %}              (desktop)
+    {% include nav-link.html item=item mobile=true %}  (mobile)
+
+  include.item   = an entry from site.nav (title + url)
+  include.mobile = true on the mobile nav; adds @click to close the menu on tap.
+
+  Active state (aria-current="page" + the accent pill) is computed from
+  page.url here, so the desktop and mobile navs can never drift apart.
+{%- endcomment -%}
+{%- assign item = include.item -%}
+{%- capture click_attr -%}{% if include.mobile %}@click="mobileOpen = false"{% endif %}{%- endcapture -%}
+{%- assign is_active = false -%}
+{%- if page.url == item.url -%}
+  {%- assign is_active = true -%}
+{%- elsif item.url != "/" and page.url contains item.url -%}
+  {%- assign is_active = true -%}
+{%- endif -%}
+<a href="{{ site.baseurl }}{{ item.url }}" {{ click_attr }}
+   aria-current="{% if is_active %}page{% else %}false{% endif %}"
+   class="px-3 py-2 rounded-lg text-sm font-medium transition-colors {% if is_active %}bg-terracotta text-white{% else %}text-gray-700 hover:bg-gray-100{% endif %}">{{ item.title }}</a>

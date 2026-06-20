@@ -1,0 +1,42 @@
+title: Sustainable FSA
+description: Modernizing USDA Farm Service Agency disaster relief with transparent, science-based data.
+baseurl: ""
+url: "https://sustainable-fsa.com"
+
+# Disable the github-pages default theme (jekyll-theme-primer). We
+# ship our own Tailwind-built CSS at assets/tailwind.css.
+theme: null
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+permalink: pretty
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - package.json
+  - package-lock.json
+  - tailwind.config.js
+  - src
+  - scripts
+  - vendor
+  - .bundle
+  - README.md
+  - assets/sustainable-fsa-banner.ai
+  - assets/sustainable-fsa-logo.ai
+  - .htmlvalidate.json
+
+nav:
+  - title: Home
+    url: /
+  - title: About
+    url: /about/
+  - title: Data
+    url: /data/
+  - title: Analysis
+    url: /analysis/
+  - title: Team
+    url: /team/

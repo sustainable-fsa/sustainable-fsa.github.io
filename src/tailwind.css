@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* All headings default to Roboto Black (900). The weight lives in one
+   place — the --heading-weight custom property below — and is referenced
+   both here (layout headings) and by the typography plugin overrides in
+   tailwind.config.js (markdown prose headings), so the two never drift.
+   Layouts can still override with a font-weight utility where a lighter
+   heading is wanted. */
+@layer base {
+  :root {
+    --heading-weight: 900;
+  }
+  h1, h2, h3, h4 {
+    font-weight: var(--heading-weight);
+  }
+}

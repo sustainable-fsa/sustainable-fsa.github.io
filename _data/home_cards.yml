@@ -1,0 +1,35 @@
+# The four feature cards on the home page (rendered by _includes/feature-card.html,
+# looped from _layouts/home.html). Each card's subtitle is pulled live from the
+# target page's `description:` front matter, so it is not duplicated here.
+#
+#   url    target page (must match the page's permalink)
+#   label  card heading
+#   cta    call-to-action text under the description
+#   theme  accent color — one of: terracotta | sage | ochre
+#          (the theme -> Tailwind class mapping lives in feature-card.html so
+#           Tailwind's content scanner still sees the literal class names)
+#   icon   the `d` attribute of the card's heroicon <path>
+
+- url: /about/
+  label: About
+  cta: Read more
+  theme: terracotta
+  icon: "M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+
+- url: /data/
+  label: Data
+  cta: Browse archives
+  theme: sage
+  icon: "M4 7v10c0 2 3.582 3 8 3s8-1 8-3V7M4 7c0 2 3.582 3 8 3s8-1 8-3M4 7c0-2 3.582-3 8-3s8 1 8 3"
+
+- url: /analysis/
+  label: Analysis
+  cta: See the reports
+  theme: ochre
+  icon: "M9 19v-6a1 1 0 00-1-1H5a1 1 0 00-1 1v6a1 1 0 001 1h3a1 1 0 001-1zm0 0V9a1 1 0 011-1h3a1 1 0 011 1v10m-5 0a1 1 0 001 1h3a1 1 0 001-1m0 0V5a1 1 0 011-1h3a1 1 0 011 1v14a1 1 0 01-1 1h-3a1 1 0 01-1-1z"
+
+- url: /team/
+  label: Team
+  cta: Meet the team
+  theme: terracotta
+  icon: "M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-5.13a4 4 0 11-8 0 4 4 0 018 0zm6 4a3 3 0 11-6 0 3 3 0 016 0z"

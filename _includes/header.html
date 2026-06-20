@@ -1,0 +1,63 @@
+{%- comment -%}
+  Sticky site header. Sits at top:0 with z-30 so page content scrolls
+  underneath. Two responsive states:
+
+    - At lg+ (>= 1024 px): logo on the left, nav items inline on the right.
+    - Below lg: logo on the left, hamburger button on the right. Tapping
+      the hamburger toggles `mobileOpen` (Alpine.js data), which expands
+      a stacked vertical menu below the header.
+
+  Nav items come from `site.nav` in _config.yml. To add a page to the
+  nav, add an entry there — no edits to this file required.
+
+  The banner image (sustainable-fsa-banner.svg) has its own internal
+  padding, which is why the wrapper uses tight `py-0.5` vertical padding
+  rather than the more typical py-3.
+{%- endcomment -%}
+<header class="sticky top-0 z-30 bg-white border-b border-gray-200 shadow-sm"
+        x-data="{ mobileOpen: false }">
+  <div class="max-w-7xl mx-auto px-4 py-0.5 flex items-center justify-between gap-4">
+
+    <a href="{{ site.baseurl }}/" class="flex-shrink-0" aria-label="Sustainable FSA — home">
+      <img src="{{ site.baseurl }}/assets/sustainable-fsa-banner.svg" alt="Sustainable FSA"
+           width="1225" height="350"
+           class="block h-12 sm:h-14 lg:h-16 w-auto object-contain" />
+    </a>
+
+    <nav class="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+      {% for item in site.nav %}{% include nav-link.html item=item %}{% endfor %}
+    </nav>
+
+    <button type="button" @click="mobileOpen = !mobileOpen"
+            class="lg:hidden inline-flex items-center justify-center w-9 h-9 rounded-lg text-gray-700 hover:bg-gray-100 transition-colors"
+            aria-label="Toggle navigation menu"
+            :aria-expanded="mobileOpen"
+            aria-controls="mobile-nav">
+      <svg x-show="!mobileOpen" class="w-5 h-5" fill="none" stroke="currentColor"
+           stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+      </svg>
+      <svg x-show="mobileOpen" x-cloak class="w-5 h-5" fill="none" stroke="currentColor"
+           stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+      </svg>
+    </button>
+
+  </div>
+
+  <div id="mobile-nav"
+       x-show="mobileOpen"
+       x-cloak
+       x-transition:enter="transition ease-out duration-150"
+       x-transition:enter-start="opacity-0 -translate-y-1"
+       x-transition:enter-end="opacity-100 translate-y-0"
+       x-transition:leave="transition ease-in duration-100"
+       x-transition:leave-start="opacity-100 translate-y-0"
+       x-transition:leave-end="opacity-0 -translate-y-1"
+       class="lg:hidden border-t border-gray-200 bg-white">
+    <nav class="max-w-7xl mx-auto px-4 py-3 flex flex-col gap-1" aria-label="Mobile navigation">
+      {% for item in site.nav %}{% include nav-link.html item=item mobile=true %}{% endfor %}
+    </nav>
+  </div>
+
+</header>

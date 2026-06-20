@@ -1,4 +1,12 @@
+# Each entry renders one card on the Data or Analysis page (filtered
+# by `category`). The home page no longer shows the full grid; see
+# `_layouts/archives.html` for the rendering loop.
+#
+#   category: data      → appears on /data/
+#   category: analysis  → appears on /analysis/
+
 - title: US Drought Monitor
+  category: data
   type: ARCHIVE
   description:
     Weekly US Drought Monitor (USDM) data archived as GeoParquet files with detailed metadata, January 4, 2000 – Today.
@@ -10,8 +18,20 @@
     - title: Animation
       url: /usdm-viz/usdm
   image: /usdm/example-1.png
+  
+- title: USDM Reported County Aggregations
+  category: data
+  type: ARCHIVE
+  description: Archive of weekly US Drought Monitor (USDM) data aggregated to county boundaries as reported by the USDM.
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.com/usdm-counties-reported
+    - title: Archive Listing
+      url: /usdm-counties-reported/manifest.html
+  image: /usdm-counties-reported/example-1.png
 
 - title: USDM Census County Aggregations
+  category: data
   type: DERIVED DATA
   description: Weekly US Drought Monitor (USDM) data aggregated to US Census county boundaries.
   links:
@@ -23,7 +43,19 @@
       url: /usdm-viz/usdm-counties
   image: /usdm-counties/example-1.png
 
+- title: USDM LFP County Aggregations
+  category: data
+  type: DERIVED DATA
+  description: Weekly US Drought Monitor (USDM) data aggregated to the Livestock Forage Program county boundaries.
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.com/usdm-counties-fsa-lfp
+    - title: Archive Listing
+      url: /usdm-counties-fsa-lfp/manifest.html
+  image: /usdm-counties-fsa-lfp/example-1.png
+
 - title: FSA Normal Grazing Periods
+  category: data
   type: FOIA ARCHIVE
   description: Official county-level normal grazing period definitions from the USDA Farm Service Agency, 2008–2026.
   links:
@@ -36,10 +68,11 @@
   image: /fsa-normal-grazing-period/example-1.png
 
 - title: Livestock Forage Program Eligibility
+  category: data
   type: FOIA ARCHIVE
   description:
     Official county-level eligibility data for the Livestock Forage Program from the USDA Farm Service Agency,
-    2008–2024.
+    2008–2025.
   links:
     - title: Documentation
       url: /fsa-lfp-eligibility
@@ -49,58 +82,8 @@
       url: /fsa-lfp-eligibility/fsa-lfp-eligibility.html
   image: /fsa-lfp-eligibility/example-1.png
 
-- title: Livestock Forage Program Counties
-  type: FOIA ARCHIVE
-  description:
-    The county boundary dataset used to determine LFP eligibility from the USDA Farm Service Agency, 2008–2024.
-  links:
-    - title: Documentation
-      url: https://sustainable-fsa.com/fsa-lfp-counties
-    - title: Download (GeoParquet)
-      url: /fsa-lfp-counties/fsa-lfp-counties.parquet
-  image: /fsa-lfp-counties/example-1.png
-
-- title: USDM LFP County Aggregations
-  type: DERIVED DATA
-  description: Weekly US Drought Monitor (USDM) data aggregated to the Livestock Forage Program county boundaries.
-  links:
-    - title: Documentation
-      url: https://sustainable-fsa.com/usdm-counties-fsa-lfp
-    - title: Archive Listing
-      url: /usdm-counties-fsa-lfp/manifest.html
-  image: /usdm-counties-fsa-lfp/example-1.png
-
-- title: USDM Reported County Aggregations
-  type: ARCHIVE
-  description: Archive of weekly US Drought Monitor (USDM) data aggregated to county boundaries as reported by the USDM.
-  links:
-    - title: Documentation
-      url: https://sustainable-fsa.com/usdm-counties-reported
-    - title: Archive Listing
-      url: /usdm-counties-reported/manifest.html
-  image: /usdm-counties-reported/example-1.png
-
-- title: FSA_Counties_dd17 Boundary Dataset
-  type: ARCHIVE
-  description: An archive of the FSA_Counties_dd17 dataset, originally distributed by the USDA Farm Service Agency.
-  links:
-    - title: Documentation
-      url: https://sustainable-fsa.com/fsa-counties-dd17
-    - title: Download (ESRI File GeoDatabase)
-      url: /fsa-counties-dd17/FSA_Counties_dd17.gdb.zip
-  image: /fsa-counties-dd17/example-1.png
-  
-- title: FSA_Counties_dd22 Boundary Dataset
-  type: ARCHIVE
-  description: An archive of the FSA_Counties_dd22 dataset, originally distributed by the USDA Farm Service Agency.
-  links:
-    - title: Documentation
-      url: https://sustainable-fsa.com/fsa-counties-dd22
-    - title: Download (ESRI File GeoDatabase)
-      url: /fsa-counties-dd17/FSA_Counties_dd22.gdb.zip
-  image: /fsa-counties-dd17/example-1.png
-
 - title: FSA Disasters Archive
+  category: data
   type: ARCHIVE
   description:
     Records of US Secretary of Agriculture disaster designations and Presidential Major Disaster declarations.
@@ -113,7 +96,43 @@
       url: /fsa-disasters/fsa-disasters.parquet
   image: /fsa-disasters/example-1.png
 
+- title: Livestock Forage Program Counties
+  category: data
+  type: FOIA ARCHIVE
+  description:
+    The county boundary dataset used to determine LFP eligibility from the USDA Farm Service Agency
+    (snapshot as of September 2025).
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.com/fsa-lfp-counties
+    - title: Download (GeoParquet)
+      url: /fsa-lfp-counties/fsa-lfp-counties.parquet
+  image: /fsa-lfp-counties/example-1.png
+
+- title: FSA_Counties_dd17 Boundary Dataset
+  category: data
+  type: ARCHIVE
+  description: An archive of the FSA_Counties_dd17 dataset, originally distributed by the USDA Farm Service Agency.
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.com/fsa-counties-dd17
+    - title: Download (ESRI File GeoDatabase)
+      url: /fsa-counties-dd17/FSA_Counties_dd17.gdb.zip
+  image: /fsa-counties-dd17/example-1.png
+
+- title: FSA_Counties_dd22 Boundary Dataset
+  category: data
+  type: ARCHIVE
+  description: An archive of the FSA_Counties_dd22 dataset, originally distributed by the USDA Farm Service Agency.
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.com/fsa-counties-dd22
+    - title: Download (ESRI File GeoDatabase)
+      url: /fsa-counties-dd22/FSA_Counties_dd22.gdb.zip
+  image: /fsa-counties-dd22/example-1.png
+
 - title: FSA Farm Payment Files, 2004–2024
+  category: data
   type: ARCHIVE
   description: Official farm payment files from the USDA Farm Service Agency, 2004–2024, available in Parquet format.
   links:
@@ -122,6 +141,7 @@
   image: /fsa-payment-files/example-1.png
 
 - title: NAP-190 Normal Grazing Periods
+  category: analysis
   type: REANALYSIS
   description:
     "A reanalysis of FSA NAP-190 Normal Grazing Periods using data from NOAA's NClimGrid daily gridded weather dataset."
@@ -129,3 +149,43 @@
     - title: Documentation
       url: https://sustainable-fsa.com/nclimgrid-normal-grazing-period
   image: /nclimgrid-normal-grazing-period/nclimgrid-normal-grazing-period.png
+
+- title: '"Emergency Relief as Routine": The Evolution of FSA''s Livestock Forage Disaster Program in an Era of Persistent Drought'
+  category: analysis
+  type: M.S. THESIS
+  byline: Shae Leigh Olsen, M.S. · University of Montana, 2025
+  description:
+    Interviews with 23 FSA staff in nine states examine how the LFP operates on the ground and how staff and producers experience it as a recurring, rather than exceptional, source of operating capital in drought-affected ranching regions.
+  links:
+    - title: Read on ScholarWorks
+      url: https://scholarworks.umt.edu/etd/12523/
+
+- title: "Adaptation and Resilience: How Beginning Farmers Navigate Land and Climate Crises in Western Montana"
+  category: analysis
+  type: M.S. THESIS
+  byline: Kyla Ivana Fugate, M.S. · University of Montana, 2025
+  description:
+    Examines how new operators in western Montana navigate the intersecting pressures of land access, climate variability, and federal program eligibility.
+  links:
+    - title: Read on ScholarWorks
+      url: https://scholarworks.umt.edu/etd/12508/
+
+- title: "Equity and Social Vulnerability in Drought Planning and Response in the Northern Great Plains"
+  category: analysis
+  type: M.S. THESIS
+  byline: Amishi Singh, M.S. · University of Montana, 2025
+  description:
+    Extends the project's lens to drought planning and response across the Northern Great Plains, with attention to equity and social vulnerability in how disaster relief reaches communities.
+  links:
+    - title: Read on ScholarWorks
+      url: https://scholarworks.umt.edu/etd/12532
+
+- title: "Water Scarcity in the Bitterroot Valley"
+  category: analysis
+  type: M.S. THESIS
+  byline: August W. Guenthner, M.S. · University of Montana, 2025
+  description:
+    A regional case study of water-scarcity dynamics in western Montana that complements the LFP work with on-the-ground evidence from a single valley.
+  links:
+    - title: Read on ScholarWorks
+      url: https://scholarworks.umt.edu/etd/12533

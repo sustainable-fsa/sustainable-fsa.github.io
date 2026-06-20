@@ -1,0 +1,62 @@
+---
+layout: default
+---
+{% comment %}
+  Home-page layout. Used only by index.md.
+
+  Sections (top to bottom):
+    1. Hero — terracotta panel with eyebrow, tagline, subtitle, and 2 CTAs.
+       Reads page.tagline and page.subtitle from index.md front matter.
+    2. Intro paragraph — renders the markdown body of index.md.
+    3. Feature cards — About / Data / Analysis / Team. Defined in
+       _data/home_cards.yml and rendered by _includes/feature-card.html.
+       Each card pulls its subtitle text from the target page's
+       `description:` front matter, so editing a page's meta description
+       automatically updates the matching home card.
+
+  The data and analysis archive grids no longer live on the home page;
+  they were moved to dedicated /data/ and /analysis/ routes (driven by
+  the `category:` field in _data/projects.yml — see _layouts/archives.html).
+{% endcomment %}
+
+<!-- ── Hero ──────────────────────────────────────────────────────────── -->
+<section class="bg-terracotta text-white">
+  <div class="max-w-7xl mx-auto px-4 py-16 sm:py-20 flex flex-col items-center text-center gap-6">
+    <p class="text-ochre-light text-xs font-semibold uppercase tracking-widest">USDA-funded research · Montana Climate Office</p>
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black max-w-3xl leading-tight">
+      {{ page.tagline | default: site.description }}
+    </h1>
+    {% if page.subtitle %}
+    <p class="text-white/90 text-lg max-w-2xl leading-relaxed">{{ page.subtitle }}</p>
+    {% endif %}
+    <div class="flex flex-col sm:flex-row items-center gap-3 mt-2">
+      <a href="{{ site.baseurl }}/data/"
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-terracotta hover:bg-cream font-semibold text-base transition-colors shadow-sm">
+        Browse the data
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/>
+        </svg>
+      </a>
+      <a href="{{ site.baseurl }}/about/"
+         class="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white/10 hover:bg-white/20 text-white font-semibold text-base transition-colors">
+        About the project
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Intro paragraph (from index.md content) ─────────────────────────── -->
+{% if content != "" %}
+<section class="max-w-4xl mx-auto px-4 py-10">
+  <div class="prose prose-lg max-w-none">
+    {{ content }}
+  </div>
+</section>
+{% endif %}
+
+<!-- ── Feature cards: About / Data / Analysis / Team (from _data/home_cards.yml) ── -->
+<section class="max-w-7xl mx-auto px-4 pb-14">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+    {% for card in site.data.home_cards %}{% include feature-card.html card=card %}{% endfor %}
+  </div>
+</section>

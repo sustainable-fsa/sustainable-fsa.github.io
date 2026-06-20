@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+{% comment %}
+  Base layout. Every page extends this (directly or via `home` / `page`).
+
+  Responsibilities:
+    - HTML shell, language, viewport
+    - SEO meta tags (title, description, Open Graph, Twitter card)
+    - Favicons + PWA manifest
+    - Web-font and CSS loads (Google Fonts then built Tailwind)
+    - Alpine.js (self-hosted, pinned) for the header's mobile menu toggle
+    - Accessibility primitives: skip-link, prefers-reduced-motion reset
+    - Site chrome via _includes/header.html and _includes/footer.html
+
+  Per-page front matter that this layout reads:
+    - title         used for the document title and OG title; "Home" is
+                    treated specially so we don't print "Home Sustainable FSA"
+    - description   meta description and OG description; falls back to
+                    site.description from _config.yml
+{% endcomment %}
+
+{%- comment -%} Build the document title once; reused by the title element and the og:title meta below. {%- endcomment -%}
+{%- capture page_title -%}
+  {%- if page.title and page.title != "Home" -%}
+    {%- unless page.title contains "Sustainable FSA" %}{{ page.title }} — {% endunless -%}
+    Sustainable FSA
+  {%- else -%}
+    Sustainable FSA
+  {%- endif -%}
+{%- endcapture -%}
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page_title }}</title>
+
+    <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+
+    <!-- ── Open Graph & Social Sharing ──────────────────────────────────── -->
+    <meta property="og:title" content="{{ page_title }}" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="{{ site.url }}{{ site.baseurl }}/assets/sustainable-fsa-logo-1024.png" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:image:alt" content="Sustainable FSA project mark" />
+    <meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" />
+    <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+    <meta property="og:site_name" content="Sustainable FSA" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="{{ site.url }}{{ site.baseurl }}/assets/sustainable-fsa-logo-1024.png" />
+
+    <!-- ── Favicons & web app manifest ─────────────────────────────────── -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="48x48" href="{{ site.baseurl }}/assets/favicon-48x48.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/favicon-16x16.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico" />
+    <link rel="manifest" href="{{ site.baseurl }}/assets/site.webmanifest" />
+    <meta name="theme-color" content="#B7410E" />
+
+    {%- comment -%}
+      Web fonts. Roboto only — body uses 400/500/700, headings use
+      900 (Roboto Black, applied via a base rule in src/tailwind.css
+      and per-heading fontWeight overrides in tailwind.config.js' prose
+      plugin block). preconnect lets the browser TLS-handshake to
+      gstatic in parallel with parsing.
+    {%- endcomment -%}
+    <!-- ── Web fonts: Roboto (body + Roboto Black for headings) ─────────── -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;900&display=swap" rel="stylesheet" />
+
+    <!-- ── Tailwind CSS (built) ──────────────────────────────────────────
+         Compiled at deploy time from src/tailwind.css by the
+         GitHub Actions workflow. Brand palette and prose colour
+         overrides live in tailwind.config.js.                            -->
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/tailwind.css" />
+
+    {%- comment -%}
+      Alpine.js for the header's hamburger menu only. Self-hosted (a
+      pinned build vendored in assets/) rather than loaded from a CDN, so
+      the sub-lg mobile navigation never depends on a third-party origin
+      being reachable or on a floating version tag resolving to a good
+      release. To upgrade: drop in a newer pinned assets/alpine-*.min.js
+      and update the src below. `[x-cloak]` (below) hides Alpine-controlled
+      regions until the framework boots so the mobile menu doesn't flash.
+    {%- endcomment -%}
+    <!-- ── Alpine.js (self-hosted, pinned) — mobile menu only ───────────── -->
+    <script defer src="{{ site.baseurl }}/assets/alpine-3.15.12.min.js"></script>
+
+    <style>
+      [x-cloak] { display: none !important; }
+
+      @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+          animation-duration: 0.01ms !important;
+          animation-iteration-count: 1 !important;
+          transition-duration: 0.01ms !important;
+          transition-delay: 0ms !important;
+        }
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        html { scroll-behavior: smooth; }
+      }
+    </style>
+  </head>
+
+  <body class="bg-cream min-h-screen flex flex-col text-gray-800">
+
+    {%- comment -%}
+      Skip-link for keyboard users. Visible only when focused; jumps
+      past the sticky header straight into the main content area.
+    {%- endcomment -%}
+    <a href="#main-content"
+       class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-terracotta focus:text-white focus:rounded-lg focus:shadow-lg focus:text-sm focus:font-medium">
+      Skip to main content
+    </a>
+
+    {% include header.html %}
+
+    <main id="main-content" class="flex-1">
+      {{ content }}
+    </main>
+
+    {% include footer.html %}
+
+  </body>
+</html>
