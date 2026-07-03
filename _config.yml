@@ -38,5 +38,7 @@ nav:
     url: /data/
   - title: Analysis
     url: /analysis/
+  - title: Documents
+    url: /documents/
   - title: Team
     url: /team/

@@ -1,15 +1,16 @@
-# Each entry renders one card on the Data or Analysis page (filtered
-# by `category`). The home page no longer shows the full grid; see
-# `_layouts/archives.html` for the rendering loop.
+# Each entry renders one card on the Data, Analysis, or Documents page
+# (filtered by `category`). The home page no longer shows the full grid;
+# see `_layouts/archives.html` for the rendering loop.
 #
-#   category: data      → appears on /data/
-#   category: analysis  → appears on /analysis/
+#   category: data       → appears on /data/
+#   category: analysis   → appears on /analysis/
+#   category: documents  → appears on /documents/
 
 - title: US Drought Monitor
   category: data
   type: ARCHIVE
   description:
-    Weekly US Drought Monitor (USDM) data archived as GeoParquet files with detailed metadata, January 4, 2000 – Today.
+    Weekly US Drought Monitor (USDM) data archived as GeoParquet files with detailed metadata, January 4, 2000 – present.
   links:
     - title: Documentation
       url: /usdm
@@ -122,8 +123,8 @@
 
 - title: FSA_Counties_dd22 Boundary Dataset
   category: data
-  type: ARCHIVE
-  description: An archive of the FSA_Counties_dd22 dataset, originally distributed by the USDA Farm Service Agency.
+  type: FOIA ARCHIVE
+  description: An archive of the FSA_Counties_dd22 dataset, obtained from the USDA Farm Service Agency via a FOIA request.
   links:
     - title: Documentation
       url: https://sustainable-fsa.com/fsa-counties-dd22
@@ -144,7 +145,7 @@
   category: analysis
   type: REANALYSIS
   description:
-    "A reanalysis of FSA NAP-190 Normal Grazing Periods using data from NOAA's NClimGrid daily gridded weather dataset."
+    "A reproducible recalculation of county Normal Grazing Periods following FSA Notice NAP-190, using NOAA's nClimGrid daily gridded weather dataset and the 1991–2020 climate normals."
   links:
     - title: Documentation
       url: https://sustainable-fsa.com/nclimgrid-normal-grazing-period
@@ -189,3 +190,178 @@
   links:
     - title: Read on ScholarWorks
       url: https://scholarworks.umt.edu/etd/12533
+
+# ── Documents (/documents/) ──────────────────────────────────────────
+# Primary-source library: FSA handbooks, Federal Register rules, and
+# oversight reports archived in the sibling `docs` repo (served at
+# /docs/ once GitHub Pages is enabled on sustainable-fsa/docs).
+# Thumbnails are page-1 renders in assets/documents/, generated with
+# `sips -s format png --resampleWidth 700 <file>.pdf`.
+
+- title: "1-LFP: Livestock Forage Disaster Program (Amendment 1)"
+  category: documents
+  type: FSA HANDBOOK
+  byline: Base issuance · Approved September 11, 2019
+  description:
+    The base issuance of FSA's national policy handbook for LFP, directing state and county offices on eligibility, drought-trigger determinations, and payment procedure for 2019 and subsequent years.
+  links:
+    - title: Download (PDF)
+      url: /docs/1lfp-a1.pdf
+    - title: Original source
+      url: https://www.fsa.usda.gov/Internet/FSA_File/1-lfp_r00_a01.pdf
+  image: /assets/documents/1lfp-a1.png
+  image_position: top
+
+- title: "1-LFP: Livestock Forage Disaster Program (Amendment 2)"
+  category: documents
+  type: FSA HANDBOOK
+  byline: Amendment 2 · Approved July 14, 2020
+  description:
+    The 2020 program-year update — sets 2020 payment rates, adds acreage-tolerance policy, and requires an FSA-578 acreage report on file before an LFP application.
+  links:
+    - title: Download (PDF)
+      url: /docs/1lfp-a2.pdf
+    - title: Original source
+      url: https://www.fsa.usda.gov/Internet/FSA_File/1-lfp_r00_a02.pdf
+  image: /assets/documents/1lfp-a2.png
+  image_position: top
+
+- title: "1-LFP: Livestock Forage Disaster Program (Amendment 3)"
+  category: documents
+  type: FSA HANDBOOK
+  byline: Amendment 3 · Approved May 3, 2021
+  description:
+    The 2021 program-year update, setting 2021 payment rates and clarifying which irrigated grazing acreage qualifies for LFP.
+  links:
+    - title: Download (PDF)
+      url: /docs/1lfp-a3.pdf
+    - title: Original source
+      url: https://www.fsa.usda.gov/Internet/FSA_File/1-lfp_r00_a03.pdf
+  image: /assets/documents/1lfp-a3.png
+  image_position: top
+
+- title: "1-LFP: Livestock Forage Disaster Program (Amendment 4)"
+  category: documents
+  type: FSA HANDBOOK
+  byline: Amendment 4 · Approved June 15, 2022
+  description:
+    The 2022 program-year update — clarifies the calculation of the qualifying-drought beginning date, limits covered livestock to weaned animals, adds millet as an eligible small grain, and clarifies beginning dates for newly established or amended grazing periods.
+  links:
+    - title: Download (PDF)
+      url: /docs/1lfp-a4.pdf
+    - title: Original source
+      url: https://www.fsa.usda.gov/Internet/FSA_File/1-lfp_r00_a04.pdf
+  image: /assets/documents/1lfp-a4.png
+  image_position: top
+
+- title: "1-LFP: Livestock Forage Disaster Program (Amendment 5)"
+  category: documents
+  type: FSA HANDBOOK
+  byline: Amendment 5 · Approved April 5, 2023
+  description:
+    The 2023 program-year update — notable for formally incorporating the US Drought Monitor's FSA Eligibility Tool into county-eligibility procedure.
+  links:
+    - title: Download (PDF)
+      url: /docs/1lfp-a5.pdf
+    - title: Original source
+      url: https://www.fsa.usda.gov/Internet/FSA_File/1-lfp_r00_a05.pdf
+  image: /assets/documents/1lfp-a5.png
+  image_position: top
+
+- title: "1-LFP: Livestock Forage Disaster Program (Amendment 6)"
+  category: documents
+  type: FSA HANDBOOK
+  byline: Amendment 6 · Approved February 5, 2025
+  description:
+    Refines application-deadline policy and the drought definitions used in eligibility determinations — the amendment of 1-LFP most cited in this project's analyses.
+  links:
+    - title: Download (PDF)
+      url: /docs/1lfp-a6.pdf
+    - title: Original source
+      url: https://www.fsa.usda.gov/Internet/FSA_File/1-lfp_r00_a06.pdf
+  image: /assets/documents/1lfp-a6.png
+  image_position: top
+
+- title: "1-LFP: Livestock Forage Disaster Program (Amendment 7)"
+  category: documents
+  type: FSA HANDBOOK
+  byline: Amendment 7 · Approved August 12, 2025
+  description:
+    The current amendment of 1-LFP — sets 2025 payment rates, updates LFP application deadlines, and requires grazing periods and carrying capacities established for LFP to match those established for NAP as reflected in the National Crop Table.
+  links:
+    - title: Download (PDF)
+      url: /docs/1lfp-a7.pdf
+    - title: Original source
+      url: https://www.fsa.usda.gov/Internet/FSA_File/1-lfp_r00_a07.pdf
+  image: /assets/documents/1lfp-a7.png
+  image_position: top
+
+- title: "2-LFP: Livestock Forage Program Automation (Amendment 1)"
+  category: documents
+  type: FSA HANDBOOK
+  byline: Base issuance · Approved December 22, 2022
+  description:
+    The companion automation handbook — how county offices enter, process, and pay LFP applications in FSA's software systems, the pipeline through which eligibility and payment data actually flow.
+  links:
+    - title: Download (PDF)
+      url: /docs/2lfp-a1.pdf
+    - title: Original source
+      url: https://www.fsa.usda.gov/Internet/FSA_File/2-lfp_r00_a01.pdf
+  image: /assets/documents/2lfp-a1.png
+  image_position: top
+
+- title: "3-LFP: LFP Automation for 2025 and Subsequent Years (Amendment 1)"
+  category: documents
+  type: FSA HANDBOOK
+  byline: Base issuance · Approved April 29, 2025
+  description:
+    The successor automation handbook covering LFP application processing in FSA systems for program year 2025 onward.
+  links:
+    - title: Download (PDF)
+      url: /docs/3lfp-a1.pdf
+    - title: Original source
+      url: https://www.fsa.usda.gov/Internet/FSA_File/3-lfp_r00_a01.pdf
+  image: /assets/documents/3lfp-a1.png
+  image_position: top
+
+- title: "Supplemental Agricultural Disaster Assistance Programs (2014 Final Rule)"
+  category: documents
+  type: FEDERAL REGISTER RULE
+  byline: 79 FR 21086 · RIN 0560-AI21 · April 14, 2014
+  description:
+    The foundational regulation implementing the 2014 Farm Bill provision that made LFP a permanent, standing disaster program — establishing the modern framework for drought-based grazing-loss payments, retroactive to October 2011.
+  links:
+    - title: Download (PDF)
+      url: /docs/RIN%200560-AI21%20%E2%80%94%202014%20Farm%20Bill%20LFP%20Final%20Rule.pdf
+    - title: Original source
+      url: https://www.federalregister.gov/documents/2014/04/14/2014-08067/supplemental-agricultural-disaster-assistance-programs-payment-limitations-and-payment-eligibility
+  image: /assets/documents/rin-0560-ai21-final-rule.png
+  image_position: top
+
+- title: "GAO Review of the 2014 Disaster Assistance Final Rule"
+  category: documents
+  type: GAO REPORT
+  byline: GAO-14-549R · April 29, 2014
+  description:
+    GAO's Congressional Review Act assessment of the 2014 final rule, classifying it as a major rule and estimating annual disaster assistance payments of roughly $502 million.
+  links:
+    - title: Download (PDF)
+      url: /docs/RIN%200560-AI21%20%E2%80%94%20GAO%20Analysis%20gao-14-549r.pdf
+    - title: Original source
+      url: https://www.gao.gov/products/gao-14-549r
+  image: /assets/documents/rin-0560-ai21-gao-14-549r.png
+  image_position: top
+
+- title: "Supplemental Agricultural Disaster Assistance Programs (2018 Final Rule)"
+  category: documents
+  type: FEDERAL REGISTER RULE
+  byline: 83 FR 49459 · RIN 0560-AH69 · October 2, 2018
+  description:
+    Implements the Bipartisan Budget Act of 2018 changes — removes payment limits for LIP and TAP, sets a combined $125,000 annual limit for LFP and ELAP, and reopens the 2017–2018 application periods.
+  links:
+    - title: Download (PDF)
+      url: /docs/RIN%200560-AH69.pdf
+    - title: Original source
+      url: https://www.federalregister.gov/documents/2018/10/02/2018-21257/supplemental-agricultural-disaster-assistance-programs-payment-limitation-and-payment-eligibility
+  image: /assets/documents/rin-0560-ah69.png
+  image_position: top

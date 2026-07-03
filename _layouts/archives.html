@@ -2,17 +2,18 @@
 layout: default
 ---
 {% comment %}
-  Archive-listing layout for /data/ and /analysis/. Renders a header
-  (eyebrow + title + lede + optional prose body) followed by a card
-  grid filtered by `page.archive_category` against _data/projects.yml.
+  Archive-listing layout for /data/, /analysis/, and /documents/.
+  Renders a header (eyebrow + title + lede + optional prose body)
+  followed by a card grid filtered by `page.archive_category` against
+  _data/projects.yml.
 
   Front-matter the layout reads:
     - title             page heading (required)
     - section_label     small eyebrow above the title (optional)
     - description       lede paragraph below the title (optional)
-    - archive_category  required; "data" or "analysis". Filters
-                        `_data/projects.yml` so only matching cards
-                        render in the grid.
+    - archive_category  required; "data", "analysis", or "documents".
+                        Filters `_data/projects.yml` so only matching
+                        cards render in the grid.
 {% endcomment %}
 <div class="max-w-7xl mx-auto px-4 py-12">
 

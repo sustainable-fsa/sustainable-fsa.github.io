@@ -5,8 +5,9 @@ layout: default
   Home-page layout. Used only by index.md.
 
   Sections (top to bottom):
-    1. Hero — terracotta panel with eyebrow, tagline, subtitle, and 2 CTAs.
-       Reads page.tagline and page.subtitle from index.md front matter.
+    1. Hero — terracotta panel with the project seal, eyebrow, tagline,
+       subtitle, and 2 CTAs. Reads page.tagline and page.subtitle from
+       index.md front matter.
     2. Intro paragraph — renders the markdown body of index.md.
     3. Feature cards — About / Data / Analysis / Team. Defined in
        _data/home_cards.yml and rendered by _includes/feature-card.html.
@@ -22,6 +23,9 @@ layout: default
 <!-- ── Hero ──────────────────────────────────────────────────────────── -->
 <section class="bg-terracotta text-white">
   <div class="max-w-7xl mx-auto px-4 py-16 sm:py-20 flex flex-col items-center text-center gap-6">
+    <img src="{{ site.baseurl }}/assets/sustainable-fsa-logo-1024.png" alt=""
+         width="1024" height="1024"
+         class="h-28 sm:h-32 lg:h-36 w-auto" />
     <p class="text-ochre-light text-xs font-semibold uppercase tracking-widest">USDA-funded research · Montana Climate Office</p>
     <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black max-w-3xl leading-tight">
       {{ page.tagline | default: site.description }}

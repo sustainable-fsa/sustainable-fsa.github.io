@@ -17,6 +17,7 @@ module.exports = {
     "./about/**/*.{html,md}",
     "./data/**/*.{html,md}",
     "./analysis/**/*.{html,md}",
+    "./documents/**/*.{html,md}",
     "./team/**/*.{html,md}",
   ],
   theme: {

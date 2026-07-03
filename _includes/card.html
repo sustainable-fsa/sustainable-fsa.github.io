@@ -13,6 +13,10 @@
     - image           optional preview thumbnail (usually
                       /SIBLING_REPO/example-1.png). Omit for cards
                       without a graphical preview (e.g. thesis cards).
+    - image_position  optional; set to "top" to anchor the object-cover
+                      crop to the top of the image (used for portrait
+                      document-page thumbnails, where the letterhead and
+                      title sit at the top). Default crop is centered.
     - links           array of { title, url } pairs; the first link is
                       also used as the card-image and title hyperlink
 
@@ -26,9 +30,15 @@
 <article class="flex flex-col bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:border-sage/40 transition-all overflow-hidden">
 
   {% if project.image %}
+  {%- comment -%}
+    Class list is assembled outside the attribute so html-validate (which
+    can't parse Liquid tags inside attribute values) sees a single token.
+  {%- endcomment -%}
+  {% assign image_classes = "w-full h-44 object-cover" %}
+  {% if project.image_position == 'top' %}{% assign image_classes = "w-full h-44 object-cover object-top" %}{% endif %}
   <a href="{{ primary.url }}" class="block bg-cream border-b border-gray-100">
     <img src="{{ project.image }}" alt="{{ project.title }} preview"
-         class="w-full h-44 object-cover" loading="lazy" />
+         class="{{ image_classes }}" loading="lazy" />
   </a>
   {% endif %}
 
