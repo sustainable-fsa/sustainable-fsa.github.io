@@ -3,7 +3,10 @@
   site.data.home_cards: `{% include feature-card.html card=card %}`.
 
   include.card provides: url, label, cta, theme, icon (see _data/home_cards.yml).
-  The subtitle is read live from the target page's `description:` front matter.
+  The subtitle is read live from the target page's `description:` front matter,
+  unless the card provides its own `description` (needed for external targets,
+  which have no page front matter). Cards with `external: true` link out
+  verbatim in a new tab instead of being prefixed with site.baseurl.
 
   The theme -> accent-class mapping is kept HERE (not in the data file) so the
   literal Tailwind class names stay in a file the content scanner reads; classes
@@ -16,7 +19,7 @@
   {%- when "ochre" -%}{%- assign hover = "hover:border-ochre/60" -%}{%- assign iconbox = "bg-ochre/10 text-ochre-dark" -%}
   {%- else -%}{%- assign hover = "hover:border-terracotta/40" -%}{%- assign iconbox = "bg-terracotta/10 text-terracotta" -%}
 {%- endcase -%}
-<a href="{{ site.baseurl }}{{ card.url }}"
+<a {% if card.external %}href="{{ card.url }}" target="_blank" rel="noopener noreferrer"{% else %}href="{{ site.baseurl }}{{ card.url }}"{% endif %}
    class="group flex flex-col bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md {{ hover }} transition-all p-6">
   <div class="w-10 h-10 rounded-lg {{ iconbox }} flex items-center justify-center mb-4 flex-shrink-0">
     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
@@ -24,7 +27,7 @@
     </svg>
   </div>
   <h2 class="text-lg font-black text-terracotta-dark mb-2">{{ card.label }}</h2>
-  <p class="text-gray-600 text-sm flex-1 leading-relaxed">{{ target.description }}</p>
+  <p class="text-gray-600 text-sm flex-1 leading-relaxed">{{ card.description | default: target.description }}</p>
   <span class="mt-4 text-terracotta-dark text-sm font-medium inline-flex items-center gap-1">
     {{ card.cta }}
     <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>

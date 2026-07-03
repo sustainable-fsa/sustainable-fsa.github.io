@@ -1,14 +1,18 @@
-# The four feature cards on the home page (rendered by _includes/feature-card.html,
-# looped from _layouts/home.html). Each card's subtitle is pulled live from the
-# target page's `description:` front matter, so it is not duplicated here.
+# The six feature cards on the home page (rendered by _includes/feature-card.html,
+# looped from _layouts/home.html; 3×2 grid at lg, 2×3 at sm). Each card's subtitle
+# is pulled live from the target page's `description:` front matter, so it is not
+# duplicated here — except external cards, which carry their own `description`.
 #
-#   url    target page (must match the page's permalink)
-#   label  card heading
-#   cta    call-to-action text under the description
-#   theme  accent color — one of: terracotta | sage | ochre
-#          (the theme -> Tailwind class mapping lives in feature-card.html so
-#           Tailwind's content scanner still sees the literal class names)
-#   icon   the `d` attribute of the card's heroicon <path>
+#   url          target page (must match the page's permalink), or an
+#                absolute URL when `external: true`
+#   label        card heading
+#   cta          call-to-action text under the description
+#   theme        accent color — one of: terracotta | sage | ochre
+#                (the theme -> Tailwind class mapping lives in feature-card.html
+#                 so Tailwind's content scanner still sees the literal class names)
+#   icon         the `d` attribute of the card's heroicon <path>
+#   external     true → link out verbatim in a new tab (no baseurl prefix)
+#   description  subtitle override; required for external cards
 
 - url: /about/
   label: About
@@ -28,8 +32,22 @@
   theme: ochre
   icon: "M9 19v-6a1 1 0 00-1-1H5a1 1 0 00-1 1v6a1 1 0 001 1h3a1 1 0 001-1zm0 0V9a1 1 0 011-1h3a1 1 0 011 1v10m-5 0a1 1 0 001 1h3a1 1 0 001-1m0 0V5a1 1 0 011-1h3a1 1 0 011 1v14a1 1 0 01-1 1h-3a1 1 0 01-1-1z"
 
+- url: /documents/
+  label: Documents
+  cta: Browse the library
+  theme: terracotta
+  icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+
 - url: /team/
   label: Team
   cta: Meet the team
-  theme: terracotta
+  theme: sage
   icon: "M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87m6-5.13a4 4 0 11-8 0 4 4 0 018 0zm6 4a3 3 0 11-6 0 3 3 0 016 0z"
+
+- url: https://github.com/sustainable-fsa
+  label: Code
+  cta: Visit GitHub
+  theme: ochre
+  external: true
+  description: Every archive and analysis on this site is backed by an open, version-controlled repository — reproducible pipelines, documented data, and public history.
+  icon: "M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
