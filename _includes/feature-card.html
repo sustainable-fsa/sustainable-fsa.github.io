@@ -19,7 +19,20 @@
   {%- when "ochre" -%}{%- assign hover = "hover:border-ochre/60" -%}{%- assign iconbox = "bg-ochre/10 text-ochre-dark" -%}
   {%- else -%}{%- assign hover = "hover:border-terracotta/40" -%}{%- assign iconbox = "bg-terracotta/10 text-terracotta" -%}
 {%- endcase -%}
-<a {% if card.external %}href="{{ card.url }}" target="_blank" rel="noopener noreferrer"{% else %}href="{{ site.baseurl }}{{ card.url }}"{% endif %}
+{%- comment -%}
+  href/target are assembled outside the tag so html-validate (which
+  cannot parse Liquid tags between attributes) sees plain attributes.
+  Internal links get an explicit target="_self"; rel="noopener
+  noreferrer" is harmless on internal links and required on external.
+{%- endcomment -%}
+{%- if card.external -%}
+  {%- assign card_href = card.url -%}
+  {%- assign card_target = "_blank" -%}
+{%- else -%}
+  {%- capture card_href -%}{{ site.baseurl }}{{ card.url }}{%- endcapture -%}
+  {%- assign card_target = "_self" -%}
+{%- endif -%}
+<a href="{{ card_href }}" target="{{ card_target }}" rel="noopener noreferrer"
    class="group flex flex-col bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md {{ hover }} transition-all p-6">
   <div class="w-10 h-10 rounded-lg {{ iconbox }} flex items-center justify-center mb-4 flex-shrink-0">
     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
