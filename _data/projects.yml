@@ -198,6 +198,20 @@
 # Thumbnails are page-1 renders in assets/documents/, generated with
 # `sips -s format png --resampleWidth 700 <file>.pdf`.
 
+- title: "1-LDAP (Rev. 1): Livestock Disaster Assistance Programs for 2011 and Subsequent Years (Amendment 37)"
+  category: documents
+  type: FSA HANDBOOK
+  byline: Amendment 37 · Approved April 25, 2019
+  description:
+    The predecessor handbook that governed LFP (alongside ELAP and LIP) from 2011 until 1-LFP superseded it in 2019 — the policy under which the earlier determinations in the project's FOIA archives were made.
+  links:
+    - title: Download (PDF)
+      url: /docs/1ldap-r01-a37.pdf
+    - title: Original source
+      url: https://www.fsa.usda.gov/Internet/FSA_File/1-ldap_r01_a37.pdf
+  image: /assets/documents/1ldap-r01-a37.png
+  image_position: top
+
 - title: "1-LFP: Livestock Forage Disaster Program (Amendment 1)"
   category: documents
   type: FSA HANDBOOK
@@ -324,6 +338,62 @@
   image: /assets/documents/3lfp-a1.png
   image_position: top
 
+- title: "1-NAP (Rev. 2): Noninsured Crop Disaster Assistance Program (Amendment 26)"
+  category: documents
+  type: FSA HANDBOOK
+  byline: Amendment 26 · Approved June 16, 2026
+  description:
+    The current NAP policy handbook. Its subparagraph 277 F requires State Offices to annually gather the most current documentation for carrying capacities and grazing periods — the authority behind the annual Normal Grazing Period review that LFP inherits.
+  links:
+    - title: Download (PDF)
+      url: /docs/1nap-r02-a26.pdf
+    - title: Original source
+      url: https://www.fsa.usda.gov/Internet/FSA_File/1-nap_r02_a26.pdf
+  image: /assets/documents/1nap-r02-a26.png
+  image_position: top
+
+- title: "FSA Notice NAP-190: Review of Normal Grazing Periods and Carrying Capacities for NAP, LFP, and ELAP"
+  category: documents
+  type: FSA NOTICE
+  byline: Approved August 10, 2017
+  description:
+    The notice defining the temperature-threshold methodology behind county Normal Grazing Periods — the procedure this project's nClimGrid reanalysis reproduces under current climate normals. Administratively obsolete since 2018, but foundational to how today's grazing periods were set.
+  links:
+    - title: Download (PDF)
+      url: /docs/nap-190.pdf
+    - title: Original source
+      url: https://www.fsa.usda.gov/Internet/FSA_Notice/nap_190.pdf
+  image: /assets/documents/nap-190.png
+  image_position: top
+
+- title: "LFP and ELAP: Supplemental Agricultural Disaster Assistance (2009 Rule)"
+  category: documents
+  type: FEDERAL REGISTER RULE
+  byline: 74 FR 46665 · September 11, 2009
+  description:
+    The original regulation implementing LFP under the 2008 Farm Bill — the framework that governed the earliest program years (2008–2011) in the project's eligibility archives.
+  links:
+    - title: Download (PDF)
+      url: /docs/fr-2009-lfp-elap-rule.pdf
+    - title: Original source
+      url: https://www.federalregister.gov/documents/2009/09/11/E9-21906/livestock-forage-disaster-program-and-emergency-assistance-for-livestock-honeybees-and-farm-raised
+  image: /assets/documents/fr-2009-lfp-elap-rule.png
+  image_position: top
+
+- title: "Disaster Designation Process (2012 Final Rule)"
+  category: documents
+  type: FEDERAL REGISTER RULE
+  byline: 77 FR 41248 · July 13, 2012
+  description:
+    Established 7 CFR part 759 and the fast-track process by which US Drought Monitor ratings — D2 for eight consecutive weeks, or any D3–D4 — trigger nearly automatic Secretarial drought disaster designations.
+  links:
+    - title: Download (PDF)
+      url: /docs/fr-2012-disaster-designation-process.pdf
+    - title: Original source
+      url: https://www.federalregister.gov/documents/2012/07/13/2012-17137/disaster-designation-process
+  image: /assets/documents/fr-2012-disaster-designation-process.png
+  image_position: top
+
 - title: "Supplemental Agricultural Disaster Assistance Programs (2014 Final Rule)"
   category: documents
   type: FEDERAL REGISTER RULE
@@ -366,6 +436,48 @@
   image: /assets/documents/rin-0560-ah69.png
   image_position: top
 
+- title: "Emergency Livestock Relief Program: Notice of Funds Availability (2021 Losses)"
+  category: documents
+  type: FEDERAL REGISTER RULE
+  byline: 87 FR 19465 · April 4, 2022
+  description:
+    Created ELRP — expedited drought relief computed directly from producers' 2021 LFP payment data, the first of the LFP "top-up" programs that now recur alongside the base program.
+  links:
+    - title: Download (PDF)
+      url: /docs/fr-2022-elrp-nofa.pdf
+    - title: Original source
+      url: https://www.federalregister.gov/documents/2022/04/04/2022-06950/notice-of-funds-availability-emergency-livestock-relief-program-elrp
+  image: /assets/documents/fr-2022-elrp-nofa.png
+  image_position: top
+
+- title: "Emergency Livestock Relief Program 2022: Notice of Funds Availability"
+  category: documents
+  type: FEDERAL REGISTER RULE
+  byline: 88 FR 66361 · September 27, 2023
+  description:
+    The second ELRP round, again computed from LFP program data — this time for 2022 grazing losses.
+  links:
+    - title: Download (PDF)
+      url: /docs/fr-2023-elrp-2022-nofa.pdf
+    - title: Original source
+      url: https://www.federalregister.gov/documents/2023/09/27/2023-21068/notice-of-funds-availability-emergency-livestock-relief-program-elrp-2022
+  image: /assets/documents/fr-2023-elrp-2022-nofa.png
+  image_position: top
+
+- title: "Emergency Livestock Relief Program 2023 and 2024 (2025 Rule)"
+  category: documents
+  type: FEDERAL REGISTER RULE
+  byline: 90 FR 22614 · May 29, 2025
+  description:
+    The third ELRP round, paying eligible producers a percentage top-up of their gross 2023 and 2024 LFP payments — evidence of how central LFP data have become to emergency livestock relief delivery.
+  links:
+    - title: Download (PDF)
+      url: /docs/fr-2025-elrp-2023-2024-rule.pdf
+    - title: Original source
+      url: https://www.federalregister.gov/documents/2025/05/29/2025-09581/emergency-livestock-relief-program-elrp-2023-and-2024
+  image: /assets/documents/fr-2025-elrp-2023-2024-rule.png
+  image_position: top
+
 - title: "The Stocking Impact and Financial-Climate Risk of the Livestock Forage Disaster Program"
   category: documents
   type: USDA ERS REPORT
@@ -392,4 +504,34 @@
     - title: Original source
       url: https://www.congress.gov/crs-product/R48082
   image: /assets/documents/crs-r48082.png
+  image_position: top
+
+- title: "The Noninsured Crop Disaster Assistance Program (NAP)"
+  category: documents
+  type: CRS REPORT
+  byline: CRS R48245 · October 24, 2024
+  description:
+    The Congressional Research Service's overview of NAP — the third disaster program this project studies, and the program whose grazing-period definitions LFP is required to match.
+  links:
+    - title: Download (PDF)
+      url: /docs/crs-r48245.pdf
+    - title: Original source
+      url: https://www.congress.gov/crs-product/R48245
+  image: /assets/documents/crs-r48245.png
+  image_position: top
+
+- title: "Livestock Forage Disaster Program Fact Sheet (April 2024)"
+  category: documents
+  type: FSA FACT SHEET
+  byline: April 2024
+  description:
+    FSA's last PDF edition of the producer-facing LFP fact sheet, summarizing eligibility triggers and payment rules. FSA now maintains the fact sheet only as a web page; the legacy PDF survives only on old.fsa.usda.gov.
+  links:
+    - title: Download (PDF)
+      url: /docs/fsa-lfp-factsheet-2024.pdf
+    - title: Original source
+      url: https://www.old.fsa.usda.gov/Assets/USDA-FSA-Public/usdafiles/FactSheets/2024/FSA_LFP-LivestockForageProgramFactSheet_24-1-.pdf
+    - title: Current web version
+      url: https://www.fsa.usda.gov/tools/informational/fact-sheets/livestock-forage-disaster-program-lfp
+  image: /assets/documents/fsa-lfp-factsheet-2024.png
   image_position: top
