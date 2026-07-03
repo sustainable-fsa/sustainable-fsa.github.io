@@ -365,3 +365,31 @@
       url: https://www.federalregister.gov/documents/2018/10/02/2018-21257/supplemental-agricultural-disaster-assistance-programs-payment-limitation-and-payment-eligibility
   image: /assets/documents/rin-0560-ah69.png
   image_position: top
+
+- title: "The Stocking Impact and Financial-Climate Risk of the Livestock Forage Disaster Program"
+  category: documents
+  type: USDA ERS REPORT
+  byline: ERR-329 · R. Aaron Hrozencik, Gabriela Perez-Quesada, and Kyle Bocinsky · January 2024
+  description:
+    USDA Economic Research Service analysis of how LFP payments affect producers' stocking decisions, and how program expenditures are projected to grow under future climate conditions. Co-authored by this project's PI.
+  links:
+    - title: Download (PDF)
+      url: /docs/ers-err-329.pdf
+    - title: Original source
+      url: https://www.ers.usda.gov/publications/108371
+  image: /assets/documents/ers-err-329.png
+  image_position: top
+
+- title: "Livestock Forage Disaster Program (LFP): Drought and Wildfire Assistance"
+  category: documents
+  type: CRS REPORT
+  byline: CRS R48082 · June 4, 2024
+  description:
+    The Congressional Research Service's overview of LFP for Congress — how US Drought Monitor ratings and Normal Grazing Periods determine eligibility, how payments are calculated, and how program spending has grown in an era of persistent drought.
+  links:
+    - title: Download (PDF)
+      url: /docs/crs-r48082.pdf
+    - title: Original source
+      url: https://www.congress.gov/crs-product/R48082
+  image: /assets/documents/crs-r48082.png
+  image_position: top
