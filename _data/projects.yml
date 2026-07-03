@@ -366,6 +366,20 @@
   image: /assets/documents/nap-190.png
   image_position: top
 
+- title: "FSA Notice LFP-7: 2026 LFP Payment Rates"
+  category: documents
+  type: FSA NOTICE
+  byline: Approved April 22, 2026
+  description:
+    The most recent LFP notice, setting 2026 daily animal-unit feed rates — notable for what it does not contain. It applies the pre-OBBBA drought triggers, evidence that the One Big Beautiful Bill Act's eligibility changes remained unimplemented into the 2026 grazing season.
+  links:
+    - title: Download (PDF)
+      url: /docs/lfp-7.pdf
+    - title: Original source
+      url: https://www.fsa.usda.gov/Internet/FSA_Notice/lfp_7.pdf
+  image: /assets/documents/lfp-7.png
+  image_position: top
+
 - title: "LFP and ELAP: Supplemental Agricultural Disaster Assistance (2009 Rule)"
   category: documents
   type: FEDERAL REGISTER RULE
@@ -478,6 +492,48 @@
   image: /assets/documents/fr-2025-elrp-2023-2024-rule.png
   image_position: top
 
+- title: "One Big Beautiful Bill Act — Disaster Assistance Provisions (P.L. 119-21)"
+  category: documents
+  type: STATUTE
+  byline: Public Law 119-21, § 10401 · 139 Stat. 101 · July 4, 2025
+  description:
+    The enrolled law whose section 10401(b) rewrote LFP's drought triggers — D2 for 4 consecutive weeks (down from 8) now earns one monthly payment, and a new tier pays two payments for D2 in 7 of the previous 8 weeks. As of mid-2026, FSA had not yet implemented these changes in regulation or handbook.
+  links:
+    - title: Download (PDF)
+      url: /docs/plaw-119-21.pdf
+    - title: Original source
+      url: https://www.govinfo.gov/app/details/PLAW-119publ21
+  image: /assets/documents/plaw-119-21.png
+  image_position: top
+
+- title: "Emergency Livestock Relief Programs (2025 Final Rule)"
+  category: documents
+  type: FEDERAL REGISTER RULE
+  byline: 90 FR 44299 · September 15, 2025
+  description:
+    Finalizes the ELRP 2023–2024 payments under the American Relief Act — and, for more than a year after the One Big Beautiful Bill Act's enactment, the only Federal Register document from FSA citing the livestock disaster assistance statute it amended.
+  links:
+    - title: Download (PDF)
+      url: /docs/fr-2025-elrp-final-rule.pdf
+    - title: Original source
+      url: https://www.federalregister.gov/documents/2025/09/15/2025-17742/emergency-livestock-relief-programs
+  image: /assets/documents/fr-2025-elrp-final-rule.png
+  image_position: top
+
+- title: "Payment Limitation and Payment Eligibility (2026 Final Rule)"
+  category: documents
+  type: FEDERAL REGISTER RULE
+  byline: 91 FR 32880 · RIN 0560-AI86 · June 2, 2026
+  description:
+    The first final rule implementing One Big Beautiful Bill Act provisions that touch LFP — conforming the payment-limitation regulations for program year 2026 and listing LFP among covered programs. It does not implement the Act's new drought triggers.
+  links:
+    - title: Download (PDF)
+      url: /docs/fr-2026-payment-limitation.pdf
+    - title: Original source
+      url: https://www.federalregister.gov/documents/2026/06/02/2026-11002/payment-limitation-and-payment-eligibility
+  image: /assets/documents/fr-2026-payment-limitation.png
+  image_position: top
+
 - title: "The Stocking Impact and Financial-Climate Risk of the Livestock Forage Disaster Program"
   category: documents
   type: USDA ERS REPORT
@@ -520,18 +576,32 @@
   image: /assets/documents/crs-r48245.png
   image_position: top
 
-- title: "Livestock Forage Disaster Program Fact Sheet (April 2024)"
+- title: "USDA Plan to Fortify the American Beef Industry"
   category: documents
-  type: FSA FACT SHEET
-  byline: April 2024
+  type: USDA REPORT
+  byline: USDA · October 20, 2025
   description:
-    FSA's last PDF edition of the producer-facing LFP fact sheet, summarizing eligibility triggers and payment rules. FSA now maintains the fact sheet only as a web page; the legacy PDF survives only on old.fsa.usda.gov.
+    The white paper in which USDA committed to enacting the One Big Beautiful Bill Act's LFP and LIP provisions — "higher and earlier payment rates to producers" — the department's only public statement of implementation intent to date.
   links:
     - title: Download (PDF)
-      url: /docs/fsa-lfp-factsheet-2024.pdf
+      url: /docs/usda-beef-industry-plan-2025.pdf
     - title: Original source
-      url: https://www.old.fsa.usda.gov/Assets/USDA-FSA-Public/usdafiles/FactSheets/2024/FSA_LFP-LivestockForageProgramFactSheet_24-1-.pdf
+      url: https://www.usda.gov/sites/default/files/documents/USDA%20Beef%20Industry%20Plan%20White%20Paper.pdf
+  image: /assets/documents/usda-beef-industry-plan-2025.png
+  image_position: top
+
+- title: "Livestock Forage Disaster Program Fact Sheet (May 2025)"
+  category: documents
+  type: FSA FACT SHEET
+  byline: May 2025 edition · April 2024 edition also archived
+  description:
+    FSA's current PDF edition of the producer-facing LFP fact sheet, still describing the pre-OBBBA eligibility triggers. The April 2024 edition is archived alongside it; legacy fact-sheet PDFs survive only on old.fsa.usda.gov.
+  links:
+    - title: Download (PDF)
+      url: /docs/fsa-lfp-factsheet-2025.pdf
+    - title: April 2024 edition
+      url: /docs/fsa-lfp-factsheet-2024.pdf
     - title: Current web version
       url: https://www.fsa.usda.gov/tools/informational/fact-sheets/livestock-forage-disaster-program-lfp
-  image: /assets/documents/fsa-lfp-factsheet-2024.png
+  image: /assets/documents/fsa-lfp-factsheet-2025.png
   image_position: top
