@@ -132,13 +132,15 @@
       url: /fsa-counties-dd22/FSA_Counties_dd22.gdb.zip
   image: /fsa-counties-dd22/example-1.png
 
-- title: FSA Farm Payment Files, 2004–2024
+- title: FSA Farm Payment Files, 2004–2025
   category: data
   type: ARCHIVE
-  description: Official farm payment files from the USDA Farm Service Agency, 2004–2024, available in Parquet format.
+  description: Official farm payment files from the USDA Farm Service Agency, 2004–2025, available in Parquet format.
   links:
     - title: Documentation
       url: https://sustainable-fsa.com/fsa-payment-files
+    - title: Archive Listing
+      url: https://data.sustainable-fsa.com/#/fsa-payment-files/
   image: /fsa-payment-files/example-1.png
 
 - title: NAP-190 Normal Grazing Periods
