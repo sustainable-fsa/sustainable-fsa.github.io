@@ -129,7 +129,7 @@
     - title: Documentation
       url: https://sustainable-fsa.com/fsa-counties-dd22
     - title: Download (ESRI File GeoDatabase)
-      url: https://data.sustainable-fsa.com/fsa-counties-dd22/FSA_Counties_dd22.gdb.zip
+      url: https://data.sustainable-fsa.com/fsa-counties-dd22/FSA_Counties_dd22_NonGeneralized.gdb.zip
   image: /fsa-counties-dd22/example-1.png
 
 - title: FSA Farm Payment Files, 2004–2025
