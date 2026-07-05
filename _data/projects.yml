@@ -15,9 +15,9 @@
     - title: Documentation
       url: /usdm
     - title: Archive Listing
-      url: /usdm/usdm.html
+      url: https://data.sustainable-fsa.com/#/usdm/
     - title: Animation
-      url: /usdm-viz/usdm
+      url: https://data.sustainable-fsa.com/usdm-viz/usdm/index.html
   image: /usdm/example-1.png
   
 - title: USDM Reported County Aggregations
@@ -28,7 +28,7 @@
     - title: Documentation
       url: https://sustainable-fsa.com/usdm-counties-reported
     - title: Archive Listing
-      url: /usdm-counties-reported/manifest.html
+      url: https://data.sustainable-fsa.com/#/usdm-counties-reported/
   image: /usdm-counties-reported/example-1.png
 
 - title: USDM Census County Aggregations
@@ -39,9 +39,9 @@
     - title: Documentation
       url: /usdm-counties
     - title: Archive Listing
-      url: /usdm-counties/manifest.html
+      url: https://data.sustainable-fsa.com/#/usdm-counties/
     - title: Animation
-      url: /usdm-viz/usdm-counties
+      url: https://data.sustainable-fsa.com/usdm-viz/usdm-counties/index.html
   image: /usdm-counties/example-1.png
 
 - title: USDM LFP County Aggregations
@@ -52,7 +52,7 @@
     - title: Documentation
       url: https://sustainable-fsa.com/usdm-counties-fsa-lfp
     - title: Archive Listing
-      url: /usdm-counties-fsa-lfp/manifest.html
+      url: https://data.sustainable-fsa.com/#/usdm-counties-fsa-lfp/
   image: /usdm-counties-fsa-lfp/example-1.png
 
 - title: FSA Normal Grazing Periods
@@ -63,9 +63,9 @@
     - title: Documentation
       url: /fsa-normal-grazing-period
     - title: Download (CSV)
-      url: /fsa-normal-grazing-period/fsa-normal-grazing-period.csv
+      url: https://data.sustainable-fsa.com/fsa-normal-grazing-period/fsa-normal-grazing-period.csv
     - title: Dashboard
-      url: /fsa-normal-grazing-period/fsa-normal-grazing-period.html
+      url: https://data.sustainable-fsa.com/fsa-normal-grazing-period/fsa-normal-grazing-period.html
   image: /fsa-normal-grazing-period/example-1.png
 
 - title: Livestock Forage Program Eligibility
@@ -78,9 +78,9 @@
     - title: Documentation
       url: /fsa-lfp-eligibility
     - title: Download (CSV)
-      url: /fsa-lfp-eligibility/fsa-lfp-eligibility.csv
+      url: https://data.sustainable-fsa.com/fsa-lfp-eligibility/fsa-lfp-eligibility.csv
     - title: Dashboard
-      url: /fsa-lfp-eligibility/fsa-lfp-eligibility.html
+      url: https://data.sustainable-fsa.com/fsa-lfp-eligibility/fsa-lfp-eligibility.html
   image: /fsa-lfp-eligibility/example-1.png
 
 - title: FSA Disasters Archive
@@ -92,9 +92,9 @@
     - title: Documentation
       url: https://sustainable-fsa.com/fsa-disasters
     - title: Download (CSV)
-      url: /fsa-disasters/fsa-disasters.csv
+      url: https://data.sustainable-fsa.com/fsa-disasters/fsa-disasters.csv
     - title: Download (Parquet)
-      url: /fsa-disasters/fsa-disasters.parquet
+      url: https://data.sustainable-fsa.com/fsa-disasters/fsa-disasters.parquet
   image: /fsa-disasters/example-1.png
 
 - title: Livestock Forage Program Counties
@@ -107,7 +107,7 @@
     - title: Documentation
       url: https://sustainable-fsa.com/fsa-lfp-counties
     - title: Download (GeoParquet)
-      url: /fsa-lfp-counties/fsa-lfp-counties.parquet
+      url: https://data.sustainable-fsa.com/fsa-lfp-counties/fsa-lfp-counties.parquet
   image: /fsa-lfp-counties/example-1.png
 
 - title: FSA_Counties_dd17 Boundary Dataset
@@ -118,7 +118,7 @@
     - title: Documentation
       url: https://sustainable-fsa.com/fsa-counties-dd17
     - title: Download (ESRI File GeoDatabase)
-      url: /fsa-counties-dd17/FSA_Counties_dd17.gdb.zip
+      url: https://data.sustainable-fsa.com/fsa-counties-dd17/FSA_Counties_dd17.gdb.zip
   image: /fsa-counties-dd17/example-1.png
 
 - title: FSA_Counties_dd22 Boundary Dataset
@@ -129,7 +129,7 @@
     - title: Documentation
       url: https://sustainable-fsa.com/fsa-counties-dd22
     - title: Download (ESRI File GeoDatabase)
-      url: /fsa-counties-dd22/FSA_Counties_dd22.gdb.zip
+      url: https://data.sustainable-fsa.com/fsa-counties-dd22/FSA_Counties_dd22.gdb.zip
   image: /fsa-counties-dd22/example-1.png
 
 - title: FSA Farm Payment Files, 2004–2025
