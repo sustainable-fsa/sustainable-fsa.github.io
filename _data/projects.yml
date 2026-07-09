@@ -308,7 +308,11 @@
 # oversight reports archived in the sibling `docs` repo (served at
 # /docs/ once GitHub Pages is enabled on sustainable-fsa/docs).
 # Thumbnails are page-1 renders in assets/documents/, generated with
-# `sips -s format png --resampleWidth 700 <file>.pdf`.
+# `sips -s format png --resampleWidth 700 <file>.pdf`, then flattened
+# with `magick <file>.png -background white -alpha remove -alpha off
+# <file>.png` — sips leaves the page background transparent wherever
+# the PDF paints none, which shows the card's manila band through the
+# page instead of white paper.
 
 - title: "1-LDAP (Rev. 1): Livestock Disaster Assistance Programs for 2011 and Subsequent Years (Amendment 37)"
   category: documents
