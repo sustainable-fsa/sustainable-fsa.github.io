@@ -18,6 +18,8 @@
       url: https://data.sustainable-fsa.com/#/usdm/
     - title: Animation
       url: https://data.sustainable-fsa.com/usdm-viz/usdm/index.html
+    - title: Code
+      url: https://github.com/sustainable-fsa/usdm
   image: /usdm/example-1.png
   
 - title: USDM Reported County Aggregations
@@ -29,6 +31,8 @@
       url: https://sustainable-fsa.com/usdm-counties-reported
     - title: Archive Listing
       url: https://data.sustainable-fsa.com/#/usdm-counties-reported/
+    - title: Code
+      url: https://github.com/sustainable-fsa/usdm-counties-reported
   image: /usdm-counties-reported/example-1.png
 
 - title: USDM Census County Aggregations
@@ -42,6 +46,8 @@
       url: https://data.sustainable-fsa.com/#/usdm-counties/
     - title: Animation
       url: https://data.sustainable-fsa.com/usdm-viz/usdm-counties/index.html
+    - title: Code
+      url: https://github.com/sustainable-fsa/usdm-counties
   image: /usdm-counties/example-1.png
 
 - title: USDM LFP County Aggregations
@@ -53,6 +59,8 @@
       url: https://sustainable-fsa.com/usdm-counties-fsa-lfp
     - title: Archive Listing
       url: https://data.sustainable-fsa.com/#/usdm-counties-fsa-lfp/
+    - title: Code
+      url: https://github.com/sustainable-fsa/usdm-counties-fsa-lfp
   image: /usdm-counties-fsa-lfp/example-1.png
 
 - title: FSA Normal Grazing Periods
@@ -68,6 +76,8 @@
       url: https://data.sustainable-fsa.com/fsa-normal-grazing-period/fsa-normal-grazing-period.csv
     - title: Dashboard
       url: https://data.sustainable-fsa.com/fsa-normal-grazing-period/fsa-normal-grazing-period.html
+    - title: Code
+      url: https://github.com/sustainable-fsa/fsa-normal-grazing-period
   image: /fsa-normal-grazing-period/example-1.png
 
 - title: Livestock Forage Program Eligibility
@@ -85,6 +95,8 @@
       url: https://data.sustainable-fsa.com/fsa-lfp-eligibility/fsa-lfp-eligibility.csv
     - title: Dashboard
       url: https://data.sustainable-fsa.com/fsa-lfp-eligibility/fsa-lfp-eligibility.html
+    - title: Code
+      url: https://github.com/sustainable-fsa/fsa-lfp-eligibility
   image: /fsa-lfp-eligibility/example-1.png
 
 - title: FSA Disasters Archive
@@ -101,6 +113,8 @@
       url: https://data.sustainable-fsa.com/fsa-disasters/fsa-disasters.csv
     - title: Download (Parquet)
       url: https://data.sustainable-fsa.com/fsa-disasters/fsa-disasters.parquet
+    - title: Code
+      url: https://github.com/sustainable-fsa/fsa-disasters
   image: /fsa-disasters/example-1.png
 
 - title: Livestock Forage Program Counties
@@ -116,6 +130,8 @@
       url: https://data.sustainable-fsa.com/#/fsa-lfp-counties/
     - title: Download (GeoParquet)
       url: https://data.sustainable-fsa.com/fsa-lfp-counties/fsa-lfp-counties.parquet
+    - title: Code
+      url: https://github.com/sustainable-fsa/fsa-lfp-counties
   image: /fsa-lfp-counties/example-1.png
 
 - title: FSA_Counties_dd17 Boundary Dataset
@@ -129,6 +145,8 @@
       url: https://data.sustainable-fsa.com/#/fsa-counties-dd17/
     - title: Download (ESRI File GeoDatabase)
       url: https://data.sustainable-fsa.com/fsa-counties-dd17/FSA_Counties_dd17.gdb.zip
+    - title: Code
+      url: https://github.com/sustainable-fsa/fsa-counties-dd17
   image: /fsa-counties-dd17/example-1.png
 
 - title: FSA_Counties_dd22 Boundary Dataset
@@ -142,6 +160,8 @@
       url: https://data.sustainable-fsa.com/#/fsa-counties-dd22/
     - title: Download (ESRI File GeoDatabase)
       url: https://data.sustainable-fsa.com/fsa-counties-dd22/FSA_Counties_dd22_NonGeneralized.gdb.zip
+    - title: Code
+      url: https://github.com/sustainable-fsa/fsa-counties-dd22
   image: /fsa-counties-dd22/example-1.png
 
 - title: FSA Farm Payment Files, 2004–2025
@@ -153,6 +173,8 @@
       url: https://sustainable-fsa.com/fsa-payment-files
     - title: Archive Listing
       url: https://data.sustainable-fsa.com/#/fsa-payment-files/
+    - title: Code
+      url: https://github.com/sustainable-fsa/fsa-payment-files
   image: /fsa-payment-files/example-1.png
 
 - title: NAP-190 Normal Grazing Periods
@@ -163,6 +185,8 @@
   links:
     - title: Documentation
       url: https://sustainable-fsa.com/nclimgrid-normal-grazing-period
+    - title: Code
+      url: https://github.com/sustainable-fsa/nclimgrid-normal-grazing-period
   image: /nclimgrid-normal-grazing-period/nclimgrid-normal-grazing-period.png
 
 - title: '"Emergency Relief as Routine": The Evolution of FSA''s Livestock Forage Disaster Program in an Era of Persistent Drought'
