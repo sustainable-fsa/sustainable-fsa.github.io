@@ -42,6 +42,10 @@ The remaining months of the project translate these results into briefings, fact
 
 The project builds on peer-reviewed work demonstrating that drought-assessment methods have not kept pace with the climate record — most directly, Hoylman, Bocinsky, and Jencso (2022), *"Drought assessment has been outpaced by climate change: empirical arguments for a paradigm shift,"* in [*Nature Communications*](https://www.nature.com/articles/s41467-022-30316-5). That paper provides the empirical case for re-anchoring drought thresholds to current climate normals; the present project translates that case into reproducible workflows and authoritative data archives for FSA program administration.
 
+## About the Montana Climate Office
+
+The [Montana Climate Office](https://climate.umt.edu) (MCO) at the University of Montana is **Montana's official state climate office**, designated in 2006, and the official steward of the state's climate data. Its mission is to provide Montanans with high-quality, timely, relevant, and scientifically based climate, drought, and water-resources information and services. The MCO operates the [**Montana Mesonet**](https://climate.umt.edu/mesonet/) — a network of more than 215 active stations monitoring weather, soil moisture, and snowpack across the state — and produces operational drought analyses for the Upper Missouri River Basin and the Pacific Northwest. That combination of on-the-ground monitoring, drought science, and day-to-day service to producers and agencies is the foundation on which this project is built.
+
 ## Funding
 
 This work is funded through a Non-Assistance Cooperative Agreement with the USDA Office of the Chief Economist, Office of Energy and Environmental Policy, passed through to the Research, Education, and Economics mission area.
