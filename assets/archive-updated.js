@@ -16,8 +16,9 @@
  *                   git records path history only on content change,
  *                   so routine pipeline reruns don't move it.
  *   manifest-dates  ref = S3 key of a manifest.json listing archive
- *                   files. Newest USDA snapshot date (YYYYMMDD)
- *                   embedded in the data-raw/ filenames; the manifest
+ *                   files. Newest USDA-stamped date embedded in the
+ *                   data-raw/ filenames — YYYYMMDD or MM-DD-YY(YY),
+ *                   both naming styles FSA uses; the manifest
  *                   regenerates each run but the embedded dates only
  *                   advance when USDA posts new files.
  *
@@ -68,16 +69,26 @@
       return iso && isoValid(iso) ? iso : null;
     },
 
+    // FSA stamps published files MM-DD-YY(YY) as well as YYYYMMDD.
+    // Digit guards rather than \b: FSA suffixes duplicate names with
+    // _0 ("07-09-26_0.pdf"), and \b treats that underscore as a word
+    // char, dropping the file. The guards still keep the pattern from
+    // starting mid-number in the scraper-log ISO dirs
+    // ("log/2026-07-09/" — capture dates, not data dates), and
+    // isoValid discards month/day-swapped false parses.
     "manifest-dates": async (ref) => {
       const res = await fetch(`${S3}/${encodeURI(ref)}`);
       if (!res.ok) return null;
       let newest = null;
+      const consider = (iso) => {
+        if (isoValid(iso) && (!newest || iso > newest)) newest = iso;
+      };
       for (const entry of await res.json()) {
         if (typeof entry.path !== "string" || !entry.path.startsWith("data-raw/")) continue;
-        for (const [raw] of entry.path.matchAll(/20\d{6}/g)) {
-          const iso = `${raw.slice(0, 4)}-${raw.slice(4, 6)}-${raw.slice(6, 8)}`;
-          if (isoValid(iso) && (!newest || iso > newest)) newest = iso;
-        }
+        for (const [raw] of entry.path.matchAll(/20\d{6}/g))
+          consider(`${raw.slice(0, 4)}-${raw.slice(4, 6)}-${raw.slice(6, 8)}`);
+        for (const [, mm, dd, yy] of entry.path.matchAll(/(?<!\d)(\d{2})-(\d{2})-(\d{4}|\d{2})(?!\d)/g))
+          consider(`${yy.length === 2 ? `20${yy}` : yy}-${mm}-${dd}`);
       }
       return newest;
     },

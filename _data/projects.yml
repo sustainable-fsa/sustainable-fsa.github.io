@@ -21,8 +21,9 @@
 #                   file (git only records path history on content
 #                   change, so routine reruns don't move it).
 #   manifest-dates  ref is an S3 key of a manifest.json; shows the
-#                   newest USDA snapshot date (YYYYMMDD) embedded in
-#                   the archive's data-raw/ filenames.
+#                   newest USDA-stamped date embedded in the archive's
+#                   data-raw/ filenames (YYYYMMDD or MM-DD-YY[YY],
+#                   both naming styles FSA uses).
 # Archives with no honest automatic signal (static FOIA snapshots,
 # manually updated mirrors) use a hand-maintained `byline` instead —
 # update it in the same edit as the data refresh.
@@ -131,6 +132,28 @@
     - title: Code
       url: https://github.com/sustainable-fsa/fsa-lfp-eligibility
   image: /fsa-lfp-eligibility/example-1.png
+
+- title: LFP Weekly Eligibility Maps & Tables
+  category: data
+  type: WEB ARCHIVE
+  updated_method: manifest-dates
+  updated_ref: fsa-lfp-eligibility-web/manifest.json
+  description:
+    Weekly Livestock Forage Program county eligibility maps and tables as published by the USDA Farm Service
+    Agency, 2008–present — the web-published companion to the FOIA eligibility archive, with current
+    program-year coverage and weekly snapshot history.
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.com/fsa-lfp-eligibility-web
+    - title: Archive Listing
+      url: https://data.sustainable-fsa.com/#/fsa-lfp-eligibility-web/
+    - title: Download (CSV)
+      url: https://data.sustainable-fsa.com/fsa-lfp-eligibility-web/fsa-lfp-eligibility-web.csv
+    - title: Dashboard
+      url: https://data.sustainable-fsa.com/fsa-lfp-eligibility-web/fsa-lfp-eligibility-web.html
+    - title: Code
+      url: https://github.com/sustainable-fsa/fsa-lfp-eligibility-web
+  image: /fsa-lfp-eligibility-web/example-1.png
 
 - title: FSA Disasters Archive
   category: data
