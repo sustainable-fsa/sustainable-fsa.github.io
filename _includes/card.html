@@ -26,11 +26,15 @@
                       Shown whole (object-contain), letterboxed on the
                       band behind it — never cropped.
     - image_background  optional CSS color for the band behind the
-                      image (default cream). Set to "white" for
-                      figures exported on white paper/plot backgrounds
-                      so the letterbox bands disappear. Emitted inside
-                      a style attribute — plain color values only
+                      image. Set to "white" for figures exported on
+                      white paper/plot backgrounds so the letterbox
+                      bands disappear. Emitted inside a style
+                      attribute — plain color values only
                       (scripts/validate-projects.mjs enforces this).
+                      Default band: ochre-light for documents cards (a
+                      manila backdrop that offsets the white page-1
+                      thumbnails — cream is too close to white to
+                      read), cream everywhere else.
     - links           array of { title, url } pairs; the first link is
                       also used as the card-image and title hyperlink
 
@@ -45,12 +49,16 @@
 
   {% if project.image %}
   {%- comment -%}
-    The default is "transparent" rather than omitting the attribute so
-    the tag needs no Liquid conditionals, which html-validate can't
-    parse; the bg-cream class shows through when no color is set.
+    The style default is "transparent" rather than omitting the
+    attribute so the tag needs no Liquid conditionals, which
+    html-validate can't parse; the band class shows through when no
+    per-card color is set. The class tokens are spelled out in the
+    assigns so Tailwind's content scan keeps them in the compiled CSS.
   {%- endcomment -%}
   {% assign image_bg = project.image_background | default: "transparent" %}
-  <a href="{{ primary.url }}" class="block bg-cream border-b border-gray-100"
+  {% assign band_class = "bg-cream" %}
+  {% if project.category == "documents" %}{% assign band_class = "bg-ochre-light" %}{% endif %}
+  <a href="{{ primary.url }}" class="block {{ band_class }} border-b border-gray-100"
      style="background-color: {{ image_bg }}">
     <img src="{{ project.image }}" alt="{{ project.title }} preview"
          class="w-full h-44 object-contain" loading="lazy" />
