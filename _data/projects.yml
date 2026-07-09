@@ -45,6 +45,7 @@
     - title: Code
       url: https://github.com/sustainable-fsa/usdm
   image: /usdm/example-1.png
+  image_background: white
   
 - title: USDM Reported County Aggregations
   category: data
@@ -60,6 +61,7 @@
     - title: Code
       url: https://github.com/sustainable-fsa/usdm-counties-reported
   image: /usdm-counties-reported/example-1.png
+  image_background: white
 
 - title: USDM Census County Aggregations
   category: data
@@ -77,6 +79,7 @@
     - title: Code
       url: https://github.com/sustainable-fsa/usdm-counties
   image: /usdm-counties/example-1.png
+  image_background: white
 
 - title: USDM LFP County Aggregations
   category: data
@@ -92,6 +95,7 @@
     - title: Code
       url: https://github.com/sustainable-fsa/usdm-counties-fsa-lfp
   image: /usdm-counties-fsa-lfp/example-1.png
+  image_background: white
 
 - title: FSA Normal Grazing Periods
   category: data
@@ -111,6 +115,7 @@
     - title: Code
       url: https://github.com/sustainable-fsa/fsa-normal-grazing-period
   image: /fsa-normal-grazing-period/example-1.png
+  image_background: white
 
 - title: Livestock Forage Program Eligibility
   category: data
@@ -132,6 +137,7 @@
     - title: Code
       url: https://github.com/sustainable-fsa/fsa-lfp-eligibility
   image: /fsa-lfp-eligibility/example-1.png
+  image_background: white
 
 - title: LFP Weekly Eligibility Maps & Tables
   category: data
@@ -154,6 +160,7 @@
     - title: Code
       url: https://github.com/sustainable-fsa/fsa-lfp-eligibility-web
   image: /fsa-lfp-eligibility-web/example-1.png
+  image_background: white
 
 - title: FSA Disasters Archive
   category: data
@@ -174,6 +181,7 @@
     - title: Code
       url: https://github.com/sustainable-fsa/fsa-disasters
   image: /fsa-disasters/example-1.png
+  image_background: white
 
 - title: Livestock Forage Program Counties
   category: data
@@ -192,6 +200,7 @@
     - title: Code
       url: https://github.com/sustainable-fsa/fsa-lfp-counties
   image: /fsa-lfp-counties/example-1.png
+  image_background: white
 
 - title: FSA_Counties_dd17 Boundary Dataset
   category: data
@@ -208,6 +217,7 @@
     - title: Code
       url: https://github.com/sustainable-fsa/fsa-counties-dd17
   image: /fsa-counties-dd17/example-1.png
+  image_background: white
 
 - title: FSA_Counties_dd22 Boundary Dataset
   category: data
@@ -224,6 +234,7 @@
     - title: Code
       url: https://github.com/sustainable-fsa/fsa-counties-dd22
   image: /fsa-counties-dd22/example-1.png
+  image_background: white
 
 - title: FSA Farm Payment Files, 2004–2025
   category: data
@@ -238,6 +249,7 @@
     - title: Code
       url: https://github.com/sustainable-fsa/fsa-payment-files
   image: /fsa-payment-files/example-1.png
+  image_background: white
 
 - title: NAP-190 Normal Grazing Periods
   category: analysis

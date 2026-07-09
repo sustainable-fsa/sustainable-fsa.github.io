@@ -24,7 +24,13 @@
                       /SIBLING_REPO/example-1.png). Omit for cards
                       without a graphical preview (e.g. thesis cards).
                       Shown whole (object-contain), letterboxed on the
-                      cream band — never cropped.
+                      band behind it — never cropped.
+    - image_background  optional CSS color for the band behind the
+                      image (default cream). Set to "white" for
+                      figures exported on white paper/plot backgrounds
+                      so the letterbox bands disappear. Emitted inside
+                      a style attribute — plain color values only
+                      (scripts/validate-projects.mjs enforces this).
     - links           array of { title, url } pairs; the first link is
                       also used as the card-image and title hyperlink
 
@@ -38,7 +44,14 @@
 <article class="flex flex-col bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md hover:border-sage/40 transition-all overflow-hidden">
 
   {% if project.image %}
-  <a href="{{ primary.url }}" class="block bg-cream border-b border-gray-100">
+  {%- comment -%}
+    The default is "transparent" rather than omitting the attribute so
+    the tag needs no Liquid conditionals, which html-validate can't
+    parse; the bg-cream class shows through when no color is set.
+  {%- endcomment -%}
+  {% assign image_bg = project.image_background | default: "transparent" %}
+  <a href="{{ primary.url }}" class="block bg-cream border-b border-gray-100"
+     style="background-color: {{ image_bg }}">
     <img src="{{ project.image }}" alt="{{ project.title }} preview"
          class="w-full h-44 object-contain" loading="lazy" />
   </a>

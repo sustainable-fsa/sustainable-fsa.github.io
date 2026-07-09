@@ -58,6 +58,13 @@ projects.forEach((p, i) => {
   if (hasRef && (typeof p.updated_ref !== "string" || !/^[^/\s][^\s]*\/[^\s]*$/.test(p.updated_ref))) {
     errors.push(`${label}: updated_ref "${p.updated_ref}" must be a slash-containing key/prefix with no leading slash or whitespace.`);
   }
+  // `image_background` is emitted verbatim inside a style attribute in
+  // _includes/card.html (Liquid does not escape it), so a quote or
+  // semicolon would silently mangle the card's markup.
+  if (p.image_background !== undefined &&
+      (typeof p.image_background !== "string" || !/^[a-z0-9#(),.% -]+$/i.test(p.image_background))) {
+    errors.push(`${label}: image_background "${p.image_background}" must be a plain CSS color (letters, digits, #, commas, parens — it lands inside a style attribute).`);
+  }
 });
 
 if (errors.length > 0) {
