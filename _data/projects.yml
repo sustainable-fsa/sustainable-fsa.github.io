@@ -5,10 +5,33 @@
 #   category: data       → appears on /data/
 #   category: analysis   → appears on /analysis/
 #   category: documents  → appears on /documents/
+#
+# `updated_method` + `updated_ref` (data cards): renders an italic
+# "Data current as of {date}" (or "Data updated {date}") line under the
+# card title, resolved client-side by assets/archive-updated.js so the
+# date tracks the DATA — not pipeline runs or repo pushes — without a
+# site rebuild. Methods:
+#   usdm-map        ref is an S3 key prefix up to the filename stem
+#                   (e.g. "usdm/data/parquet/USDM_"); shows the map
+#                   date of the newest weekly file (USDM maps are
+#                   valid the Tuesday before their Thursday release,
+#                   and the files are named by map date).
+#   github-file     ref is "<repo>/<path>" in the sustainable-fsa org;
+#                   shows the date of the last commit that CHANGED that
+#                   file (git only records path history on content
+#                   change, so routine reruns don't move it).
+#   manifest-dates  ref is an S3 key of a manifest.json; shows the
+#                   newest USDA snapshot date (YYYYMMDD) embedded in
+#                   the archive's data-raw/ filenames.
+# Archives with no honest automatic signal (static FOIA snapshots,
+# manually updated mirrors) use a hand-maintained `byline` instead —
+# update it in the same edit as the data refresh.
 
 - title: US Drought Monitor
   category: data
   type: ARCHIVE
+  updated_method: usdm-map
+  updated_ref: usdm/data/parquet/USDM_
   description:
     Weekly US Drought Monitor (USDM) data archived as GeoParquet files with detailed metadata, January 4, 2000 – present.
   links:
@@ -25,6 +48,8 @@
 - title: USDM Reported County Aggregations
   category: data
   type: ARCHIVE
+  updated_method: usdm-map
+  updated_ref: usdm-counties-reported/data/usdm/USDM_
   description: Archive of weekly US Drought Monitor (USDM) data aggregated to county boundaries as reported by the USDM.
   links:
     - title: Documentation
@@ -38,6 +63,8 @@
 - title: USDM Census County Aggregations
   category: data
   type: DERIVED DATA
+  updated_method: usdm-map
+  updated_ref: usdm-counties/data/usdm/USDM_
   description: Weekly US Drought Monitor (USDM) data aggregated to US Census county boundaries.
   links:
     - title: Documentation
@@ -53,6 +80,8 @@
 - title: USDM LFP County Aggregations
   category: data
   type: DERIVED DATA
+  updated_method: usdm-map
+  updated_ref: usdm-counties-fsa-lfp/data/usdm/USDM_
   description: Weekly US Drought Monitor (USDM) data aggregated to the Livestock Forage Program county boundaries.
   links:
     - title: Documentation
@@ -66,6 +95,8 @@
 - title: FSA Normal Grazing Periods
   category: data
   type: FOIA ARCHIVE
+  updated_method: github-file
+  updated_ref: fsa-normal-grazing-period/fsa-normal-grazing-period.csv
   description: Official county-level normal grazing period definitions from the USDA Farm Service Agency, 2008–2026.
   links:
     - title: Documentation
@@ -83,6 +114,8 @@
 - title: Livestock Forage Program Eligibility
   category: data
   type: FOIA ARCHIVE
+  updated_method: github-file
+  updated_ref: fsa-lfp-eligibility/fsa-lfp-eligibility.csv
   description:
     Official county-level eligibility data for the Livestock Forage Program from the USDA Farm Service Agency,
     2008–2025.
@@ -102,6 +135,8 @@
 - title: FSA Disasters Archive
   category: data
   type: ARCHIVE
+  updated_method: manifest-dates
+  updated_ref: fsa-disasters/manifest.json
   description:
     Records of US Secretary of Agriculture disaster designations and Presidential Major Disaster declarations.
   links:
@@ -120,6 +155,7 @@
 - title: Livestock Forage Program Counties
   category: data
   type: FOIA ARCHIVE
+  byline: FOIA snapshot · September 2025
   description:
     The county boundary dataset used to determine LFP eligibility from the USDA Farm Service Agency
     (snapshot as of September 2025).
@@ -137,6 +173,7 @@
 - title: FSA_Counties_dd17 Boundary Dataset
   category: data
   type: ARCHIVE
+  byline: Archived April 16, 2025
   description: An archive of the FSA_Counties_dd17 dataset, originally distributed by the USDA Farm Service Agency.
   links:
     - title: Documentation
@@ -152,6 +189,7 @@
 - title: FSA_Counties_dd22 Boundary Dataset
   category: data
   type: FOIA ARCHIVE
+  byline: FOIA archive · April 29, 2026
   description: An archive of the FSA_Counties_dd22 dataset, obtained from the USDA Farm Service Agency via a FOIA request.
   links:
     - title: Documentation
@@ -167,6 +205,7 @@
 - title: FSA Farm Payment Files, 2004–2025
   category: data
   type: ARCHIVE
+  byline: Data through program year 2025 · updated July 2026
   description: Official farm payment files from the USDA Farm Service Agency, 2004–2025, available in Parquet format.
   links:
     - title: Documentation

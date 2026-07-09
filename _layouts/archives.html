@@ -45,3 +45,12 @@ layout: default
   </div>
 
 </div>
+
+{%- comment -%}
+  Fills each card's "Data current as of {date}" line (cards whose
+  projects.yml entry has an `updated_method`) from the archive's own
+  data signals — newest USDM map date, last data-changing commit, or
+  newest USDA snapshot in a manifest. Self-hosted like Alpine; a no-op
+  on pages whose cards carry no updated_method.
+{%- endcomment -%}
+<script defer src="{{ site.baseurl }}/assets/archive-updated.js"></script>

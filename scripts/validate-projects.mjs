@@ -12,6 +12,7 @@ import { dirname, join } from "node:path";
 import yaml from "js-yaml";
 
 const ALLOWED = new Set(["data", "analysis", "documents"]);
+const UPDATED_METHODS = new Set(["usdm-map", "github-file", "manifest-dates"]);
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dataFile = join(repoRoot, "_data", "projects.yml");
 
@@ -42,6 +43,20 @@ projects.forEach((p, i) => {
     errors.push(`${label}: missing "category" (must be one of: ${[...ALLOWED].join(", ")}).`);
   } else if (!ALLOWED.has(p.category)) {
     errors.push(`${label}: category "${p.category}" is not one of ${[...ALLOWED].join(", ")} — the card would render on no page.`);
+  }
+  // `updated_method`/`updated_ref` feed assets/archive-updated.js. A
+  // malformed pair fails silently in the browser (the "Data current
+  // as of" line just never appears), so shape-check it here.
+  const hasMethod = p.updated_method !== undefined;
+  const hasRef = p.updated_ref !== undefined;
+  if (hasMethod !== hasRef) {
+    errors.push(`${label}: updated_method and updated_ref must appear together.`);
+  }
+  if (hasMethod && !UPDATED_METHODS.has(p.updated_method)) {
+    errors.push(`${label}: updated_method "${p.updated_method}" is not one of ${[...UPDATED_METHODS].join(", ")}.`);
+  }
+  if (hasRef && (typeof p.updated_ref !== "string" || !/^[^/\s][^\s]*\/[^\s]*$/.test(p.updated_ref))) {
+    errors.push(`${label}: updated_ref "${p.updated_ref}" must be a slash-containing key/prefix with no leading slash or whitespace.`);
   }
 });
 

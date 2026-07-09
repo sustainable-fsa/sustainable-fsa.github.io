@@ -9,6 +9,16 @@
     - type            small uppercase eyebrow (e.g. "FOIA ARCHIVE")
     - byline          optional author/credit line; rendered in italic
                       between the title and description (used for theses)
+    - updated_method  optional; how to resolve the archive's data
+    - updated_ref     currency date ("usdm-map", "github-file", or
+                      "manifest-dates" — see _data/projects.yml for the
+                      ref each method expects). Renders an italic
+                      "Data current as of {date}" (or, for github-file,
+                      "Data updated {date}") line in the byline slot,
+                      filled client-side by assets/archive-updated.js —
+                      hidden until the lookup succeeds, so it degrades
+                      to nothing offline. Static snapshots use a plain
+                      byline instead.
     - description     1-2 sentence summary
     - image           optional preview thumbnail (usually
                       /SIBLING_REPO/example-1.png). Omit for cards
@@ -49,6 +59,12 @@
     </h3>
     {% if project.byline %}
     <p class="text-xs text-gray-500 italic mb-2">{{ project.byline }}</p>
+    {% endif %}
+    {% if project.updated_method %}
+    {% assign updated_label = "Data current as of" %}
+    {% if project.updated_method == "github-file" %}{% assign updated_label = "Data updated" %}{% endif %}
+    <p class="text-xs text-gray-500 italic mb-2" data-updated-method="{{ project.updated_method }}"
+       data-updated-ref="{{ project.updated_ref }}" hidden>{{ updated_label }} <time></time></p>
     {% endif %}
     <p class="text-sm text-gray-600 leading-relaxed flex-1">{{ project.description }}</p>
 
