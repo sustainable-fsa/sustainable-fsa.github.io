@@ -49,17 +49,19 @@
 
   {% if project.image %}
   {%- comment -%}
-    The style default is "transparent" rather than omitting the
-    attribute so the tag needs no Liquid conditionals, which
-    html-validate can't parse; the band class shows through when no
-    per-card color is set. The class tokens are spelled out in the
+    The style attribute is always present but EMPTY unless the card
+    sets image_background: html-validate can't parse Liquid tags
+    inside the tag itself, and a "background-color: transparent"
+    default would not fall through to the band class — inline style
+    outranks any class in the cascade, leaving the card's white
+    article showing through. The class tokens are spelled out in the
     assigns so Tailwind's content scan keeps them in the compiled CSS.
   {%- endcomment -%}
-  {% assign image_bg = project.image_background | default: "transparent" %}
+  {% capture image_bg %}{% if project.image_background %}background-color: {{ project.image_background }}{% endif %}{% endcapture %}
   {% assign band_class = "bg-cream" %}
   {% if project.category == "documents" %}{% assign band_class = "bg-ochre-light" %}{% endif %}
   <a href="{{ primary.url }}" class="block {{ band_class }} border-b border-gray-100"
-     style="background-color: {{ image_bg }}">
+     style="{{ image_bg }}">
     <img src="{{ project.image }}" alt="{{ project.title }} preview"
          class="w-full h-44 object-contain" loading="lazy" />
   </a>
