@@ -29,7 +29,7 @@
 
 - title: US Drought Monitor
   category: data
-  type: ARCHIVE
+  type: WEB ARCHIVE
   updated_method: usdm-map
   updated_ref: usdm/data/parquet/USDM_
   description:
@@ -47,7 +47,7 @@
   
 - title: USDM Reported County Aggregations
   category: data
-  type: ARCHIVE
+  type: WEB ARCHIVE
   updated_method: usdm-map
   updated_ref: usdm-counties-reported/data/usdm/USDM_
   description: Archive of weekly US Drought Monitor (USDM) data aggregated to county boundaries as reported by the USDM.
@@ -134,7 +134,7 @@
 
 - title: FSA Disasters Archive
   category: data
-  type: ARCHIVE
+  type: WEB ARCHIVE
   updated_method: manifest-dates
   updated_ref: fsa-disasters/manifest.json
   description:
@@ -172,7 +172,7 @@
 
 - title: FSA_Counties_dd17 Boundary Dataset
   category: data
-  type: ARCHIVE
+  type: WEB ARCHIVE
   byline: Archived April 16, 2025
   description: An archive of the FSA_Counties_dd17 dataset, originally distributed by the USDA Farm Service Agency.
   links:
@@ -204,7 +204,7 @@
 
 - title: FSA Farm Payment Files, 2004–2025
   category: data
-  type: ARCHIVE
+  type: WEB ARCHIVE
   byline: Data through program year 2025 · updated July 2026
   description: Official farm payment files from the USDA Farm Service Agency, 2004–2025, available in Parquet format.
   links:
