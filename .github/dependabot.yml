@@ -1,0 +1,9 @@
+# Keep the SHA-pinned actions in .github/workflows/pages.yml current.
+# Dependabot understands `uses: <owner>/<repo>@<sha> # <version>` pins
+# and PRs both the SHA and the version comment together.
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
