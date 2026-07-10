@@ -39,7 +39,7 @@
     - title: Documentation
       url: /usdm
     - title: Archive Listing
-      url: https://data.sustainable-fsa.com/#/usdm/
+      url: https://data.sustainable-fsa.com/usdm/
     - title: Animation
       url: https://data.sustainable-fsa.com/usdm-viz/usdm/index.html
     - title: Code
@@ -57,7 +57,7 @@
     - title: Documentation
       url: https://sustainable-fsa.com/usdm-counties-reported
     - title: Archive Listing
-      url: https://data.sustainable-fsa.com/#/usdm-counties-reported/
+      url: https://data.sustainable-fsa.com/usdm-counties-reported/
     - title: Code
       url: https://github.com/sustainable-fsa/usdm-counties-reported
   image: /usdm-counties-reported/example-1.png
@@ -73,7 +73,7 @@
     - title: Documentation
       url: /usdm-counties
     - title: Archive Listing
-      url: https://data.sustainable-fsa.com/#/usdm-counties/
+      url: https://data.sustainable-fsa.com/usdm-counties/
     - title: Animation
       url: https://data.sustainable-fsa.com/usdm-viz/usdm-counties/index.html
     - title: Code
@@ -91,7 +91,7 @@
     - title: Documentation
       url: https://sustainable-fsa.com/usdm-counties-fsa-lfp
     - title: Archive Listing
-      url: https://data.sustainable-fsa.com/#/usdm-counties-fsa-lfp/
+      url: https://data.sustainable-fsa.com/usdm-counties-fsa-lfp/
     - title: Code
       url: https://github.com/sustainable-fsa/usdm-counties-fsa-lfp
   image: /usdm-counties-fsa-lfp/example-1.png
@@ -107,7 +107,7 @@
     - title: Documentation
       url: /fsa-normal-grazing-period
     - title: Archive Listing
-      url: https://data.sustainable-fsa.com/#/fsa-normal-grazing-period/
+      url: https://data.sustainable-fsa.com/fsa-normal-grazing-period/
     - title: Download (CSV)
       url: https://data.sustainable-fsa.com/fsa-normal-grazing-period/fsa-normal-grazing-period.csv
     - title: Dashboard
@@ -129,7 +129,7 @@
     - title: Documentation
       url: /fsa-lfp-eligibility
     - title: Archive Listing
-      url: https://data.sustainable-fsa.com/#/fsa-lfp-eligibility/
+      url: https://data.sustainable-fsa.com/fsa-lfp-eligibility/
     - title: Download (CSV)
       url: https://data.sustainable-fsa.com/fsa-lfp-eligibility/fsa-lfp-eligibility.csv
     - title: Dashboard
@@ -152,7 +152,7 @@
     - title: Documentation
       url: https://sustainable-fsa.com/fsa-lfp-eligibility-web
     - title: Archive Listing
-      url: https://data.sustainable-fsa.com/#/fsa-lfp-eligibility-web/
+      url: https://data.sustainable-fsa.com/fsa-lfp-eligibility-web/
     - title: Download (CSV)
       url: https://data.sustainable-fsa.com/fsa-lfp-eligibility-web/fsa-lfp-eligibility-web.csv
     - title: Dashboard
@@ -173,7 +173,7 @@
     - title: Documentation
       url: https://sustainable-fsa.com/fsa-disasters
     - title: Archive Listing
-      url: https://data.sustainable-fsa.com/#/fsa-disasters/
+      url: https://data.sustainable-fsa.com/fsa-disasters/
     - title: Download (CSV)
       url: https://data.sustainable-fsa.com/fsa-disasters/fsa-disasters.csv
     - title: Download (Parquet)
@@ -194,7 +194,7 @@
     - title: Documentation
       url: https://sustainable-fsa.com/fsa-lfp-counties
     - title: Archive Listing
-      url: https://data.sustainable-fsa.com/#/fsa-lfp-counties/
+      url: https://data.sustainable-fsa.com/fsa-lfp-counties/
     - title: Download (GeoParquet)
       url: https://data.sustainable-fsa.com/fsa-lfp-counties/fsa-lfp-counties.parquet
     - title: Code
@@ -211,7 +211,7 @@
     - title: Documentation
       url: https://sustainable-fsa.com/fsa-counties-dd17
     - title: Archive Listing
-      url: https://data.sustainable-fsa.com/#/fsa-counties-dd17/
+      url: https://data.sustainable-fsa.com/fsa-counties-dd17/
     - title: Download (ESRI File GeoDatabase)
       url: https://data.sustainable-fsa.com/fsa-counties-dd17/FSA_Counties_dd17.gdb.zip
     - title: Code
@@ -228,7 +228,7 @@
     - title: Documentation
       url: https://sustainable-fsa.com/fsa-counties-dd22
     - title: Archive Listing
-      url: https://data.sustainable-fsa.com/#/fsa-counties-dd22/
+      url: https://data.sustainable-fsa.com/fsa-counties-dd22/
     - title: Download (ESRI File GeoDatabase)
       url: https://data.sustainable-fsa.com/fsa-counties-dd22/FSA_Counties_dd22_NonGeneralized.gdb.zip
     - title: Code
@@ -245,7 +245,7 @@
     - title: Documentation
       url: https://sustainable-fsa.com/fsa-payment-files
     - title: Archive Listing
-      url: https://data.sustainable-fsa.com/#/fsa-payment-files/
+      url: https://data.sustainable-fsa.com/fsa-payment-files/
     - title: Code
       url: https://github.com/sustainable-fsa/fsa-payment-files
   image: /fsa-payment-files/example-1.png
