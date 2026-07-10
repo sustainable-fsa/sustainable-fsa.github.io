@@ -61,15 +61,11 @@
       Web fonts. Roboto only — body uses 400/500/700, headings use
       900 (Roboto Black, applied via a base rule in src/tailwind.css
       and per-heading fontWeight overrides in tailwind.config.js' prose
-      plugin block). preconnect lets the browser TLS-handshake to
-      gstatic in parallel with parsing.
+      plugin block). Self-hosted like Alpine: the @font-face in
+      src/tailwind.css points at a pinned variable-font file vendored
+      in assets/fonts/, so no request ever leaves the origin.
     {%- endcomment -%}
-    <!-- ── Web fonts: Roboto (body + Roboto Black for headings) ─────────── -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;900&display=swap" rel="stylesheet" />
-
-    <!-- ── Tailwind CSS (built) ──────────────────────────────────────────
+    <!-- ── Tailwind CSS (built; includes the self-hosted Roboto @font-face) ─
          Compiled at deploy time from src/tailwind.css by the
          GitHub Actions workflow. Brand palette and prose colour
          overrides live in tailwind.config.js.                            -->
