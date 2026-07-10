@@ -10,13 +10,22 @@
   page.url here, so the desktop and mobile navs can never drift apart.
 {%- endcomment -%}
 {%- assign item = include.item -%}
-{%- capture click_attr -%}{% if include.mobile %}@click="mobileOpen = false"{% endif %}{%- endcapture -%}
 {%- assign is_active = false -%}
 {%- if page.url == item.url -%}
   {%- assign is_active = true -%}
 {%- elsif item.url != "/" and page.url contains item.url -%}
   {%- assign is_active = true -%}
 {%- endif -%}
-<a href="{{ site.baseurl }}{{ item.url }}" {{ click_attr }}
-   aria-current="{% if is_active %}page{% else %}false{% endif %}"
+{%- comment -%}
+  Conditional attributes (mobile @click, aria-current on the active
+  link only — aria-current="false" is valid but needless noise for
+  screen readers) are built in ONE capture: html-validate can cope
+  with a single Liquid output between attributes, but two of them
+  read as duplicate `{{`/`}}` attributes (no-dup-attr).
+{%- endcomment -%}
+{%- capture extra_attrs -%}
+  {%- if include.mobile %}@click="mobileOpen = false" {% endif -%}
+  {%- if is_active %}aria-current="page"{% endif -%}
+{%- endcapture -%}
+<a href="{{ site.baseurl }}{{ item.url }}" {{ extra_attrs }}
    class="px-3 py-2 rounded-lg text-sm font-medium transition-colors {% if is_active %}bg-terracotta text-white{% else %}text-gray-700 hover:bg-gray-100{% endif %}">{{ item.title }}</a>
