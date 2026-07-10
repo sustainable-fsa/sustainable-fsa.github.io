@@ -7,7 +7,7 @@ description: University of Montana researchers, faculty collaborators, and feder
 
 ## Principal Investigator
 
-**Kyle Bocinsky, Ph.D.** &middot; Director of Climate Extension, [Montana Climate Office](https://climate.umt.edu), [W.A. Franke College of Forestry & Conservation](https://www.umt.edu/forestry/), University of Montana.
+**Kyle Bocinsky, Ph.D.** &middot; Director of Climate Extension, [Montana Climate Office](https://climate.umt.edu), [W.A. Franke College of Forestry & Conservation](https://www.umt.edu/environment/), University of Montana.
 
 Dr. Bocinsky leads project design, federal coordination, and the data and analysis pipelines that underpin every output on this site. He coordinates directly with the USDA Climate Hubs and OCE-OEEP to translate findings into actionable recommendations for FSA disaster-relief program delivery.
 
@@ -37,7 +37,7 @@ Graduate-thesis committee chairs at the University of Montana for the four M.S. 
 
 **[Margiana Petersen-Rockney](https://www.umt.edu/environmental-studies/people/default.php?ID=8246)** &middot; Assistant Professor of Environmental Studies, University of Montana. A political ecologist studying climate equity and agrarian change — how rural agricultural communities experience and respond to climate change, including water and land use policy, climate adaptation, and rural livelihoods.
 
-**[Hilary Faxon](https://www.umt.edu/environment/personnel/faculty.php/1000?ID=7836)** &middot; Assistant Professor of Environmental Social Science and Director of the International Conservation & Development Program at the [W.A. Franke College of Forestry &amp; Conservation](https://www.umt.edu/forestry/), University of Montana. Researches the politics of land and natural resources, with attention to ties between land tenure, democracy, and rural development.
+**[Hilary Faxon](https://www.umt.edu/environment/personnel/faculty.php?ID=7836)** &middot; Assistant Professor of Environmental Social Science and Director of the International Conservation & Development Program at the [W.A. Franke College of Forestry &amp; Conservation](https://www.umt.edu/environment/), University of Montana. Researches the politics of land and natural resources, with attention to ties between land tenure, democracy, and rural development.
 
 ---
 
@@ -56,4 +56,4 @@ The project is delivered in partnership with the USDA Climate Hubs, the USDA Off
 - [USDA Southern Plains Climate Hub](https://www.climatehubs.usda.gov/hubs/southern-plains)
 - [USDA Office of the Chief Economist — Office of Energy and Environmental Policy](https://www.usda.gov/about-usda/general-information/staff-offices/office-chief-economist/office-energy-and-environmental-policy)
 - [USDA Farm Service Agency](https://www.fsa.usda.gov)
-- [Montana Climate Office](https://climate.umt.edu), [W.A. Franke College of Forestry &amp; Conservation](https://www.umt.edu/forestry/), [University of Montana](https://www.umt.edu)
+- [Montana Climate Office](https://climate.umt.edu), [W.A. Franke College of Forestry &amp; Conservation](https://www.umt.edu/environment/), [University of Montana](https://www.umt.edu)
