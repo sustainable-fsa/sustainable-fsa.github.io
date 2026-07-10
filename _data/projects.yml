@@ -37,7 +37,7 @@
     Weekly US Drought Monitor (USDM) data archived as GeoParquet files with detailed metadata, January 4, 2000 – present.
   links:
     - title: Documentation
-      url: /usdm
+      url: /usdm/
     - title: Archive Listing
       url: https://data.sustainable-fsa.com/usdm/
     - title: Animation
@@ -55,7 +55,7 @@
   description: Archive of weekly US Drought Monitor (USDM) data aggregated to county boundaries as reported by the USDM.
   links:
     - title: Documentation
-      url: https://sustainable-fsa.com/usdm-counties-reported
+      url: https://sustainable-fsa.com/usdm-counties-reported/
     - title: Archive Listing
       url: https://data.sustainable-fsa.com/usdm-counties-reported/
     - title: Code
@@ -71,7 +71,7 @@
   description: Weekly US Drought Monitor (USDM) data aggregated to US Census county boundaries.
   links:
     - title: Documentation
-      url: /usdm-counties
+      url: /usdm-counties/
     - title: Archive Listing
       url: https://data.sustainable-fsa.com/usdm-counties/
     - title: Animation
@@ -89,7 +89,7 @@
   description: Weekly US Drought Monitor (USDM) data aggregated to the Livestock Forage Program county boundaries.
   links:
     - title: Documentation
-      url: https://sustainable-fsa.com/usdm-counties-fsa-lfp
+      url: https://sustainable-fsa.com/usdm-counties-fsa-lfp/
     - title: Archive Listing
       url: https://data.sustainable-fsa.com/usdm-counties-fsa-lfp/
     - title: Code
@@ -105,7 +105,7 @@
   description: Official county-level normal grazing period definitions from the USDA Farm Service Agency, 2008–2026.
   links:
     - title: Documentation
-      url: /fsa-normal-grazing-period
+      url: /fsa-normal-grazing-period/
     - title: Archive Listing
       url: https://data.sustainable-fsa.com/fsa-normal-grazing-period/
     - title: Download (CSV)
@@ -127,7 +127,7 @@
     2008–2025.
   links:
     - title: Documentation
-      url: /fsa-lfp-eligibility
+      url: /fsa-lfp-eligibility/
     - title: Archive Listing
       url: https://data.sustainable-fsa.com/fsa-lfp-eligibility/
     - title: Download (CSV)
@@ -150,7 +150,7 @@
     program-year coverage and weekly snapshot history.
   links:
     - title: Documentation
-      url: https://sustainable-fsa.com/fsa-lfp-eligibility-web
+      url: https://sustainable-fsa.com/fsa-lfp-eligibility-web/
     - title: Archive Listing
       url: https://data.sustainable-fsa.com/fsa-lfp-eligibility-web/
     - title: Download (CSV)
@@ -171,7 +171,7 @@
     Records of US Secretary of Agriculture disaster designations and Presidential Major Disaster declarations.
   links:
     - title: Documentation
-      url: https://sustainable-fsa.com/fsa-disasters
+      url: https://sustainable-fsa.com/fsa-disasters/
     - title: Archive Listing
       url: https://data.sustainable-fsa.com/fsa-disasters/
     - title: Download (CSV)
@@ -192,7 +192,7 @@
     (snapshot as of September 2025).
   links:
     - title: Documentation
-      url: https://sustainable-fsa.com/fsa-lfp-counties
+      url: https://sustainable-fsa.com/fsa-lfp-counties/
     - title: Archive Listing
       url: https://data.sustainable-fsa.com/fsa-lfp-counties/
     - title: Download (GeoParquet)
@@ -209,7 +209,7 @@
   description: An archive of the FSA_Counties_dd17 dataset, originally distributed by the USDA Farm Service Agency.
   links:
     - title: Documentation
-      url: https://sustainable-fsa.com/fsa-counties-dd17
+      url: https://sustainable-fsa.com/fsa-counties-dd17/
     - title: Archive Listing
       url: https://data.sustainable-fsa.com/fsa-counties-dd17/
     - title: Download (ESRI File GeoDatabase)
@@ -226,7 +226,7 @@
   description: An archive of the FSA_Counties_dd22 dataset, obtained from the USDA Farm Service Agency via a FOIA request.
   links:
     - title: Documentation
-      url: https://sustainable-fsa.com/fsa-counties-dd22
+      url: https://sustainable-fsa.com/fsa-counties-dd22/
     - title: Archive Listing
       url: https://data.sustainable-fsa.com/fsa-counties-dd22/
     - title: Download (ESRI File GeoDatabase)
@@ -243,7 +243,7 @@
   description: Official farm payment files from the USDA Farm Service Agency, 2004–2025, available in Parquet format.
   links:
     - title: Documentation
-      url: https://sustainable-fsa.com/fsa-payment-files
+      url: https://sustainable-fsa.com/fsa-payment-files/
     - title: Archive Listing
       url: https://data.sustainable-fsa.com/fsa-payment-files/
     - title: Code
@@ -258,7 +258,7 @@
     "A reproducible recalculation of county Normal Grazing Periods following FSA Notice NAP-190, using NOAA's nClimGrid daily gridded weather dataset and the 1991–2020 climate normals."
   links:
     - title: Documentation
-      url: https://sustainable-fsa.com/nclimgrid-normal-grazing-period
+      url: https://sustainable-fsa.com/nclimgrid-normal-grazing-period/
     - title: Code
       url: https://github.com/sustainable-fsa/nclimgrid-normal-grazing-period
   image: /nclimgrid-normal-grazing-period/nclimgrid-normal-grazing-period.png
@@ -291,7 +291,7 @@
     Extends the project's lens to drought planning and response across the Northern Great Plains, with attention to equity and social vulnerability in how disaster relief reaches communities.
   links:
     - title: Read on ScholarWorks
-      url: https://scholarworks.umt.edu/etd/12532
+      url: https://scholarworks.umt.edu/etd/12532/
 
 - title: "Water Scarcity in the Bitterroot Valley"
   category: analysis
@@ -301,7 +301,7 @@
     A regional case study of water-scarcity dynamics in western Montana that complements the LFP work with on-the-ground evidence from a single valley.
   links:
     - title: Read on ScholarWorks
-      url: https://scholarworks.umt.edu/etd/12533
+      url: https://scholarworks.umt.edu/etd/12533/
 
 # ── Documents (/documents/) ──────────────────────────────────────────
 # Primary-source library: FSA handbooks, Federal Register rules, and

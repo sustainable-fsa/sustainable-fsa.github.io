@@ -25,9 +25,9 @@ Four M.S. theses are tied to this project: two directly supported and two advise
 
 ### Advised by the PI (related work)
 
-**Amishi Singh, M.S.** &middot; *[Equity and Social Vulnerability in Drought Planning and Response in the Northern Great Plains](https://scholarworks.umt.edu/etd/12532).* University of Montana, 2025. Extends the project's lens to drought planning and response across the Northern Great Plains.
+**Amishi Singh, M.S.** &middot; *[Equity and Social Vulnerability in Drought Planning and Response in the Northern Great Plains](https://scholarworks.umt.edu/etd/12532/).* University of Montana, 2025. Extends the project's lens to drought planning and response across the Northern Great Plains.
 
-**August W. Guenthner, M.S.** &middot; *[Water Scarcity in the Bitterroot Valley](https://scholarworks.umt.edu/etd/12533).* University of Montana, 2025. A regional case study in water-scarcity dynamics in western Montana that complements the LFP work.
+**August W. Guenthner, M.S.** &middot; *[Water Scarcity in the Bitterroot Valley](https://scholarworks.umt.edu/etd/12533/).* University of Montana, 2025. A regional case study in water-scarcity dynamics in western Montana that complements the LFP work.
 
 ---
 
