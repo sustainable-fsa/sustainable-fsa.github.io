@@ -156,7 +156,7 @@
     - title: Download (CSV)
       url: https://data.sustainable-fsa.com/fsa-lfp-eligibility-web/fsa-lfp-eligibility-web.csv
     - title: Dashboard
-      url: https://data.sustainable-fsa.com/fsa-lfp-eligibility-web/fsa-lfp-eligibility-web.html
+      url: https://sustainable-fsa.com/fsa-lfp-eligibility-web/fsa-lfp-eligibility-web.html
     - title: Code
       url: https://github.com/sustainable-fsa/fsa-lfp-eligibility-web
   image: /fsa-lfp-eligibility-web/example-1.png
