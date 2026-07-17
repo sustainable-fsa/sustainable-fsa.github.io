@@ -458,6 +458,18 @@
     - title: Original source
       url: https://www.fsa.usda.gov/Internet/FSA_Notice/nap_190.pdf
   image: /assets/documents/nap-190.png
+- title: "FSA Notice ELAP-19: 2024 and Subsequent Year ELAP Normal Grazing Periods for Perennial Forages"
+  category: documents
+  type: FSA NOTICE
+  byline: Approved March 5, 2024
+  description:
+    Extends ELAP's normal grazing season to 365 calendar days in every state and county for perennial forages, beginning with program year 2024 — so ELAP grazing and feed-transportation losses on perennial pasture no longer hinge on the county Normal Grazing Periods that continue to govern LFP.
+  links:
+    - title: Download (PDF)
+      url: /docs/elap-19.pdf
+    - title: Original source
+      url: https://www.fsa.usda.gov/Internet/FSA_Notice/elap_19.pdf
+  image: /assets/documents/elap-19.png
 - title: "FSA Notice LFP-7: 2026 LFP Payment Rates"
   category: documents
   type: FSA NOTICE
