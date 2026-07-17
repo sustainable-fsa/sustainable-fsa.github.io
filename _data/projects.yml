@@ -446,7 +446,7 @@
     - title: Original source
       url: https://www.fsa.usda.gov/Internet/FSA_File/1-nap_r02_a26.pdf
   image: /assets/documents/1nap-r02-a26.png
-- title: "FSA Notice NAP-190: Review of Normal Grazing Periods and Carrying Capacities for NAP, LFP, and ELAP"
+- title: "NAP-190: Review of Normal Grazing Periods and Carrying Capacities for NAP, LFP, and ELAP"
   category: documents
   type: FSA NOTICE
   byline: Approved August 10, 2017
@@ -458,7 +458,7 @@
     - title: Original source
       url: https://www.fsa.usda.gov/Internet/FSA_Notice/nap_190.pdf
   image: /assets/documents/nap-190.png
-- title: "FSA Notice ELAP-19: 2024 and Subsequent Year ELAP Normal Grazing Periods for Perennial Forages"
+- title: "ELAP-19: 2024 and Subsequent Year ELAP Normal Grazing Periods for Perennial Forages"
   category: documents
   type: FSA NOTICE
   byline: Approved March 5, 2024
@@ -470,7 +470,7 @@
     - title: Original source
       url: https://www.fsa.usda.gov/Internet/FSA_Notice/elap_19.pdf
   image: /assets/documents/elap-19.png
-- title: "FSA Notice LFP-7: 2026 LFP Payment Rates"
+- title: "LFP-7: 2026 LFP Payment Rates"
   category: documents
   type: FSA NOTICE
   byline: Approved April 22, 2026
@@ -482,7 +482,7 @@
     - title: Original source
       url: https://www.fsa.usda.gov/Internet/FSA_Notice/lfp_7.pdf
   image: /assets/documents/lfp-7.png
-- title: "LFP and ELAP: Supplemental Agricultural Disaster Assistance (2009 Rule)"
+- title: "LFP and ELAP: Supplemental Agricultural Disaster Assistance (2009 Final Rule)"
   category: documents
   type: FEDERAL REGISTER RULE
   byline: 74 FR 46665 · September 11, 2009
@@ -544,7 +544,7 @@
   image: /assets/documents/rin-0560-ah69.png
 - title: "Emergency Livestock Relief Program: Notice of Funds Availability (2021 Losses)"
   category: documents
-  type: FEDERAL REGISTER RULE
+  type: FEDERAL REGISTER NOTICE
   byline: 87 FR 19465 · April 4, 2022
   description:
     Created ELRP — expedited drought relief computed directly from producers' 2021 LFP payment data, the first of the LFP "top-up" programs that now recur alongside the base program.
@@ -556,7 +556,7 @@
   image: /assets/documents/fr-2022-elrp-nofa.png
 - title: "Emergency Livestock Relief Program 2022: Notice of Funds Availability"
   category: documents
-  type: FEDERAL REGISTER RULE
+  type: FEDERAL REGISTER NOTICE
   byline: 88 FR 66361 · September 27, 2023
   description:
     The second ELRP round, again computed from LFP program data — this time for 2022 grazing losses.
@@ -566,7 +566,7 @@
     - title: Original source
       url: https://www.federalregister.gov/documents/2023/09/27/2023-21068/notice-of-funds-availability-emergency-livestock-relief-program-elrp-2022
   image: /assets/documents/fr-2023-elrp-2022-nofa.png
-- title: "Emergency Livestock Relief Program 2023 and 2024 (2025 Rule)"
+- title: "Emergency Livestock Relief Program 2023 and 2024 (2025 Final Rule)"
   category: documents
   type: FEDERAL REGISTER RULE
   byline: 90 FR 22614 · May 29, 2025
