@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-tagline: Grounding disaster assistance in data science
+tagline: Grounding FSA disaster assistance in reproducible data science
 subtitle: A USDA-funded partnership reassessing the data and thresholds that govern disaster assistance — so programs are delivered efficiently, accurately, and predictably to American producers.
 ---
 
