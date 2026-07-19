@@ -1,7 +1,7 @@
 ---
 layout: home
 title: Home
-tagline: Enhancing FSA disaster relief with gold standard science
+tagline: Data-informed disaster assistance for producers
 subtitle: A USDA-funded partnership reassessing the data and thresholds that govern disaster assistance — so programs are delivered efficiently, accurately, and predictably to American producers.
 ---
 
