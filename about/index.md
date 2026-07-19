@@ -7,7 +7,7 @@ description: A USDA partnership modernizing the data behind FSA livestock disast
 
 ## The problem
 
-USDA Farm Service Agency disaster-assistance programs — the **Livestock Forage Disaster Program (LFP)**, **Emergency Assistance for Livestock, Honeybees, and Farm-Raised Fish (ELAP)**, and the **Noninsured Crop Disaster Assistance Program (NAP)** — are a critical lifeline for American producers. LFP alone has paid out more than $12 billion since 2008: roughly a billion dollars in a typical year, and several billion in years of widespread drought. Eligibility for those payments hinges on two key inputs:
+USDA Farm Service Agency disaster-assistance programs — the **Livestock Forage Disaster Program (LFP)**, **Emergency Assistance for Livestock, Honeybees, and Farm-Raised Fish (ELAP)**, and the **Noninsured Crop Disaster Assistance Program (NAP)** — are a critical lifeline for American producers. LFP alone has paid out more than $13.6 billion since 2008 — roughly $800 million in a typical year, and over $2.5 billion in years of widespread drought — as computed from the project's [Farm Payment Files archive](/fsa-payment-files/). Eligibility for those payments hinges on two key inputs:
 
 1. **The Normal Grazing Period (NGP)** assigned to each type of grazing land in each county — the period of the calendar year when grazing normally occurs, which sets the season during which drought conditions can trigger eligibility.
 2. **The US Drought Monitor (USDM)**, the weekly drought-severity classification that triggers LFP eligibility and fast-tracks Secretarial disaster designations.
