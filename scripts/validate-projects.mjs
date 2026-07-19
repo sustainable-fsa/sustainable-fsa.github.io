@@ -12,7 +12,7 @@ import { dirname, join } from "node:path";
 import yaml from "js-yaml";
 
 const ALLOWED = new Set(["data", "analysis", "documents"]);
-const UPDATED_METHODS = new Set(["usdm-map", "github-file", "manifest-dates"]);
+const UPDATED_METHODS = new Set(["usdm-map", "github-file", "github-release", "manifest-dates"]);
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dataFile = join(repoRoot, "_data", "projects.yml");
 
@@ -55,7 +55,13 @@ projects.forEach((p, i) => {
   if (hasMethod && !UPDATED_METHODS.has(p.updated_method)) {
     errors.push(`${label}: updated_method "${p.updated_method}" is not one of ${[...UPDATED_METHODS].join(", ")}.`);
   }
-  if (hasRef && (typeof p.updated_ref !== "string" || !/^[^/\s][^\s]*\/[^\s]*$/.test(p.updated_ref))) {
+  // github-release refs are bare repo names in the sustainable-fsa
+  // org; every other method's ref is a slash-containing key/path.
+  if (hasRef && p.updated_method === "github-release") {
+    if (typeof p.updated_ref !== "string" || !/^[A-Za-z0-9_.-]+$/.test(p.updated_ref)) {
+      errors.push(`${label}: updated_ref "${p.updated_ref}" must be a bare repo name (no slashes) for github-release.`);
+    }
+  } else if (hasRef && (typeof p.updated_ref !== "string" || !/^[^/\s][^\s]*\/[^\s]*$/.test(p.updated_ref))) {
     errors.push(`${label}: updated_ref "${p.updated_ref}" must be a slash-containing key/prefix with no leading slash or whitespace.`);
   }
   // `image_background` is emitted verbatim inside a style attribute in

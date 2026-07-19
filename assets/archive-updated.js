@@ -1,4 +1,4 @@
-/* Fills the "Data current as of {date}" line on data-archive cards
+/* Fills the "Data updated {date}" line on data-archive cards
  * (see _includes/card.html). Each card with an `updated_method` in
  * _data/projects.yml carries data-updated-method / data-updated-ref
  * attributes; the resolvers below turn them into the date the DATA
@@ -12,9 +12,19 @@
  *                   is valid, two days before its Thursday release —
  *                   so the newest filename is the archive's currency.
  *   github-file     ref = "<repo>/<path>" in the sustainable-fsa org.
- *                   Date of the last commit that CHANGED the file:
- *                   git records path history only on content change,
- *                   so routine pipeline reruns don't move it.
+ *                   Date of the last commit that CHANGED the file (or
+ *                   anything under it, for a directory path): git
+ *                   records path history only on content change, so
+ *                   routine pipeline reruns don't move it.
+ *   github-release  ref = "<repo>" in the sustainable-fsa org. Date of
+ *                   the latest GitHub release — the update signal for
+ *                   FOIA and other irregularly refreshed archives,
+ *                   whose repos cut a release (and a Zenodo DOI
+ *                   version) per data refresh. Release tags are named
+ *                   by DATA date (dotted YYYY.MM.DD, e.g. the FOIA
+ *                   response date), which may trail the publish
+ *                   timestamp, so parse the tag and fall back to the
+ *                   publish date only for non-date-shaped tags.
  *   manifest-dates  ref = S3 key of a manifest.json listing archive
  *                   files. Newest USDA-stamped date embedded in the
  *                   data-raw/ filenames — YYYYMMDD or MM-DD-YY(YY),
@@ -66,6 +76,15 @@
       const res = await fetch(`https://api.github.com/repos/sustainable-fsa/${repo}/commits?${q}`);
       if (!res.ok) return null;
       const iso = (await res.json())[0]?.commit?.committer?.date?.slice(0, 10);
+      return iso && isoValid(iso) ? iso : null;
+    },
+
+    "github-release": async (ref) => {
+      const res = await fetch(`https://api.github.com/repos/sustainable-fsa/${ref}/releases/latest`);
+      if (!res.ok) return null;
+      const rel = await res.json();
+      const m = /^v?(\d{4})\.(\d{2})\.(\d{2})$/.exec(rel.tag_name ?? "");
+      const iso = m ? `${m[1]}-${m[2]}-${m[3]}` : rel.published_at?.slice(0, 10);
       return iso && isoValid(iso) ? iso : null;
     },
 

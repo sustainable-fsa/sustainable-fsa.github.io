@@ -7,10 +7,10 @@
 #   category: documents  → appears on /documents/
 #
 # `updated_method` + `updated_ref` (data cards): renders an italic
-# "Data current as of {date}" (or "Data updated {date}") line under the
-# card title, resolved client-side by assets/archive-updated.js so the
-# date tracks the DATA — not pipeline runs or repo pushes — without a
-# site rebuild. Methods:
+# "Data updated {date}" line under the card title, resolved
+# client-side by assets/archive-updated.js so the date tracks the
+# DATA — not pipeline runs or repo pushes — without a site rebuild.
+# Methods:
 #   usdm-map        ref is an S3 key prefix up to the filename stem
 #                   (e.g. "usdm/data/parquet/USDM_"); shows the map
 #                   date of the newest weekly file (USDM maps are
@@ -18,15 +18,22 @@
 #                   and the files are named by map date).
 #   github-file     ref is "<repo>/<path>" in the sustainable-fsa org;
 #                   shows the date of the last commit that CHANGED that
-#                   file (git only records path history on content
-#                   change, so routine reruns don't move it).
+#                   file — or anything under it, for a directory path
+#                   (git only records path history on content change,
+#                   so routine reruns don't move it).
+#   github-release  ref is "<repo>" in the sustainable-fsa org; shows
+#                   the date of the latest GitHub release. The update
+#                   signal for FOIA and other irregularly refreshed
+#                   archives: each data refresh cuts a release (which
+#                   also mints a new Zenodo DOI version), tagged with
+#                   the DATA date (dotted YYYY.MM.DD, e.g. the FOIA
+#                   response date). The tag is parsed as the date; the
+#                   publish timestamp is only a fallback. A refresh
+#                   pushed without a release will NOT move this date.
 #   manifest-dates  ref is an S3 key of a manifest.json; shows the
 #                   newest USDA-stamped date embedded in the archive's
 #                   data-raw/ filenames (YYYYMMDD or MM-DD-YY[YY],
 #                   both naming styles FSA uses).
-# Archives with no honest automatic signal (static FOIA snapshots,
-# manually updated mirrors) use a hand-maintained `byline` instead —
-# update it in the same edit as the data refresh.
 
 - title: US Drought Monitor
   category: data
@@ -100,8 +107,8 @@
 - title: FSA Normal Grazing Periods
   category: data
   type: FOIA ARCHIVE
-  updated_method: github-file
-  updated_ref: fsa-normal-grazing-period/fsa-normal-grazing-period.csv
+  updated_method: github-release
+  updated_ref: fsa-normal-grazing-period
   description: Official county-level normal grazing period definitions from the USDA Farm Service Agency, 2008–2026.
   links:
     - title: Documentation
@@ -121,8 +128,8 @@
 - title: Livestock Forage Program Eligibility
   category: data
   type: FOIA ARCHIVE
-  updated_method: github-file
-  updated_ref: fsa-lfp-eligibility/fsa-lfp-eligibility.csv
+  updated_method: github-release
+  updated_ref: fsa-lfp-eligibility
   description:
     Official county-level eligibility data for the Livestock Forage Program from the USDA Farm Service Agency,
     2008–2025.
@@ -188,7 +195,8 @@
 - title: Livestock Forage Program Counties
   category: data
   type: FOIA ARCHIVE
-  byline: FOIA snapshot · September 2025
+  updated_method: github-release
+  updated_ref: fsa-lfp-counties
   description:
     The county boundary dataset used to determine LFP eligibility from the USDA Farm Service Agency
     (snapshot as of September 2025).
@@ -208,7 +216,8 @@
 - title: FSA_Counties_dd17 Boundary Dataset
   category: data
   type: WEB ARCHIVE
-  byline: Archived April 16, 2025
+  updated_method: github-release
+  updated_ref: fsa-counties-dd17
   description: An archive of the FSA_Counties_dd17 dataset, originally distributed by the USDA Farm Service Agency.
   links:
     - title: Documentation
@@ -226,7 +235,8 @@
 - title: FSA_Counties_dd22 Boundary Dataset
   category: data
   type: FOIA ARCHIVE
-  byline: FOIA archive · April 29, 2026
+  updated_method: github-release
+  updated_ref: fsa-counties-dd22
   description: An archive of the FSA_Counties_dd22 dataset, obtained from the USDA Farm Service Agency via a FOIA request.
   links:
     - title: Documentation
@@ -244,7 +254,8 @@
 - title: FSA Farm Payment Files, 2004–2025
   category: data
   type: WEB ARCHIVE
-  byline: Data through program year 2025 · updated July 2026
+  updated_method: github-file
+  updated_ref: fsa-payment-files/fsa-payment-files
   description: Official farm payment files from the USDA Farm Service Agency, 2004–2025, available in Parquet format.
   links:
     - title: Documentation
