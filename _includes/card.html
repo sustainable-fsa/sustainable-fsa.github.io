@@ -37,6 +37,13 @@
                       read), cream everywhere else.
     - links           array of { title, url } pairs; the first link is
                       also used as the card-image and title hyperlink
+    - doi             optional bare DOI (e.g. 10.5281/zenodo.15252842 —
+                      no https://doi.org/ prefix; the template adds the
+                      resolver, and scripts/validate-projects.mjs
+                      enforces the shape). Prefer the Zenodo concept
+                      DOI, which always resolves to the latest version.
+                      Rendered as a "DOI: …" footer line below the
+                      links row, with the DOI string as the hyperlink.
 
   In production the `image` URLs resolve under sustainable-fsa.com (the
   sibling repos are deployed to the same parent domain). They 404 in
@@ -97,6 +104,13 @@
       </li>
       {% endfor %}
     </ul>
+    {% endif %}
+
+    {% if project.doi %}
+    <p class="mt-2 text-xs text-gray-500">
+      DOI: <a href="https://doi.org/{{ project.doi }}"
+         class="text-terracotta-dark font-medium hover:underline">{{ project.doi }}</a>
+    </p>
     {% endif %}
   </div>
 </article>

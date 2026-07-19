@@ -102,6 +102,7 @@ Edit `_data/projects.yml`. Each entry needs:
     - title: Download (CSV)
       url: /my-new-archive/data.csv
   image: /my-new-archive/example-1.png
+  doi: 10.5281/zenodo.15252842   # optional; bare DOI, no https://doi.org/ prefix
 ```
 
 The `category` field decides which page the card appears on:
@@ -111,6 +112,11 @@ for the card's preview image and title. Card images come from the
 sibling repos under the same parent domain (e.g.
 `sustainable-fsa.com/usdm/example-1.png` is served by the `usdm` repo's
 GitHub Pages site); they 404 in local dev — that's expected.
+
+If the archive has a Zenodo DOI, add it as `doi:` (bare, no
+`https://doi.org/` prefix — the card template adds the resolver; prefer
+the concept DOI, which always resolves to the latest version). It
+renders as a small "DOI: …" footer line under the card's links.
 
 ### Edit page descriptions (and home-page card subtitles)
 

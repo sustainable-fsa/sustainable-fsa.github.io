@@ -65,6 +65,12 @@ projects.forEach((p, i) => {
       (typeof p.image_background !== "string" || !/^[a-z0-9#(),.% -]+$/i.test(p.image_background))) {
     errors.push(`${label}: image_background "${p.image_background}" must be a plain CSS color (letters, digits, #, commas, parens — it lands inside a style attribute).`);
   }
+  // `doi` is a bare DOI (card.html prepends https://doi.org/); a full URL
+  // or whitespace would produce a broken link.
+  if (p.doi !== undefined &&
+      (typeof p.doi !== "string" || !/^10\.\d{4,9}\/\S+$/.test(p.doi))) {
+    errors.push(`${label}: doi "${p.doi}" must be a bare DOI like 10.5281/zenodo.15252842 (no https://doi.org/ prefix).`);
+  }
 });
 
 if (errors.length > 0) {

@@ -116,6 +116,7 @@
       url: https://github.com/sustainable-fsa/fsa-normal-grazing-period
   image: /fsa-normal-grazing-period/example-1.png
   image_background: white
+  doi: 10.5281/zenodo.15252842
 
 - title: Livestock Forage Program Eligibility
   category: data
@@ -138,6 +139,7 @@
       url: https://github.com/sustainable-fsa/fsa-lfp-eligibility
   image: /fsa-lfp-eligibility/example-1.png
   image_background: white
+  doi: 10.5281/zenodo.15491626
 
 - title: LFP Weekly Eligibility Maps & Tables
   category: data
@@ -201,6 +203,7 @@
       url: https://github.com/sustainable-fsa/fsa-lfp-counties
   image: /fsa-lfp-counties/example-1.png
   image_background: white
+  doi: 10.5281/zenodo.17064495
 
 - title: FSA_Counties_dd17 Boundary Dataset
   category: data
@@ -218,6 +221,7 @@
       url: https://github.com/sustainable-fsa/fsa-counties-dd17
   image: /fsa-counties-dd17/example-1.png
   image_background: white
+  doi: 10.5281/zenodo.15232797
 
 - title: FSA_Counties_dd22 Boundary Dataset
   category: data
@@ -235,6 +239,7 @@
       url: https://github.com/sustainable-fsa/fsa-counties-dd22
   image: /fsa-counties-dd22/example-1.png
   image_background: white
+  doi: 10.5281/zenodo.21443221
 
 - title: FSA Farm Payment Files, 2004–2025
   category: data
