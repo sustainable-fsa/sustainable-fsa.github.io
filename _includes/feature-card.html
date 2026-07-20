@@ -3,6 +3,8 @@
   site.data.home_cards: `{% include feature-card.html card=card %}`.
 
   include.card provides: url, label, cta, theme, icon (see _data/home_cards.yml).
+  include.extra_class is an optional grid-placement class the caller adds to
+  this card's outer element (home.html uses it to center a lone trailing card).
   The subtitle is read live from the target page's `description:` front matter,
   unless the card provides its own `description` (needed for external targets,
   which have no page front matter). Cards with `external: true` link out
@@ -32,8 +34,20 @@
   {%- capture card_href -%}{{ site.baseurl }}{{ card.url }}{%- endcapture -%}
   {%- assign card_target = "_self" -%}
 {%- endif -%}
+{%- comment -%}
+  The class list is captured too: html-validate parses the class
+  attribute's value, and two Liquid interpolations inside it read as
+  duplicated "{{" / "}}" class tokens (no-dup-class). Building the
+  string here leaves a single clean {{ card_class }} in the tag. All
+  class tokens are still literal text in this file, so Tailwind's
+  content scan keeps them.
+{%- endcomment -%}
+{%- capture card_class -%}
+group flex flex-col bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md {{ hover }} transition-all p-6 {{ include.extra_class }}
+{%- endcapture -%}
+{%- assign card_class = card_class | strip -%}
 <a href="{{ card_href }}" target="{{ card_target }}" rel="noopener noreferrer"
-   class="group flex flex-col bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-md {{ hover }} transition-all p-6">
+   class="{{ card_class }}">
   <div class="w-10 h-10 rounded-lg {{ iconbox }} flex items-center justify-center mb-4 flex-shrink-0">
     <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true">
       <path stroke-linecap="round" stroke-linejoin="round" d="{{ card.icon }}"/>

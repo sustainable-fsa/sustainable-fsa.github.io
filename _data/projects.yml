@@ -1,10 +1,10 @@
-# Each entry renders one card on the Data, Analysis, or Documents page
+# Each entry renders one card on the Data, Publications, or Library page
 # (filtered by `category`). The home page no longer shows the full grid;
 # see `_layouts/archives.html` for the rendering loop.
 #
-#   category: data       → appears on /data/
-#   category: analysis   → appears on /analysis/
-#   category: documents  → appears on /documents/
+#   category: data          → appears on /data/
+#   category: library       → appears on /library/
+#   category: publications  → appears on /publications/
 #
 # `updated_method` + `updated_ref` (data cards): renders an italic
 # "Data updated {date}" line under the card title, resolved
@@ -267,59 +267,7 @@
   image: /fsa-payment-files/example-1.png
   image_background: white
 
-- title: NAP-190 Normal Grazing Periods
-  category: analysis
-  type: REANALYSIS
-  description:
-    "A reproducible recalculation of county Normal Grazing Periods following FSA Notice NAP-190, using NOAA's nClimGrid daily gridded weather dataset and the 1991–2020 climate normals."
-  links:
-    - title: Documentation
-      url: https://sustainable-fsa.com/nclimgrid-normal-grazing-period/
-    - title: Code
-      url: https://github.com/sustainable-fsa/nclimgrid-normal-grazing-period
-  image: /nclimgrid-normal-grazing-period/nclimgrid-normal-grazing-period.png
-
-- title: '"Emergency Relief as Routine": The Evolution of FSA''s Livestock Forage Disaster Program in an Era of Persistent Drought'
-  category: analysis
-  type: M.S. THESIS
-  byline: Shae Leigh Olsen, M.S. · University of Montana, 2025
-  description:
-    Interviews with 23 FSA staff in nine states examine how the LFP operates on the ground and how staff and producers experience it as a recurring, rather than exceptional, source of operating capital in drought-affected ranching regions.
-  links:
-    - title: Read on ScholarWorks
-      url: https://scholarworks.umt.edu/etd/12523/
-
-- title: "Adaptation and Resilience: How Beginning Farmers Navigate Land and Climate Crises in Western Montana"
-  category: analysis
-  type: M.S. THESIS
-  byline: Kyla Ivana Fugate, M.S. · University of Montana, 2025
-  description:
-    Examines how new operators in western Montana navigate the intersecting pressures of land access, climate variability, and federal program eligibility.
-  links:
-    - title: Read on ScholarWorks
-      url: https://scholarworks.umt.edu/etd/12508/
-
-- title: "Equity and Social Vulnerability in Drought Planning and Response in the Northern Great Plains"
-  category: analysis
-  type: M.S. THESIS
-  byline: Amishi Singh, M.S. · University of Montana, 2025
-  description:
-    Extends the project's lens to drought planning and response across the Northern Great Plains, with attention to equity and social vulnerability in how disaster relief reaches communities.
-  links:
-    - title: Read on ScholarWorks
-      url: https://scholarworks.umt.edu/etd/12532/
-
-- title: "Water Scarcity in the Bitterroot Valley"
-  category: analysis
-  type: M.S. THESIS
-  byline: August W. Guenthner, M.S. · University of Montana, 2025
-  description:
-    A regional case study of water-scarcity dynamics in western Montana that complements the LFP work with on-the-ground evidence from a single valley.
-  links:
-    - title: Read on ScholarWorks
-      url: https://scholarworks.umt.edu/etd/12533/
-
-# ── Documents (/documents/) ──────────────────────────────────────────
+# ── Library (/library/) ────────────────────────────────────────────
 # Primary-source library: FSA handbooks, Federal Register rules, and
 # oversight reports archived in the sibling `docs` repo (served at
 # /docs/ once GitHub Pages is enabled on sustainable-fsa/docs).
@@ -331,7 +279,7 @@
 # page instead of white paper.
 
 - title: "1-LDAP (Rev. 1): Livestock Disaster Assistance Programs for 2011 and Subsequent Years (Amendment 37)"
-  category: documents
+  category: library
   type: FSA HANDBOOK
   byline: Amendment 37 · Approved April 25, 2019
   description:
@@ -343,7 +291,7 @@
       url: https://www.fsa.usda.gov/Internet/FSA_File/1-ldap_r01_a37.pdf
   image: /assets/documents/1ldap-r01-a37.png
 - title: "1-LFP: Livestock Forage Disaster Program (Amendment 1)"
-  category: documents
+  category: library
   type: FSA HANDBOOK
   byline: Base issuance · Approved September 11, 2019
   description:
@@ -355,7 +303,7 @@
       url: https://www.fsa.usda.gov/Internet/FSA_File/1-lfp_r00_a01.pdf
   image: /assets/documents/1lfp-a1.png
 - title: "1-LFP: Livestock Forage Disaster Program (Amendment 2)"
-  category: documents
+  category: library
   type: FSA HANDBOOK
   byline: Amendment 2 · Approved July 14, 2020
   description:
@@ -367,7 +315,7 @@
       url: https://www.fsa.usda.gov/Internet/FSA_File/1-lfp_r00_a02.pdf
   image: /assets/documents/1lfp-a2.png
 - title: "1-LFP: Livestock Forage Disaster Program (Amendment 3)"
-  category: documents
+  category: library
   type: FSA HANDBOOK
   byline: Amendment 3 · Approved May 3, 2021
   description:
@@ -379,7 +327,7 @@
       url: https://www.fsa.usda.gov/Internet/FSA_File/1-lfp_r00_a03.pdf
   image: /assets/documents/1lfp-a3.png
 - title: "1-LFP: Livestock Forage Disaster Program (Amendment 4)"
-  category: documents
+  category: library
   type: FSA HANDBOOK
   byline: Amendment 4 · Approved June 15, 2022
   description:
@@ -391,7 +339,7 @@
       url: https://www.fsa.usda.gov/Internet/FSA_File/1-lfp_r00_a04.pdf
   image: /assets/documents/1lfp-a4.png
 - title: "1-LFP: Livestock Forage Disaster Program (Amendment 5)"
-  category: documents
+  category: library
   type: FSA HANDBOOK
   byline: Amendment 5 · Approved April 5, 2023
   description:
@@ -403,7 +351,7 @@
       url: https://www.fsa.usda.gov/Internet/FSA_File/1-lfp_r00_a05.pdf
   image: /assets/documents/1lfp-a5.png
 - title: "1-LFP: Livestock Forage Disaster Program (Amendment 6)"
-  category: documents
+  category: library
   type: FSA HANDBOOK
   byline: Amendment 6 · Approved February 5, 2025
   description:
@@ -415,7 +363,7 @@
       url: https://www.fsa.usda.gov/Internet/FSA_File/1-lfp_r00_a06.pdf
   image: /assets/documents/1lfp-a6.png
 - title: "1-LFP: Livestock Forage Disaster Program (Amendment 7)"
-  category: documents
+  category: library
   type: FSA HANDBOOK
   byline: Amendment 7 · Approved August 12, 2025
   description:
@@ -427,7 +375,7 @@
       url: https://www.fsa.usda.gov/Internet/FSA_File/1-lfp_r00_a07.pdf
   image: /assets/documents/1lfp-a7.png
 - title: "2-LFP: Livestock Forage Program Automation (Amendment 1)"
-  category: documents
+  category: library
   type: FSA HANDBOOK
   byline: Base issuance · Approved December 22, 2022
   description:
@@ -439,7 +387,7 @@
       url: https://www.fsa.usda.gov/Internet/FSA_File/2-lfp_r00_a01.pdf
   image: /assets/documents/2lfp-a1.png
 - title: "3-LFP: LFP Automation for 2025 and Subsequent Years (Amendment 1)"
-  category: documents
+  category: library
   type: FSA HANDBOOK
   byline: Base issuance · Approved April 29, 2025
   description:
@@ -451,7 +399,7 @@
       url: https://www.fsa.usda.gov/Internet/FSA_File/3-lfp_r00_a01.pdf
   image: /assets/documents/3lfp-a1.png
 - title: "1-NAP (Rev. 2): Noninsured Crop Disaster Assistance Program (Amendment 26)"
-  category: documents
+  category: library
   type: FSA HANDBOOK
   byline: Amendment 26 · Approved June 16, 2026
   description:
@@ -463,7 +411,7 @@
       url: https://www.fsa.usda.gov/Internet/FSA_File/1-nap_r02_a26.pdf
   image: /assets/documents/1nap-r02-a26.png
 - title: "NAP-190: Review of Normal Grazing Periods and Carrying Capacities for NAP, LFP, and ELAP"
-  category: documents
+  category: library
   type: FSA NOTICE
   byline: Approved August 10, 2017
   description:
@@ -475,7 +423,7 @@
       url: https://www.fsa.usda.gov/Internet/FSA_Notice/nap_190.pdf
   image: /assets/documents/nap-190.png
 - title: "ELAP-19: 2024 and Subsequent Year ELAP Normal Grazing Periods for Perennial Forages"
-  category: documents
+  category: library
   type: FSA NOTICE
   byline: Approved March 5, 2024
   description:
@@ -487,7 +435,7 @@
       url: https://www.fsa.usda.gov/Internet/FSA_Notice/elap_19.pdf
   image: /assets/documents/elap-19.png
 - title: "LFP-7: 2026 LFP Payment Rates"
-  category: documents
+  category: library
   type: FSA NOTICE
   byline: Approved April 22, 2026
   description:
@@ -499,7 +447,7 @@
       url: https://www.fsa.usda.gov/Internet/FSA_Notice/lfp_7.pdf
   image: /assets/documents/lfp-7.png
 - title: "LFP and ELAP: Supplemental Agricultural Disaster Assistance (2009 Final Rule)"
-  category: documents
+  category: library
   type: FEDERAL REGISTER RULE
   byline: 74 FR 46665 · September 11, 2009
   description:
@@ -511,7 +459,7 @@
       url: https://www.federalregister.gov/documents/2009/09/11/E9-21906/livestock-forage-disaster-program-and-emergency-assistance-for-livestock-honeybees-and-farm-raised
   image: /assets/documents/fr-2009-lfp-elap-rule.png
 - title: "Disaster Designation Process (2012 Final Rule)"
-  category: documents
+  category: library
   type: FEDERAL REGISTER RULE
   byline: 77 FR 41248 · July 13, 2012
   description:
@@ -523,7 +471,7 @@
       url: https://www.federalregister.gov/documents/2012/07/13/2012-17137/disaster-designation-process
   image: /assets/documents/fr-2012-disaster-designation-process.png
 - title: "Supplemental Agricultural Disaster Assistance Programs (2014 Final Rule)"
-  category: documents
+  category: library
   type: FEDERAL REGISTER RULE
   byline: 79 FR 21086 · RIN 0560-AI21 · April 14, 2014
   description:
@@ -535,7 +483,7 @@
       url: https://www.federalregister.gov/documents/2014/04/14/2014-08067/supplemental-agricultural-disaster-assistance-programs-payment-limitations-and-payment-eligibility
   image: /assets/documents/rin-0560-ai21-final-rule.png
 - title: "GAO Review of the 2014 Disaster Assistance Final Rule"
-  category: documents
+  category: library
   type: GAO REPORT
   byline: GAO-14-549R · April 29, 2014
   description:
@@ -547,7 +495,7 @@
       url: https://www.gao.gov/products/gao-14-549r
   image: /assets/documents/rin-0560-ai21-gao-14-549r.png
 - title: "Supplemental Agricultural Disaster Assistance Programs (2018 Final Rule)"
-  category: documents
+  category: library
   type: FEDERAL REGISTER RULE
   byline: 83 FR 49459 · RIN 0560-AH69 · October 2, 2018
   description:
@@ -559,7 +507,7 @@
       url: https://www.federalregister.gov/documents/2018/10/02/2018-21257/supplemental-agricultural-disaster-assistance-programs-payment-limitation-and-payment-eligibility
   image: /assets/documents/rin-0560-ah69.png
 - title: "Emergency Livestock Relief Program: Notice of Funds Availability (2021 Losses)"
-  category: documents
+  category: library
   type: FEDERAL REGISTER NOTICE
   byline: 87 FR 19465 · April 4, 2022
   description:
@@ -571,7 +519,7 @@
       url: https://www.federalregister.gov/documents/2022/04/04/2022-06950/notice-of-funds-availability-emergency-livestock-relief-program-elrp
   image: /assets/documents/fr-2022-elrp-nofa.png
 - title: "Emergency Livestock Relief Program 2022: Notice of Funds Availability"
-  category: documents
+  category: library
   type: FEDERAL REGISTER NOTICE
   byline: 88 FR 66361 · September 27, 2023
   description:
@@ -583,7 +531,7 @@
       url: https://www.federalregister.gov/documents/2023/09/27/2023-21068/notice-of-funds-availability-emergency-livestock-relief-program-elrp-2022
   image: /assets/documents/fr-2023-elrp-2022-nofa.png
 - title: "Emergency Livestock Relief Program 2023 and 2024 (2025 Final Rule)"
-  category: documents
+  category: library
   type: FEDERAL REGISTER RULE
   byline: 90 FR 22614 · May 29, 2025
   description:
@@ -595,7 +543,7 @@
       url: https://www.federalregister.gov/documents/2025/05/29/2025-09581/emergency-livestock-relief-program-elrp-2023-and-2024
   image: /assets/documents/fr-2025-elrp-2023-2024-rule.png
 - title: "One Big Beautiful Bill Act — Disaster Assistance Provisions (P.L. 119-21)"
-  category: documents
+  category: library
   type: STATUTE
   byline: Public Law 119-21, § 10401 · 139 Stat. 101 · July 4, 2025
   description:
@@ -607,7 +555,7 @@
       url: https://www.govinfo.gov/app/details/PLAW-119publ21
   image: /assets/documents/plaw-119-21.png
 - title: "Emergency Livestock Relief Programs (2025 Final Rule)"
-  category: documents
+  category: library
   type: FEDERAL REGISTER RULE
   byline: 90 FR 44299 · September 15, 2025
   description:
@@ -619,7 +567,7 @@
       url: https://www.federalregister.gov/documents/2025/09/15/2025-17742/emergency-livestock-relief-programs
   image: /assets/documents/fr-2025-elrp-final-rule.png
 - title: "Payment Limitation and Payment Eligibility (2026 Final Rule)"
-  category: documents
+  category: library
   type: FEDERAL REGISTER RULE
   byline: 91 FR 32880 · RIN 0560-AI86 · June 2, 2026
   description:
@@ -631,7 +579,7 @@
       url: https://www.federalregister.gov/documents/2026/06/02/2026-11002/payment-limitation-and-payment-eligibility
   image: /assets/documents/fr-2026-payment-limitation.png
 - title: "The Stocking Impact and Financial-Climate Risk of the Livestock Forage Disaster Program"
-  category: documents
+  category: library
   type: USDA ERS REPORT
   byline: ERR-329 · R. Aaron Hrozencik, Gabriela Perez-Quesada, and Kyle Bocinsky · January 2024
   description:
@@ -643,7 +591,7 @@
       url: https://www.ers.usda.gov/publications/108371
   image: /assets/documents/ers-err-329.png
 - title: "Livestock Forage Disaster Program (LFP): Drought and Wildfire Assistance"
-  category: documents
+  category: library
   type: CRS REPORT
   byline: CRS R48082 · June 4, 2024
   description:
@@ -655,7 +603,7 @@
       url: https://www.congress.gov/crs-product/R48082
   image: /assets/documents/crs-r48082.png
 - title: "The Noninsured Crop Disaster Assistance Program (NAP)"
-  category: documents
+  category: library
   type: CRS REPORT
   byline: CRS R48245 · October 24, 2024
   description:
@@ -667,7 +615,7 @@
       url: https://www.congress.gov/crs-product/R48245
   image: /assets/documents/crs-r48245.png
 - title: "USDA Plan to Fortify the American Beef Industry"
-  category: documents
+  category: library
   type: USDA REPORT
   byline: USDA · October 20, 2025
   description:
@@ -679,7 +627,7 @@
       url: https://www.usda.gov/sites/default/files/documents/USDA%20Beef%20Industry%20Plan%20White%20Paper.pdf
   image: /assets/documents/usda-beef-industry-plan-2025.png
 - title: "Livestock Forage Disaster Program Fact Sheet (May 2025)"
-  category: documents
+  category: library
   type: FSA FACT SHEET
   byline: May 2025 edition · April 2024 edition also archived
   description:
@@ -692,3 +640,151 @@
     - title: Current web version
       url: https://www.fsa.usda.gov/tools/informational/fact-sheets/livestock-forage-disaster-program-lfp
   image: /assets/documents/fsa-lfp-factsheet-2025.png
+
+# ── Publications (/publications/) ─────────────────────────────────────
+# Project-authored briefings, fact sheets, reports, and infographics,
+# written in the sibling `publications` repo and compiled to branded
+# PDF/UA-1 PDFs. The PDFs themselves are published by that repo's
+# `publish` workflow to s3://sustainable-fsa/publications/ and served
+# through CloudFront at data.sustainable-fsa.com/publications/ — so a
+# republished document goes live without a site rebuild, and these
+# links never need to change.
+# Thumbnails are page-1 renders in assets/publications/, generated from
+# publications/build/ with `pdftoppm -png -r 150 -scale-to-x 700
+# -scale-to-y -1 -f 1 -l 1 <file>.pdf <stem>`, then flattened with
+# `magick <stem>-1.png -background white -alpha remove -alpha off
+# <stem>.png`. Every page renders on white paper, so each card sets
+# image_background: white to drop the letterbox band.
+
+- title: "Sustainable FSA: Project Overview"
+  category: publications
+  type: FACT SHEET
+  byline: Fact sheet · July 2026
+  description:
+    A two-page introduction to the project — the archives, analyses, and partnerships behind an effort to ground FSA disaster assistance in reproducible data science, with the headline numbers on LFP payments since 2008.
+  links:
+    - title: Download (PDF)
+      url: https://data.sustainable-fsa.com/publications/2026-07-factsheet-project-overview.pdf
+    - title: Source
+      url: https://github.com/sustainable-fsa/publications/blob/main/factsheets/2026-07-factsheet-project-overview.md
+  image: /assets/publications/2026-07-factsheet-project-overview.png
+  image_background: white
+
+- title: "Sustainable FSA: Top-Line Takeaways"
+  category: publications
+  type: BRIEFING
+  byline: Briefing · July 2026 · Prepared for the USDA Office of the Chief Economist
+  description:
+    The leadership-facing summary: the Livestock Forage Disaster Program largely works as designed, but the conditions it was designed for have shifted. Lays out where the program's data inputs have drifted from measured conditions and what it would take to bring them current.
+  links:
+    - title: Download (PDF)
+      url: https://data.sustainable-fsa.com/publications/2026-07-briefing-chief-economist-takeaways.pdf
+    - title: Source
+      url: https://github.com/sustainable-fsa/publications/blob/main/briefings/2026-07-briefing-chief-economist-takeaways.md
+  image: /assets/publications/2026-07-briefing-chief-economist-takeaways.png
+  image_background: white
+
+- title: County Boundaries, the Drought Monitor, and LFP Eligibility
+  category: publications
+  type: BRIEFING
+  byline: Briefing · July 2026 · Prepared for the USDA Office of the Chief Economist
+  description:
+    LFP eligibility is adjudicated where the US Drought Monitor meets county boundaries — but the boundary dataset in use is non-authoritative and essentially frozen, while federal law names the Census Bureau steward of authoritative boundaries. Makes the case for adopting Census boundaries as both a Geospatial Data Act compliance measure and a fiscal-integrity fix.
+  links:
+    - title: Download (PDF)
+      url: https://data.sustainable-fsa.com/publications/2026-07-briefing-gda-county-boundaries.pdf
+    - title: Source
+      url: https://github.com/sustainable-fsa/publications/blob/main/briefings/2026-07-briefing-gda-county-boundaries.md
+  image: /assets/publications/2026-07-briefing-gda-county-boundaries.png
+  image_background: white
+
+- title: The Sustainable FSA Data Archives
+  category: publications
+  type: BRIEFING
+  byline: Briefing · July 2026 · Prepared for the USDA Office of the Chief Economist
+  description:
+    A guide to the twelve public archives behind the project — the weekly Drought Monitor, county boundaries, normal grazing periods, and the eligibility and payment records that follow from them — all with documented provenance, so any county determination since 2008 can be independently reproduced and audited.
+  links:
+    - title: Download (PDF)
+      url: https://data.sustainable-fsa.com/publications/2026-07-briefing-data-archives.pdf
+    - title: Source
+      url: https://github.com/sustainable-fsa/publications/blob/main/briefings/2026-07-briefing-data-archives.md
+    - title: Browse the archives
+      url: /data/
+  image: /assets/publications/2026-07-briefing-data-archives.png
+  image_background: white
+
+- title: Calculating Normal Grazing Periods Using Historical nClimGrid-Daily Data
+  category: publications
+  type: REPORT
+  byline: Report · July 2026 · Prepared for the USDA Office of the Chief Economist
+  description:
+    A reproducible reanalysis of FSA's NAP-190 methodology, re-deriving full-, cool-, and warm-season normal grazing periods for every CONUS county from NOAA's nClimGrid-daily data and the 1991–2020 normals — a pipeline that can be re-run on each new decadal normal so program criteria stay current.
+  links:
+    - title: Download (PDF)
+      url: https://data.sustainable-fsa.com/publications/2026-07-report-nclimgrid-ngp.pdf
+    - title: Source
+      url: https://github.com/sustainable-fsa/publications/blob/main/reports/2026-07-report-nclimgrid-ngp.md
+    - title: Data and code
+      url: https://sustainable-fsa.com/nclimgrid-normal-grazing-period/
+  image: /assets/publications/2026-07-report-nclimgrid-ngp.png
+  image_background: white
+
+- title: How a Drought Map Becomes a Disaster Payment
+  category: publications
+  type: INFOGRAPHIC
+  byline: Infographic · July 2026
+  description:
+    A one-page walk through the LFP pipeline, from the weekly US Drought Monitor map to a payment in a rancher's account — the county cut, the normal grazing period, and the payment calculation, with the drift in each step flagged along the way.
+  links:
+    - title: Download (PDF)
+      url: https://data.sustainable-fsa.com/publications/2026-07-infographic-lfp-pipeline.pdf
+    - title: Source
+      url: https://github.com/sustainable-fsa/publications/blob/main/infographics/2026-07-infographic-lfp-pipeline.typ
+  image: /assets/publications/2026-07-infographic-lfp-pipeline.png
+  image_background: white
+
+# Graduate theses — a second, complementary register: interview- and
+# field-research-based degree work rather than project-authored PDFs, so
+# these carry no thumbnail (see _includes/card.html: image is optional,
+# omitted for thesis-style cards) and link out to ScholarWorks instead
+# of a download.
+- title: '"Emergency Relief as Routine": The Evolution of FSA''s Livestock Forage Disaster Program in an Era of Persistent Drought'
+  category: publications
+  type: M.S. THESIS
+  byline: Shae Leigh Olsen, M.S. · University of Montana, 2025
+  description:
+    Interviews with 23 FSA staff in nine states examine how the LFP operates on the ground and how staff and producers experience it as a recurring, rather than exceptional, source of operating capital in drought-affected ranching regions.
+  links:
+    - title: Read on ScholarWorks
+      url: https://scholarworks.umt.edu/etd/12523/
+
+- title: "Adaptation and Resilience: How Beginning Farmers Navigate Land and Climate Crises in Western Montana"
+  category: publications
+  type: M.S. THESIS
+  byline: Kyla Ivana Fugate, M.S. · University of Montana, 2025
+  description:
+    Examines how new operators in western Montana navigate the intersecting pressures of land access, climate variability, and federal program eligibility.
+  links:
+    - title: Read on ScholarWorks
+      url: https://scholarworks.umt.edu/etd/12508/
+
+- title: "Equity and Social Vulnerability in Drought Planning and Response in the Northern Great Plains"
+  category: publications
+  type: M.S. THESIS
+  byline: Amishi Singh, M.S. · University of Montana, 2025
+  description:
+    Extends the project's lens to drought planning and response across the Northern Great Plains, with attention to equity and social vulnerability in how disaster relief reaches communities.
+  links:
+    - title: Read on ScholarWorks
+      url: https://scholarworks.umt.edu/etd/12532/
+
+- title: "Water Scarcity in the Bitterroot Valley"
+  category: publications
+  type: M.S. THESIS
+  byline: August W. Guenthner, M.S. · University of Montana, 2025
+  description:
+    A regional case study of water-scarcity dynamics in western Montana that complements the LFP work with on-the-ground evidence from a single valley.
+  links:
+    - title: Read on ScholarWorks
+      url: https://scholarworks.umt.edu/etd/12533/

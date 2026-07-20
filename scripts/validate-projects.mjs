@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 // Validates _data/projects.yml against the contract that _layouts/archives.html
-// relies on: every entry must carry a `category` of exactly "data", "analysis",
-// or "documents". A card renders only where `project.category == page.archive_category`,
+// relies on: every entry must carry a `category` of exactly "data",
+// "library", or "publications". A card renders only where
+// `project.category == page.archive_category`,
 // so a missing, misspelled, or mis-cased category silently drops the card from
 // every page while the Jekyll build still succeeds. This check fails the CI run
 // before that can ship. Run via `npm run lint:data`.
@@ -11,7 +12,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
 import yaml from "js-yaml";
 
-const ALLOWED = new Set(["data", "analysis", "documents"]);
+const ALLOWED = new Set(["data", "library", "publications"]);
 const UPDATED_METHODS = new Set(["usdm-map", "github-file", "github-release", "manifest-dates"]);
 const repoRoot = join(dirname(fileURLToPath(import.meta.url)), "..");
 const dataFile = join(repoRoot, "_data", "projects.yml");
@@ -90,4 +91,8 @@ const counts = projects.reduce((acc, p) => {
   acc[p.category] = (acc[p.category] || 0) + 1;
   return acc;
 }, {});
-console.log(`✓ _data/projects.yml OK — ${projects.length} entries (${counts.data || 0} data, ${counts.analysis || 0} analysis, ${counts.documents || 0} documents).`);
+// Summarize over ALLOWED so a newly added category can't be silently
+// omitted from the count line (which is how a mis-tallied 53-entry run
+// would otherwise read as fine).
+const summary = [...ALLOWED].map((c) => `${counts[c] || 0} ${c}`).join(", ");
+console.log(`✓ _data/projects.yml OK — ${projects.length} entries (${summary}).`);

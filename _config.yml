@@ -36,9 +36,9 @@ nav:
     url: /about/
   - title: Data
     url: /data/
-  - title: Analysis
-    url: /analysis/
-  - title: Documents
-    url: /documents/
+  - title: Publications
+    url: /publications/
+  - title: Library
+    url: /library/
   - title: Team
     url: /team/

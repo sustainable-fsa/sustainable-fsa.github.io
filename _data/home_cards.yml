@@ -1,5 +1,7 @@
-# The six feature cards on the home page (rendered by _includes/feature-card.html,
-# looped from _layouts/home.html; 3×2 grid at lg, 2×3 at sm). Each card's subtitle
+# The feature cards on the home page (rendered by _includes/feature-card.html,
+# looped from _layouts/home.html; 3 across at lg, 2 at sm). When the count
+# leaves a single card alone on the final lg row, home.html centers it —
+# see the comment there. Each card's subtitle
 # is pulled live from the target page's `description:` front matter, so it is not
 # duplicated here — except external cards, which carry their own `description`.
 #
@@ -26,14 +28,14 @@
   theme: sage
   icon: "M4 7v10c0 2 3.582 3 8 3s8-1 8-3V7M4 7c0 2 3.582 3 8 3s8-1 8-3M4 7c0-2 3.582-3 8-3s8 1 8 3"
 
-- url: /analysis/
-  label: Analysis
-  cta: See the reports
-  theme: ochre
-  icon: "M9 19v-6a1 1 0 00-1-1H5a1 1 0 00-1 1v6a1 1 0 001 1h3a1 1 0 001-1zm0 0V9a1 1 0 011-1h3a1 1 0 011 1v10m-5 0a1 1 0 001 1h3a1 1 0 001-1m0 0V5a1 1 0 011-1h3a1 1 0 011 1v14a1 1 0 01-1 1h-3a1 1 0 01-1-1z"
+- url: /publications/
+  label: Publications
+  cta: Read the publications
+  theme: terracotta
+  icon: "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
 
-- url: /documents/
-  label: Documents
+- url: /library/
+  label: Library
   cta: Browse the library
   theme: terracotta
   icon: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"

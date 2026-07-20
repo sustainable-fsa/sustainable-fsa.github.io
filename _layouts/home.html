@@ -9,14 +9,14 @@ layout: default
        subtitle, and 2 CTAs. Reads page.tagline and page.subtitle from
        index.md front matter.
     2. Intro paragraph — renders the markdown body of index.md.
-    3. Feature cards — About / Data / Analysis / Documents / Team / Code.
+    3. Feature cards — About / Data / Publications / Library / Team / Code.
        Defined in _data/home_cards.yml, rendered by _includes/feature-card.html.
        Each card pulls its subtitle text from the target page's
        `description:` front matter, so editing a page's meta description
        automatically updates the matching home card.
 
-  The data and analysis archive grids no longer live on the home page;
-  they were moved to dedicated /data/ and /analysis/ routes (driven by
+  The data and publications archive grids no longer live on the home page;
+  they were moved to dedicated /data/ and /publications/ routes (driven by
   the `category:` field in _data/projects.yml — see _layouts/archives.html).
 {% endcomment %}
 
@@ -58,9 +58,23 @@ layout: default
 </section>
 {% endif %}
 
-<!-- ── Feature cards (3×2 grid, from _data/home_cards.yml) ─────────────── -->
+<!-- ── Feature cards (3 across at lg, from _data/home_cards.yml) ───────── -->
+{%- comment -%}
+  With a card count that is not a multiple of 3, the final lg row is
+  short. One card alone at the left edge reads as a mistake, so when
+  `count mod 3 == 1` the last card is pushed to the middle column
+  (lg:col-start-2). Two-card remainders fill the row well enough to
+  leave alone, as does the 2-column sm layout. The class token is
+  written out literally here so Tailwind's content scan keeps it.
+{%- endcomment -%}
+{%- assign card_count = site.data.home_cards | size -%}
+{%- assign remainder = card_count | modulo: 3 -%}
 <section class="max-w-7xl mx-auto px-4 pb-14">
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-    {% for card in site.data.home_cards %}{% include feature-card.html card=card %}{% endfor %}
+    {% for card in site.data.home_cards %}
+      {%- assign orphan = "" -%}
+      {%- if remainder == 1 and forloop.last -%}{%- assign orphan = "lg:col-start-2" -%}{%- endif -%}
+      {% include feature-card.html card=card extra_class=orphan %}
+    {% endfor %}
   </div>
 </section>

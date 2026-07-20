@@ -39,20 +39,22 @@ bundle exec jekyll serve --livereload
 │   ├── default.html        HTML shell, head/meta, header, footer.
 │   ├── home.html           Hero + intro + feature cards (no archive grid).
 │   ├── page.html           Prose layout for About / Team.
-│   └── archives.html       Card-grid layout for /data/ and /analysis/.
-│                           Both pages render the same way; what they
-│                           show is driven by `category:` in projects.yml.
+│   └── archives.html       Card-grid layout for /data/, /publications/, and
+│                           /library/. All three pages render the same way;
+│                           what they show is driven by `category:` in projects.yml.
 ├── _includes/
 │   ├── header.html         Sticky navbar with banner + Alpine.js mobile menu.
 │   ├── footer.html         Funding statement, partner credits, source link.
 │   └── card.html           Single data-archive card; loop target for projects.yml.
 ├── _data/
-│   └── projects.yml        Archive cards; each has `category: data` or
-│                           `category: analysis` to route it to the right page.
+│   └── projects.yml        Archive cards; each has `category: data`,
+│                           `category: publications`, or `category: library`
+│                           to route it to the right page.
 ├── index.md                Home page (uses `layout: home`).
 ├── about/index.md          About the project, including progress narrative.
 ├── data/index.md           Data archives (uses `layout: archives`).
-├── analysis/index.md       Reproducible analytical reports.
+├── publications/index.md   Briefings, fact sheets, reports, infographics & theses.
+├── library/index.md        FSA handbooks, Federal Register rules & oversight reports.
 ├── team/index.md           PI, graduate researchers, faculty collaborators, partners.
 ├── assets/
 │   ├── sustainable-fsa-banner.svg   Header logo banner.
@@ -81,19 +83,21 @@ Edit `_config.yml` — append to the `nav:` list:
 
 ```yaml
 nav:
-  - title: Publications
-    url: /publications/
+  - title: My New Page
+    url: /my-new-page/
 ```
 
-Then create `publications/index.md` with `layout: page` front matter.
+Then create `my-new-page/index.md`, with `layout: page` front matter for
+a prose page (like About or Team) or `layout: archives` front matter
+for a card-grid page (like Data, Publications, or Library).
 
-### Add or edit a data or analysis card
+### Add or edit a data, publications, or library card
 
 Edit `_data/projects.yml`. Each entry needs:
 
 ```yaml
 - title: My New Archive
-  category: data            # or `analysis`
+  category: data            # or `publications`, `library`
   type: ARCHIVE
   description: One- or two-sentence summary.
   links:
@@ -106,8 +110,9 @@ Edit `_data/projects.yml`. Each entry needs:
 ```
 
 The `category` field decides which page the card appears on:
-`category: data` routes it to `/data/`, `category: analysis` routes it
-to `/analysis/`. The first link's URL is used as the hyperlink target
+`category: data` routes it to `/data/`, `category: publications` routes
+it to `/publications/`, `category: library` routes it to `/library/`.
+The first link's URL is used as the hyperlink target
 for the card's preview image and title. Card images come from the
 sibling repos under the same parent domain (e.g.
 `sustainable-fsa.com/usdm/example-1.png` is served by the `usdm` repo's
@@ -120,8 +125,8 @@ renders as a small "DOI: …" footer line under the card's links.
 
 ### Edit page descriptions (and home-page card subtitles)
 
-The four feature cards on the home page (`About`, `Data`, `Analysis`,
-`Team`) read their subtitle from the target page's `description:`
+The feature cards on the home page (`About`, `Data`, `Publications`,
+`Team`, etc.) read their subtitle from the target page's `description:`
 front-matter field. Editing the front matter at `about/index.md`,
 `data/index.md`, etc., automatically updates the matching card on the
 home page.

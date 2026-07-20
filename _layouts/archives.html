@@ -2,7 +2,7 @@
 layout: default
 ---
 {% comment %}
-  Archive-listing layout for /data/, /analysis/, and /documents/.
+  Archive-listing layout for /data/, /publications/, and /library/.
   Renders a header (eyebrow + title + lede + optional prose body)
   followed by a card grid filtered by `page.archive_category` against
   _data/projects.yml.
@@ -11,7 +11,7 @@ layout: default
     - title             page heading (required)
     - section_label     small eyebrow above the title (optional)
     - description       lede paragraph below the title (optional)
-    - archive_category  required; "data", "analysis", or "documents".
+    - archive_category  required; "data", "publications", or "library".
                         Filters `_data/projects.yml` so only matching
                         cards render in the grid.
 {% endcomment %}
