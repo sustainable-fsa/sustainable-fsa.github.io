@@ -673,9 +673,9 @@
 - title: "Sustainable FSA: Top-Line Takeaways"
   category: publications
   type: BRIEFING
-  byline: Briefing · July 2026 · Prepared for the USDA Office of the Chief Economist
+  byline: Briefing · July 2026
   description:
-    The leadership-facing summary: the Livestock Forage Disaster Program largely works as designed, but the conditions it was designed for have shifted. Lays out where the program's data inputs have drifted from measured conditions and what it would take to bring them current.
+    The leadership-facing summary — the Livestock Forage Disaster Program largely works as designed, but the conditions it was designed for have shifted. Lays out where the program's data inputs have drifted from measured conditions and what it would take to bring them current.
   links:
     - title: Download (PDF)
       url: https://data.sustainable-fsa.com/publications/2026-07-briefing-chief-economist-takeaways.pdf
@@ -687,7 +687,7 @@
 - title: County Boundaries, the Drought Monitor, and LFP Eligibility
   category: publications
   type: BRIEFING
-  byline: Briefing · July 2026 · Prepared for the USDA Office of the Chief Economist
+  byline: Briefing · July 2026
   description:
     LFP eligibility is adjudicated where the US Drought Monitor meets county boundaries — but the boundary dataset in use is non-authoritative and essentially frozen, while federal law names the Census Bureau steward of authoritative boundaries. Makes the case for adopting Census boundaries as both a Geospatial Data Act compliance measure and a fiscal-integrity fix.
   links:
@@ -701,7 +701,7 @@
 - title: The Sustainable FSA Data Archives
   category: publications
   type: BRIEFING
-  byline: Briefing · July 2026 · Prepared for the USDA Office of the Chief Economist
+  byline: Briefing · July 2026
   description:
     A guide to the twelve public archives behind the project — the weekly Drought Monitor, county boundaries, normal grazing periods, and the eligibility and payment records that follow from them — all with documented provenance, so any county determination since 2008 can be independently reproduced and audited.
   links:
@@ -717,7 +717,7 @@
 - title: Calculating Normal Grazing Periods Using Historical nClimGrid-Daily Data
   category: publications
   type: REPORT
-  byline: Report · July 2026 · Prepared for the USDA Office of the Chief Economist
+  byline: Report · July 2026
   description:
     A reproducible reanalysis of FSA's NAP-190 methodology, re-deriving full-, cool-, and warm-season normal grazing periods for every CONUS county from NOAA's nClimGrid-daily data and the 1991–2020 normals — a pipeline that can be re-run on each new decadal normal so program criteria stay current.
   links:
