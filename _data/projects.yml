@@ -665,8 +665,6 @@
   links:
     - title: Download (PDF)
       url: https://data.sustainable-fsa.com/publications/2026-07-factsheet-project-overview.pdf
-    - title: Source
-      url: https://github.com/sustainable-fsa/publications/blob/main/factsheets/2026-07-factsheet-project-overview.md
   image: /assets/publications/2026-07-factsheet-project-overview.png
   image_background: white
 
@@ -679,8 +677,6 @@
   links:
     - title: Download (PDF)
       url: https://data.sustainable-fsa.com/publications/2026-07-briefing-chief-economist-takeaways.pdf
-    - title: Source
-      url: https://github.com/sustainable-fsa/publications/blob/main/briefings/2026-07-briefing-chief-economist-takeaways.md
   image: /assets/publications/2026-07-briefing-chief-economist-takeaways.png
   image_background: white
 
@@ -693,8 +689,6 @@
   links:
     - title: Download (PDF)
       url: https://data.sustainable-fsa.com/publications/2026-07-briefing-gda-county-boundaries.pdf
-    - title: Source
-      url: https://github.com/sustainable-fsa/publications/blob/main/briefings/2026-07-briefing-gda-county-boundaries.md
   image: /assets/publications/2026-07-briefing-gda-county-boundaries.png
   image_background: white
 
@@ -707,8 +701,6 @@
   links:
     - title: Download (PDF)
       url: https://data.sustainable-fsa.com/publications/2026-07-briefing-data-archives.pdf
-    - title: Source
-      url: https://github.com/sustainable-fsa/publications/blob/main/briefings/2026-07-briefing-data-archives.md
     - title: Browse the archives
       url: /data/
   image: /assets/publications/2026-07-briefing-data-archives.png
@@ -723,8 +715,6 @@
   links:
     - title: Download (PDF)
       url: https://data.sustainable-fsa.com/publications/2026-07-report-nclimgrid-ngp.pdf
-    - title: Source
-      url: https://github.com/sustainable-fsa/publications/blob/main/reports/2026-07-report-nclimgrid-ngp.md
     - title: Data and code
       url: https://sustainable-fsa.com/nclimgrid-normal-grazing-period/
   image: /assets/publications/2026-07-report-nclimgrid-ngp.png
@@ -739,8 +729,6 @@
   links:
     - title: Download (PDF)
       url: https://data.sustainable-fsa.com/publications/2026-07-infographic-lfp-pipeline.pdf
-    - title: Source
-      url: https://github.com/sustainable-fsa/publications/blob/main/infographics/2026-07-infographic-lfp-pipeline.typ
   image: /assets/publications/2026-07-infographic-lfp-pipeline.png
   image_background: white
 
