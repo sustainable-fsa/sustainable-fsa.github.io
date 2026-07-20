@@ -673,7 +673,7 @@
   type: BRIEFING
   byline: Briefing · July 2026
   description:
-    The leadership-facing summary — the Livestock Forage Disaster Program largely works as designed, but the conditions it was designed for have shifted. Lays out where the program's data inputs have drifted from measured conditions and what it would take to bring them current.
+    A leadership-facing summary of the project's core finding — the Livestock Forage Disaster Program largely works as designed, but the conditions it was designed for have shifted — laying out where the program's data inputs have drifted from measured conditions and what it would take to bring them current.
   links:
     - title: Download (PDF)
       url: https://data.sustainable-fsa.com/publications/2026-07-briefing-chief-economist-takeaways.pdf
@@ -685,7 +685,7 @@
   type: BRIEFING
   byline: Briefing · July 2026
   description:
-    LFP eligibility is adjudicated where the US Drought Monitor meets county boundaries — but the boundary dataset in use is non-authoritative and essentially frozen, while federal law names the Census Bureau steward of authoritative boundaries. Makes the case for adopting Census boundaries as both a Geospatial Data Act compliance measure and a fiscal-integrity fix.
+    A case for adopting authoritative Census county boundaries in LFP eligibility determinations, as both a Geospatial Data Act compliance measure and a fiscal-integrity fix — eligibility is adjudicated where the US Drought Monitor meets county boundaries, but the boundary dataset in use is non-authoritative and essentially frozen, despite federal law naming the Census Bureau steward of authoritative boundaries.
   links:
     - title: Download (PDF)
       url: https://data.sustainable-fsa.com/publications/2026-07-briefing-gda-county-boundaries.pdf
@@ -742,7 +742,7 @@
   type: M.S. THESIS
   byline: Shae Leigh Olsen, M.S. · University of Montana, 2025
   description:
-    Interviews with 23 FSA staff in nine states examine how the LFP operates on the ground and how staff and producers experience it as a recurring, rather than exceptional, source of operating capital in drought-affected ranching regions.
+    A study based on interviews with 23 FSA staff in nine states, examining how the LFP operates on the ground and how staff and producers experience it as a recurring, rather than exceptional, source of operating capital in drought-affected ranching regions.
   links:
     - title: Read on ScholarWorks
       url: https://scholarworks.umt.edu/etd/12523/
@@ -752,7 +752,7 @@
   type: M.S. THESIS
   byline: Kyla Ivana Fugate, M.S. · University of Montana, 2025
   description:
-    Examines how new operators in western Montana navigate the intersecting pressures of land access, climate variability, and federal program eligibility.
+    A study of how new operators in western Montana navigate the intersecting pressures of land access, climate variability, and federal program eligibility.
   links:
     - title: Read on ScholarWorks
       url: https://scholarworks.umt.edu/etd/12508/
@@ -762,7 +762,7 @@
   type: M.S. THESIS
   byline: Amishi Singh, M.S. · University of Montana, 2025
   description:
-    Extends the project's lens to drought planning and response across the Northern Great Plains, with attention to equity and social vulnerability in how disaster relief reaches communities.
+    A study extending the project's lens to drought planning and response across the Northern Great Plains, with attention to equity and social vulnerability in how disaster relief reaches communities.
   links:
     - title: Read on ScholarWorks
       url: https://scholarworks.umt.edu/etd/12532/
