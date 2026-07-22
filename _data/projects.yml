@@ -673,11 +673,24 @@
   type: BRIEFING
   byline: Briefing · July 2026
   description:
-    A leadership-facing summary of the project's core finding — the Livestock Forage Disaster Program largely works as designed, but the conditions it was designed for have shifted — laying out where the program's data inputs have drifted from measured conditions and what it would take to bring them current.
+    A summary of the project's core findings, laying out where the program's data inputs have drifted from measured conditions and what it would take to bring them current.
   links:
     - title: Download (PDF)
       url: https://data.sustainable-fsa.com/publications/2026-07-briefing-chief-economist-takeaways.pdf
   image: /assets/publications/2026-07-briefing-chief-economist-takeaways.png
+  image_background: white
+  
+  
+- title: How a Drought Map Becomes a Disaster Payment
+  category: publications
+  type: INFOGRAPHIC
+  byline: Infographic · July 2026
+  description:
+    A one-page walk through the LFP pipeline, from the weekly US Drought Monitor map to a payment in a rancher's account — the county cut, the normal grazing period, and the payment calculation, with the drift in each step flagged along the way.
+  links:
+    - title: Download (PDF)
+      url: https://data.sustainable-fsa.com/publications/2026-07-infographic-lfp-pipeline.pdf
+  image: /assets/publications/2026-07-infographic-lfp-pipeline.png
   image_background: white
 
 - title: County Boundaries, the Drought Monitor, and LFP Eligibility
@@ -685,7 +698,7 @@
   type: BRIEFING
   byline: Briefing · July 2026
   description:
-    A case for adopting authoritative Census county boundaries in LFP eligibility determinations, as both a Geospatial Data Act compliance measure and a fiscal-integrity fix — eligibility is adjudicated where the US Drought Monitor meets county boundaries, but the boundary dataset in use is non-authoritative and essentially frozen, despite federal law naming the Census Bureau steward of authoritative boundaries.
+    A case for adopting authoritative Census county boundaries in LFP eligibility determinations, as both a Geospatial Data Act compliance measure and a fiscal-integrity fix.
   links:
     - title: Download (PDF)
       url: https://data.sustainable-fsa.com/publications/2026-07-briefing-gda-county-boundaries.pdf
@@ -718,18 +731,6 @@
     - title: Data and code
       url: https://sustainable-fsa.com/nclimgrid-normal-grazing-period/
   image: /assets/publications/2026-07-report-nclimgrid-ngp.png
-  image_background: white
-
-- title: How a Drought Map Becomes a Disaster Payment
-  category: publications
-  type: INFOGRAPHIC
-  byline: Infographic · July 2026
-  description:
-    A one-page walk through the LFP pipeline, from the weekly US Drought Monitor map to a payment in a rancher's account — the county cut, the normal grazing period, and the payment calculation, with the drift in each step flagged along the way.
-  links:
-    - title: Download (PDF)
-      url: https://data.sustainable-fsa.com/publications/2026-07-infographic-lfp-pipeline.pdf
-  image: /assets/publications/2026-07-infographic-lfp-pipeline.png
   image_background: white
 
 # Graduate theses — a second, complementary register: interview- and
