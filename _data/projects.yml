@@ -171,6 +171,28 @@
   image: /fsa-lfp-eligibility-web/example-1.png
   image_background: white
 
+- title: Livestock Forage Program Eligibility, Derived
+  category: data
+  type: DERIVED DATA
+  updated_method: usdm-map
+  updated_ref: fsa-lfp-eligibility-derived/data/usdm/USDM_
+  description:
+    County-level LFP eligibility recomputed from the US Drought Monitor and FSA's published normal grazing
+    periods under four county-aggregation conventions, program years 2008–present — a derived companion to
+    the FOIA eligibility archive that measures the sensitivity of eligibility to the choice of county
+    boundaries, not a record of USDA's own determinations.
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.com/fsa-lfp-eligibility-derived/
+    - title: Archive Listing
+      url: https://data.sustainable-fsa.com/fsa-lfp-eligibility-derived/
+    - title: Download (CSV)
+      url: https://data.sustainable-fsa.com/fsa-lfp-eligibility-derived/fsa-lfp-eligibility-derived.csv
+    - title: Code
+      url: https://github.com/sustainable-fsa/fsa-lfp-eligibility-derived
+  image: /fsa-lfp-eligibility-derived/example-1.png
+  image_background: white
+
 - title: FSA Disasters Archive
   category: data
   type: WEB ARCHIVE
