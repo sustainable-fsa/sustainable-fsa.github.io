@@ -193,6 +193,29 @@
   image: /fsa-lfp-eligibility-derived/example-1.png
   image_background: white
 
+- title: Livestock Forage Program Payments, Derived
+  category: data
+  type: DERIVED DATA
+  updated_method: github-file
+  updated_ref: fsa-lfp-payments-derived/fsa-lfp-payments-derived.csv
+  description:
+    Estimated LFP payments foregone, program years 2008–2025, under three data issues in county
+    eligibility determinations — non-authoritative county boundaries, the NDMC's percent-of-county
+    coverage threshold, and the undocumented cap on eligible payment months — derived by scaling actual
+    disbursements from the Farm Payment Files by the ratio of months the drought record warrants to
+    months FSA paid. An estimate with stated assumptions, not an accounting of money owed.
+  links:
+    - title: Documentation
+      url: https://sustainable-fsa.com/fsa-lfp-payments-derived/
+    - title: Archive Listing
+      url: https://data.sustainable-fsa.com/fsa-lfp-payments-derived/
+    - title: Download (CSV)
+      url: https://data.sustainable-fsa.com/fsa-lfp-payments-derived/fsa-lfp-payments-derived.csv
+    - title: Code
+      url: https://github.com/sustainable-fsa/fsa-lfp-payments-derived
+  image: /fsa-lfp-payments-derived/example-1.png
+  image_background: white
+
 - title: FSA Disasters Archive
   category: data
   type: WEB ARCHIVE
